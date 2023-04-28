@@ -1,9 +1,13 @@
 body {
     padding: 0;
     margin: 0;
+    background-image: url(https://images.alphacoders.com/241/241901.jpg);
+    background-size: cover;
+    
 }
 .header {
-    background-color: white;
+    background-color: transparent;
+    
 }
 
 header {
@@ -17,5 +21,39 @@ header {
     justify-content: center;
     margin: 10px;
     margin-left: 30px;
-    
+}
+
+.botton_nav {
+    display: flex;
+    padding: 0 50px;
+    font-size: 20px;
+    align-items: center;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+}
+
+a {
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    color: white;
+}
+
+.inscrever {
+    display: flex;
+    background-color: rgba(0, 0, 255, 0.212);
+    border-radius: 5px;
+    padding: 10px 10px;
+}
+
+a :hover{
+    color: white;
+}
+
+.inscrever :hover {
+    background-color: blue;
+
 }
