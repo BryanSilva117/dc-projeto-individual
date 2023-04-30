@@ -8,10 +8,11 @@
     background-image: url(../img/Fundo1.jpg);
     background-size: cover;
     height: 95vh;
+    border-bottom: 0.5vh solid rgba(0, 0, 255, 0.596);
 }
 
 .dois {
-    background-image: url(../img/ttt.jpg);
+    background-image: url(https://images2.alphacoders.com/446/446666.jpg);
     background-size: cover;
     height: 95vh;
 }
@@ -51,20 +52,31 @@ header {
 
 
 .contribuir {
-    
     font-size: 3.3vh;
     display: flex;
     color: white;
-    margin-left: -50vh;
+    margin-left: -60vh;
     cursor: pointer;
     transition: 0.4s;
     font-family: 'Oswald', sans-serif;
-    
 }
+
 .contribuir:hover {
     color: black;
 }
 
+.sobre {
+    font-size: 3.3vh;
+    display: flex;
+    color: white;
+    margin-left: -60vh;
+    cursor: pointer;
+    transition: 0.4s;
+    font-family: 'Oswald', sans-serif;
+}
+.sobre:hover {
+    color: black;
+}
 
 
 nav ul {
@@ -93,12 +105,28 @@ nav ul {
     transition: 0.4s;
 }
 
+.mensaoDC {
+    color: rgba(0, 0, 255, 0.753);
+    font-size: 4.6vh;
+}
+
 
 /* PARTE ABAIXO DA NAVIBAR */
-.sobre {
+.parte1 {
     display: flex;
     justify-content: left;
     align-items: center;
     padding: 10vh;
+    font-family: 'Oswald', sans-serif;
+}
+
+
+/* SOBRE A DC */
+
+.parte2 {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    text-align: center;
     font-family: 'Oswald', sans-serif;
 }
