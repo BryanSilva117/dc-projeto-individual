@@ -3,18 +3,21 @@
     padding: 0;
 }
 
+
 .inicio {
     background-image: url(../img/Fundo1.jpg);
     background-size: cover;
     height: 95vh;
 }
 
-.dois{
+.dois {
     background-image: url(../img/ttt.jpg);
     background-size: cover;
     height: 95vh;
 }
 
+
+/* PARTE NAVBAR */
 
 header {
     display: flex;
@@ -29,50 +32,73 @@ header {
 }
 
 
-.logo {
+.logo img {
     display: flex;
     height: 12vh;
-   /*  opacity: 0.7;  Torna a logo 50% transparente quando o mouse passa por cima */
+    /*  opacity: 0.7;  Torna a logo 50% transparente quando o mouse passa por cima */
     cursor: pointer;
-    transition-duration: 2s;
-}
-.logo :hover {
-    transform: scale(1.2); /* Aumenta a escala da logo em 20% quando o mouse passa por cima */
-    z-index: 1;
-    
+    transition-duration: 0.4s;
 }
 
-.container {
-    display: flex;
-    font-size: 2.5vh;
+
+.logo :hover {
+    transform: scale(1.2);
+    /* Aumenta a escala da logo em 20% quando o mouse passa por cima */
+    /* z-index: 1; */
+    margin-top: 5px;
+
 }
+
+
+.contribuir {
+    
+    font-size: 3.3vh;
+    display: flex;
+    color: white;
+    margin-left: -50vh;
+    cursor: pointer;
+    transition: 0.4s;
+    font-family: 'Oswald', sans-serif;
+    
+}
+.contribuir:hover {
+    color: black;
+}
+
+
+
 nav ul {
     display: flex;
     list-style: none;
 }
 
-a {
+
+.container a {
+    font-size: 2.5vh;
     background-color: rgba(0, 0, 0, 0.61);
     border: 5px black;
-    border-radius: 1vh;
+    border-radius: 2vh;
     padding: 2vh 2vh;
     text-decoration: none;
     color: white;
     margin: 2vh;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Oswald', sans-serif;
 }
 
-a:hover {
+
+.container a:hover {
     box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.418);
     background-color: white;
-    color:black;
+    color: black;
     transition: 0.4s;
 }
 
+
+/* PARTE ABAIXO DA NAVIBAR */
 .sobre {
     display: flex;
-    justify-content: space-between;
-   align-items: center;
-   padding: 10vh;
-    
+    justify-content: left;
+    align-items: center;
+    padding: 10vh;
+    font-family: 'Oswald', sans-serif;
 }
