@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.inicio {
+    background-image: url(../img/Fundo1.jpg);
+    background-size: cover;
+    height: 95vh;
+}
+
+.dois{
+    background-image: url(../img/ttt.jpg);
+    background-size: cover;
+    height: 95vh;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.418);
+    padding: 1vh 5vh;
+}
+
+.header {
+    background-color: rgba(0, 0, 255, 0.596);
+}
+
+
+.logo {
+    display: flex;
+    height: 12vh;
+   /*  opacity: 0.7;  Torna a logo 50% transparente quando o mouse passa por cima */
+    cursor: pointer;
+    transition-duration: 2s;
+}
+.logo :hover {
+    transform: scale(1.2); /* Aumenta a escala da logo em 20% quando o mouse passa por cima */
+    z-index: 1;
+    
+}
+
+.container {
+    display: flex;
+    font-size: 2.5vh;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+a {
+    background-color: rgba(0, 0, 0, 0.61);
+    border: 5px black;
+    border-radius: 1vh;
+    padding: 2vh 2vh;
+    text-decoration: none;
+    color: white;
+    margin: 2vh;
+    font-family: 'Roboto', sans-serif;
+}
+
+a:hover {
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.418);
+    background-color: white;
+    color:black;
+    transition: 0.4s;
+}
+
+.sobre {
+    display: flex;
+    justify-content: space-between;
+   align-items: center;
+   padding: 10vh;
+    
+}
