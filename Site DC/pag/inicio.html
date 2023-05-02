@@ -41,7 +41,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="cadastro">
+                        <a href="#">
                             Junte-se a Liga
                         </a>
                     </li>
@@ -59,8 +59,13 @@
                 recheado <br>de conteúdos e descubra
                 qual será <br>seu herói (ou vilão),
                 favorito<br> dessa incrível editoda
-                <br>chamada Detective Comics</h1>
-                <br>
+                <br>chamada Detective Comics
+                <br><br>
+                <a href="#" class="cadastro">
+                    CADASTRE-SE AQUI!
+                </a>
+            </h1>
+             
         </div>
     </div>
 
@@ -110,3 +115,23 @@
 </body>
 
 </html>
+
+<script>
+
+// Seleciona todos os links que apontam para uma seção dentro da página
+const sobreDcLink = document.querySelector('a[href="#sobreDc"]');
+
+// Adiciona um evento de clique a cada link
+sobreDcLink.addEventListener('click', function(event) {
+
+// isso impede que a página seja recarregada quando o link for clicado
+  event.preventDefault(); 
+
+  // Seleciona a seção correspondente ao link clicado usando o atributo "href" do link
+  const sobreDcSection = document.getElementById('sobreDc');
+
+  // Faz a página rolar suavemente até a seção selecionada
+  sobreDcSection.scrollIntoView({behavior: 'smooth'});
+});
+
+</script>

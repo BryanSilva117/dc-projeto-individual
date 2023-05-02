@@ -7,20 +7,20 @@
 .inicio {
     background-image: url(../img/Fundo1.jpg);
     background-size: cover;
-    height: 95vh;
-    border-bottom: 0.5vh solid rgba(0, 0, 255, 0.596);
+    height: 98vh;
+    border-bottom: 0.2vh solid rgba(182, 182, 185, 0.808);
 }
 
 .dois {
     background-image: url(https://images2.alphacoders.com/446/446666.jpg);
     background-size: cover;
-    height: 95vh;
+    height: 98vh;
 }
 
 .tres {
     background-image: url(https://images2.alphacoders.com/446/446666.jpg);
     background-size: cover;
-    height: 95vh;
+    height: 98vh;
 }
 
 
@@ -126,6 +126,25 @@ nav ul {
     align-items: center;
     padding: 10vh;
     font-family: 'Oswald', sans-serif;
+}
+
+.cadastro {
+    font-size: 3vh;
+    background-color: rgba(0, 0, 0, 0.61);
+    border: 5px black;
+    border-radius: 1vh;
+    padding: 3vh 5vh;
+    text-decoration: none;
+    color: white;
+    margin: 2vh;
+    font-family: 'Oswald', sans-serif;
+}
+
+.cadastro:hover {
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.418);
+    background-color: rgba(0, 0, 255, 0.596);;
+    color: black;
+    transition: 0.4s;
 }
 
 
