@@ -12,7 +12,7 @@
 }
 
 .dois {
-    background-image: url(https://images2.alphacoders.com/446/446666.jpg);
+    background-image: url(../img/imgSobre.jpg);
     background-size: cover;
     height: 98vh;
 }
@@ -141,7 +141,7 @@ nav ul {
 }
 
 .cadastro:hover {
-    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.418);
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.418);
     background-color: rgba(0, 0, 255, 0.596);;
     color: black;
     transition: 0.4s;
