@@ -18,7 +18,7 @@
 }
 
 .tres {
-    background-image: url(https://images2.alphacoders.com/446/446666.jpg);
+    background-image: url(https://i.pinimg.com/originals/58/fa/4c/58fa4cf3deb485013324867aad57fe21.jpg);
     background-size: cover;
     height: 98vh;
 }
@@ -49,8 +49,7 @@ header {
 
 
 .logo :hover {
-    transform: scale(1.2);
-    /* Aumenta a escala da logo em 20% quando o mouse passa por cima */
+    transform: scale(1.2); /* Aumenta a escala da logo em 20% quando o mouse passa por cima */
     /* z-index: 1; */
     margin-top: 5px;
 
@@ -61,7 +60,7 @@ header {
     font-size: 3.3vh;
     display: flex;
     color: white;
-    margin-left: -60vh;
+    margin-left: -70vh;
     cursor: pointer;
     transition: 0.4s;
     font-family: 'Oswald', sans-serif;
@@ -76,7 +75,7 @@ header {
     font-size: 3.3vh;
     display: flex;
     color: white;
-    margin-left: -60vh;
+    margin-left: -80vh;
     cursor: pointer;
     transition: 0.4s;
     font-family: 'Oswald', sans-serif;
