@@ -75,7 +75,7 @@ header {
     font-size: 3.3vh;
     display: flex;
     color: white;
-    margin-left: -80vh;
+    margin-left: -70vh;
     cursor: pointer;
     transition: 0.4s;
     font-family: 'Oswald', sans-serif;
@@ -155,4 +155,20 @@ nav ul {
     padding: 10px;
     text-align: center;
     font-family: 'Oswald', sans-serif;
+}
+
+/* Parte trindade */
+
+.parte3 { 
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.hero {
+    transition: all 1s;
+
+}
+.hero:hover {
+    transform: scale(1.2);
 }
