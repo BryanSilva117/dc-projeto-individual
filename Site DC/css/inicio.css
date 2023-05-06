@@ -18,9 +18,17 @@
 }
 
 .tres {
-    background-image: url(https://static.dc.com/sites/default/files/imce/2020/08-AUG/DCU_Rewards_Watchtower_wp_5f46c2f5d333d2.95780100.jpg);
+    background-image: url(https://wallpaperset.com/w/full/c/a/e/153437.jpg);
     background-size: cover;
     height: 98vh;
+}
+
+.quatro {
+    background-color: rgba(0, 0, 255, 0.596);
+    background-image: none;
+    background-size: 200vh 20vh;
+    height: 15vh;
+    border-bottom: 0;
 }
 
 
@@ -60,7 +68,7 @@ header {
     font-size: 3.3vh;
     display: flex;
     color: white;
-    margin-left: -70vh;
+    margin-left: -60vh;
     cursor: pointer;
     transition: 0.4s;
     font-family: 'Oswald', sans-serif;
@@ -75,7 +83,7 @@ header {
     font-size: 3.3vh;
     display: flex;
     color: white;
-    margin-left: -70vh;
+    margin-left: -60vh;
     cursor: pointer;
     transition: 0.4s;
     font-family: 'Oswald', sans-serif;
@@ -83,6 +91,21 @@ header {
 }
 .sobre:hover {
     color: black;
+}
+
+.jl {
+    font-size: 3.3vh;
+    display: flex;
+    color: white;
+    margin-left: -60vh;
+    cursor: pointer;
+    transition: 0.4s;
+    font-family: 'Oswald', sans-serif;
+    text-decoration: none;
+}
+.jl:hover {
+    color: black;
+    transform: scale(1.2);
 }
 
 
@@ -159,12 +182,22 @@ nav ul {
 
 /* Parte trindade */
 
-.parte3 { 
+.tres h1 {
+    color: white;
     display: flex;
     justify-content: center;
-    align-items: center;
+    font-family: 'Oswald', sans-serif;
+
+}
+
+.parte3 { 
+    display: flex;
+    justify-content:flex-start;
+    position: relative;
+    top: 15vh;
     
 }
+
 
 .hero {
     transition: all 0.7s;
@@ -173,3 +206,49 @@ nav ul {
 .hero:hover {
     transform: scale(1.2);
 }
+
+.aquaman {
+    position: absolute;
+    left: 19vh;
+    z-index: 2;
+}
+
+.green {
+    position: absolute;
+    left: 35vh;
+    z-index: 3;
+}
+
+.mulher {
+    position: absolute;
+    left: 55vh;
+    z-index: 5;
+}
+
+.superman {
+    position: absolute;
+    left: 74vh;
+    z-index: 7;
+    top: -4vh;
+}
+
+.batman {
+    position: absolute;
+    left: 95vh;
+    z-index: 6;
+}
+
+.flash {
+    position: absolute;
+    left: 115vh;
+    z-index: 4;
+}
+
+.ciborgue {
+    position: absolute;
+    left: 134vh;
+    z-index: 1;
+}
+
+
+

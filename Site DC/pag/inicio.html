@@ -32,6 +32,10 @@
                 Sobre a DC
             </a>
 
+            <a class="jl" href="#JL">
+                <img src="../img/jl.png" alt="" width="40px">
+            </a>
+
 
             <nav class="container">
                 <ul>
@@ -91,19 +95,30 @@
     </div>
 
     <div class="inicio tres">
+        <br>
+        <h1><i><u>Principais membros da liga da justiça</u></i></h1>
+        <br>
+        <br>
+        <div id="JL" class="parte3">
 
-        <div class="parte3">
-            <img class="hero" src="https://i.pinimg.com/originals/94/c1/fe/94c1fea4420e4bef297a8eaa0e16ec3b.png" alt="" width="130px">
-            <img class="hero" src="https://static.wikia.nocookie.net/liga-da-zueira-oficial/images/4/41/A0d4693e63dd037fcd9fc86932ece3ce.png/revision/latest?cb=20200730215724&path-prefix=pt-br" alt="" width="130px">
-            <img class="hero" src="https://static.miraheze.org/animatedmusclewomenwiki/a/a4/Wonder_Woman-Comic-vector.png" alt="" width="180px">
-        </div>
-        <div class="parte3">
-            <img class="hero" src="https://i.pinimg.com/originals/94/c1/fe/94c1fea4420e4bef297a8eaa0e16ec3b.png" alt="" width="130px">
-            <img class="hero" src="https://static.wikia.nocookie.net/liga-da-zueira-oficial/images/4/41/A0d4693e63dd037fcd9fc86932ece3ce.png/revision/latest?cb=20200730215724&path-prefix=pt-br" alt="" width="130px">
-            <img class="hero" src="https://static.miraheze.org/animatedmusclewomenwiki/a/a4/Wonder_Woman-Comic-vector.png" alt="" width="180px">
+            <img class="hero aquaman" src="../img/Aquaman.png" alt="" width="200px">
+            <img class="hero green" src="../img/lanterna-verde.png" alt="" width="230px">
+            <img class="hero mulher" src="../img/Mulher-Maravilha.png" alt="" width="210px">
+            <img class="hero superman" src="../img/Superman.png" alt="" width="230px">
+            <img class="hero batman" src="../img/Batman.png" alt="" width="230px">
+            <img class="hero flash" src="../img/Flash.png" alt="" width="190px">
+            <img class="hero ciborgue" src="../img/Ciborgue.png" alt="" width="200px">
+
         </div>
         
     </div>
+
+    <footer>
+        <div class="inicio quatro">
+
+
+        </div>
+    </footer>
 
 
 </body>
@@ -126,6 +141,24 @@ sobreDcLink.addEventListener('click', function(event) {
 
   // Faz a página rolar suavemente até a seção selecionada
   sobreDcSection.scrollIntoView({behavior: 'smooth'});
+});
+
+
+
+// Seleciona todos os links que apontam para uma seção dentro da página
+const JLLink = document.querySelector('a[href="#JL"]');
+
+// Adiciona um evento de clique a cada link
+JLLink.addEventListener('click', function(event) {
+
+// isso impede que a página seja recarregada quando o link for clicado
+  event.preventDefault(); 
+
+  // Seleciona a seção correspondente ao link clicado usando o atributo "href" do link
+  const JLSection = document.getElementById('JL');
+
+  // Faz a página rolar suavemente até a seção selecionada
+  JLSection.scrollIntoView({behavior: 'smooth'});
 });
 
 </script>
