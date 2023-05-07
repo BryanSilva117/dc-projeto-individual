@@ -20,7 +20,7 @@
 .tres {
     background-image: url(https://wallpaperset.com/w/full/c/a/e/153437.jpg);
     background-size: cover;
-    height: 98vh;
+    height: 110vh;
 }
 
 .quatro {
@@ -212,42 +212,60 @@ nav ul {
     left: 19vh;
     z-index: 2;
 }
+.aquaman:hover {
+    z-index: 8;
+}
 
 .green {
     position: absolute;
-    left: 35vh;
+    left: 39vh;
     z-index: 3;
+    top: 3vh;
+}
+.green:hover {
+    z-index: 8;
 }
 
-.mulher {
+.mulherM {
     position: absolute;
-    left: 55vh;
+    left: 62vh;
     z-index: 5;
+}
+.mulherM:hover {
+    z-index: 8;
 }
 
 .superman {
     position: absolute;
-    left: 74vh;
+    left: 84vh;
     z-index: 7;
     top: -4vh;
 }
 
 .batman {
     position: absolute;
-    left: 95vh;
+    right: 60vh;
     z-index: 6;
+}
+.batman:hover {
+    z-index: 8;
 }
 
 .flash {
     position: absolute;
-    left: 115vh;
+    right: 38vh;
     z-index: 4;
+    top: 7vh;
+}
+.flash:hover {
+    z-index: 8;
 }
 
 .ciborgue {
     position: absolute;
-    left: 134vh;
+    right: 17vh;
     z-index: 1;
+    top: 4vh;
 }
 
 
