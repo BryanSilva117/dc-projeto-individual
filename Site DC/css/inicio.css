@@ -18,10 +18,23 @@
 }
 
 .tres {
-    background-image: url(https://wallpaperset.com/w/full/c/a/e/153437.jpg);
+    background-image: url(../img/BackgroundJL.jpg);
     background-size: cover;
     height: 110vh;
+    animation: aternar-imagem 12s linear infinite;
 }
+
+@keyframes aternar-imagem {
+    0% {
+      background-image: url(../img/BackgroundJL.jpg);
+    }
+    50% {
+      background-image: url(../img/BackgroundJL2.jpg);
+    }
+    100% {
+      background-image: url(../img/BackgroundJL.jpg);
+    }
+  }
 
 .quatro {
     background-color: rgba(0, 0, 255, 0.596);
@@ -244,7 +257,7 @@ nav ul {
 
 .batman {
     position: absolute;
-    right: 60vh;
+    left: 108vh;
     z-index: 6;
 }
 .batman:hover {
@@ -253,7 +266,7 @@ nav ul {
 
 .flash {
     position: absolute;
-    right: 38vh;
+    left: 138vh;
     z-index: 4;
     top: 7vh;
 }
@@ -263,9 +276,12 @@ nav ul {
 
 .ciborgue {
     position: absolute;
-    right: 17vh;
+    left: 158vh;
     z-index: 1;
-    top: 4vh;
+    top: 7vh;
+}
+.ciborgue:hover {
+    z-index: 8;
 }
 
 
