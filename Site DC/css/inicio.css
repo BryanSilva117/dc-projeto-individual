@@ -157,13 +157,14 @@ nav ul {
     transition: 0.4s;
 }
 
+
+
+/* PARTE ABAIXO DA NAVIBAR */
 .mensaoDC {
     color: rgba(0, 0, 255, 0.753);
     font-size: 4.6vh;
 }
 
-
-/* PARTE ABAIXO DA NAVIBAR */
 .parte1 {
     display: flex;
     justify-content: left;
