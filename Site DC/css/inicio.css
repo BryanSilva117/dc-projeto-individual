@@ -64,6 +64,7 @@ header {
     padding: 1vh 5vh;
 }
 
+
 .header {
     background-color: rgba(0, 0, 255, 0.596);
 }
@@ -72,7 +73,6 @@ header {
 .logo img {
     display: flex;
     height: 12vh;
-    /*  opacity: 0.7;  Torna a logo 50% transparente quando o mouse passa por cima */
     cursor: pointer;
     transition: 0.4s;
 }
@@ -80,7 +80,6 @@ header {
 
 .logo :hover {
     transform: scale(1.2); /* Aumenta a escala da logo em 20% quando o mouse passa por cima */
-    /* z-index: 1; */
     margin-top: 5px;
 
 }

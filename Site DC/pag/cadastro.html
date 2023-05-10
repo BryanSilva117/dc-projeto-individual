@@ -24,8 +24,9 @@
                     <img src="../img/DCLOGO3.png" alt="LOGOPG">
                 </a>
             </div>
-            
-            <a class="contribuir" title="Entre em contato com nos caso queira Contribuir" href="../pag/inicio.html#contribuir">
+
+            <a class="contribuir" title="Entre em contato com nos caso queira Contribuir"
+                href="../pag/inicio.html#contribuir">
                 Quer Contribuir?
             </a>
             <a class="sobre" href="../pag/inicio.html#sobreDc">
@@ -53,20 +54,86 @@
                 </ul>
             </nav>
         </header>
-        <div class="cadastro">
+        <section class="cadastro">
 
-         <img src="../img/DCLOGO3.png" alt="">
-    
-         <div class="inputs">
+            <div class="logoCadastro">
+                <img src="../img/DCLOGO3.png" alt="" width="80px">
+            </div>
+            <br>
+            <br>
+            
+            <div class="inputs">
+              
+                <input class="nome" placeholder="Nome"  id="input_nome">
 
-            <input class="nome" id="idnome">
+                <input class="sobrenome" placeholder="Sobrenome" id="input_sobrenome">
 
-            <input  class="sobrenome" id="idsobrenome">
+            </div>
 
-        </div>
-           
-        </div>
-       
+            <div class="inputs">
 
-    
+                <input class="email" placeholder="Email" id="input_email">
+
+
+            </div>
+
+            <div class="inputs">
+
+                <input class="senha" type="password" placeholder="Senha" id="input_senha">
+
+                <input class="confirmar"  type="password" placeholder="Confirmar Senha" id="input_confirmar_senha">
+
+            </div>
+            <br>
+
+            <div class="inputs">
+               
+                <input class="dtNasc" type="date" placeholder="Nascimento" id="idnome">
+
+                <select class="genero" name="genero" id="genero">
+                    <option value="" disabled selected hidden>gênero</option>
+                    <option value="Masculino">Masculino</option>
+                    <option value="Feminino">Feminino</option>
+                    <option value="Outro">Outro</option>
+                    <option value="prefNd">Prefiro não dizer</option>
+                  
+                </select>
+
+            </div>
+
+            <div class="escolha">
+
+                Qual membro da Liga da Justiça Você prefere?
+                
+            </div>
+            <div>
+
+                <select class="heroPref" name="PersFav" id="personagemFav">
+                    <option value="" disabled selected hidden>Escolher...</option>
+                    <option value="Superman">Superman</option>
+                    <option value="Batman">Batman</option>
+                    <option value="MulherM">Mulher Maravilha</option>
+                    <option value="Flash">Flash</option>
+                    <option value="LanternaV">Lanterna Verde</option>
+                    <option value="Aquaman">Aquaman</option>
+                    <option value="Ciborgue">Ciborgue</option>
+                    <option value="PreMarvel">Prefiro a Marvel</option>
+                </select>
+
+            </div>
+
+            <div class="botao">
+                <br>
+                <br>
+                <button onclick="cadastrar()"><b>Cadastrar</b></button>
+
+            </div>
+
+            
+        </section>
+
+
+    </div>
+
+
 </body>

@@ -2,9 +2,10 @@
     margin: 0;
     padding: 0;
 }
+
 .inicio {
-    background-color: white;
-    height: 98vh;
+    background-color: rgb(255, 255, 255);
+    height: 100vh;
 }
 
 
@@ -26,7 +27,6 @@ header {
     height: 7vh;
     left: 3vh;
     top: 0.5vh;
-    /*  opacity: 0.7;  Torna a logo 50% transparente quando o mouse passa por cima */
     cursor: pointer;
     transition: 0.4s;
     position: absolute;
@@ -35,7 +35,6 @@ header {
 
 .logo :hover {
     transform: scale(1.2); /* Aumenta a escala da logo em 20% quando o mouse passa por cima */
-    /* z-index: 1; */
     margin-top: 5px;
 
 }
@@ -117,33 +116,124 @@ nav ul {
     font-size: 4.6vh;
 }
 
+/* Parte cadastro */
+
 .cadastro {
     background-color: rgba(0, 0, 255, 0.596);
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
     margin: auto;
     width: 70vh;
-    height: 70vh;
-    margin-top: 13vh;
-    border-radius: 4vh;
+    height: 80vh;
+    margin-top: 6vh;
+    border-radius: 3vh;
     box-shadow: 1vh 1vh 1vh 0vh rgba(0, 0, 0, 0.623);
 }
 
-.cadastro img {
-    display: flex;
-    justify-content: center;
-    margin-top: 2vh;
-    width: 10vh;
-    height: 10vh;
-    
+.logoCadastro {
+    margin-top: -2vh;
 }
 
-.cadastro .inputs {
-    display: flex;
-    justify-content: center;
-    padding-top: 15vh;
+input {
+    text-align: center;
+    font-size: 3vh;
+    width: 30vh;
     height: 6vh;
+    margin-left: 0.5vh;
+    margin-bottom: 2vh;
+    border-radius: 1vh;
+    border: solid 2px rgba(0, 0, 0, 0.767);
+    transition: 0.4s;
 }
+
+input:hover {
+    box-shadow: 1vh 1vh 1vh 0vh rgba(0, 0, 0, 0.623);
+}
+
+::placeholder {
+    color: rgb(0, 0, 255);
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.6vh;
+    padding: 2vh;
+}
+
+.inputs {
+    display: flex;
+    justify-content: center;     
+}
+
+.email {
+    width: 61vh;
+}
+
+.dtNasc {
+    width: 30vh;
+    height: 5.6vh;
+    margin-right: 0.5vh;
+}
+
+.genero {
+    text-align: center;
+    color: rgb(0, 0, 255);
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.6vh;
+    border: solid 2px rgba(0, 0, 0, 0.767);
+    width: 30vh;
+    height: 6vh;
+    border-radius: 1vh;
+    transition: 0.4s;
+}
+
+.genero:hover {
+    box-shadow: 1vh 1vh 1vh 0vh rgba(0, 0, 0, 0.623);
+}
+
+.escolha {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.9vh;
+    color: white;
+}
+
+
+.heroPref {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: rgb(0, 0, 255);
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.6vh;
+    border: solid 2px rgba(0, 0, 0, 0.767);
+    width: 20vh;
+    height: 6vh;
+    border-radius: 1vh;
+    transition: 0.4s;
+}
+
+.heroPref:hover {
+    box-shadow: 1vh 1vh 1vh 0vh rgba(0, 0, 0, 0.623);
+}
+
+button {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.61);
+    border: 5px black;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    font-size: 4vh;
+    border: solid 2px rgba(0, 0, 0, 0.767);
+    width: 33vh;
+    height:9vh;
+    border-radius: 3vh;
+    transition: 0.4s;
+}
+button:hover {
+    box-shadow: 1vh 1vh 1vh rgba(0, 0, 0, 0.76);
+    background-color: white;
+    color: black;
+}
+
 
 
 
