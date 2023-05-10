@@ -61,10 +61,10 @@
             </div>
             <br>
             <br>
-            
+
             <div class="inputs">
-              
-                <input class="nome" placeholder="Nome"  id="input_nome">
+
+                <input class="nome" placeholder="Nome" id="input_nome">
 
                 <input class="sobrenome" placeholder="Sobrenome" id="input_sobrenome">
 
@@ -81,22 +81,22 @@
 
                 <input class="senha" type="password" placeholder="Senha" id="input_senha">
 
-                <input class="confirmar"  type="password" placeholder="Confirmar Senha" id="input_confirmar_senha">
+                <input class="confirmar" type="password" placeholder="Confirmar Senha" id="input_confirmar_senha">
 
             </div>
             <br>
 
             <div class="inputs">
-               
-                <input class="dtNasc" type="date" placeholder="Nascimento" id="idnome">
 
-                <select class="genero" name="genero" id="genero">
+                <input class="dtNasc" type="date" placeholder="Nascimento" id="input_nascimento">
+
+                <select class="genero" name="genero" id="input_genero">
                     <option value="" disabled selected hidden>gênero</option>
                     <option value="Masculino">Masculino</option>
                     <option value="Feminino">Feminino</option>
                     <option value="Outro">Outro</option>
                     <option value="prefNd">Prefiro não dizer</option>
-                  
+
                 </select>
 
             </div>
@@ -104,11 +104,11 @@
             <div class="escolha">
 
                 Qual membro da Liga da Justiça Você prefere?
-                
+
             </div>
             <div>
 
-                <select class="heroPref" name="PersFav" id="personagemFav">
+                <select class="heroPref" name="PersFav" id="input_personagemFav">
                     <option value="" disabled selected hidden>Escolher...</option>
                     <option value="Superman">Superman</option>
                     <option value="Batman">Batman</option>
@@ -129,11 +129,35 @@
 
             </div>
 
-            
         </section>
-
 
     </div>
 
-
 </body>
+
+<script>
+    function cadastrar() {
+        var cadastro = {
+            nome: input_nome.value,
+            sobrenome: input_sobrenome.value,
+            email: input_email.value,
+            senha: input_senha.value,
+            confirmar_senha: input_confirmar_senha.value,
+            nascimento: input_nascimento.value,
+            genero: input_genero.value,
+            personagemFav: input_personagemFav.value,
+        }
+    
+
+        if (cadastro.nome == "") {
+            alert("nome vazio")
+        }
+        else if (cadastro.nome.length < 3) {
+            alert('até 3 letras')
+        }
+        else {
+            
+        }
+
+    }
+</script>
