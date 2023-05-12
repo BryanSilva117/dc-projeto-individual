@@ -40,7 +40,7 @@
             <nav class="container">
                 <ul>
                     <li>
-                        <a href="#">
+                        <a onclick="toggleLogin()" href="#">
                             Já é Membro?
                         </a>
                     </li>
@@ -56,6 +56,7 @@
 
         <div class="parte1">
 
+
             <h1><i class="mensaoDC"><u>BEM VINDO AO UNIVERSO DC!</u></i>
                 <br>
                 <br>
@@ -69,7 +70,17 @@
                     CADASTRE-SE AQUI!
                 </a>
             </h1>
-             
+            <div id="login-inicio" class="login-inicio">
+                <h2><u>Bem vindo!</u> 
+                    <br>
+                    <span>Login</span> 
+                </h2>
+                <div id="login">
+                  <input name="Email" placeholder="Email">
+                  <input type="password" name="password" placeholder="Senha">
+                  <button>Entrar</button>
+                </div>
+              </div>
         </div>
     </div>
 
@@ -165,6 +176,15 @@
 </html>
 
 <script>
+
+function toggleLogin() {
+      var logininicio = document.getElementById('login-inicio');
+      if (logininicio.style.display == 'none') {
+        logininicio.style.display = 'block';
+      } else {
+        logininicio.style.display = 'none';
+      }
+    }
 
 // Seleciona todos os links que apontam para uma seção dentro da página
 const sobreDcLink = document.querySelector('a[href="#sobreDc"]');
