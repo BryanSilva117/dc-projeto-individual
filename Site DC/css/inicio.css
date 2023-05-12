@@ -267,7 +267,7 @@ nav ul {
 
 .batman {
     position: absolute;
-    left: 108vh;
+    left: 112vh;
     z-index: 6;
 }
 .batman:hover {
@@ -343,10 +343,10 @@ nav ul {
 
 
 
-/* Estilos CSS para a tela de login */
+/*tela de login */
 .login-inicio {
-    margin-left: 58vh;
-    margin-top: -40vh;
+    margin-left: 73vh;
+    margin-top: -45vh;
     border-radius: 3vh;
     display: none;
     width: 30vh;
