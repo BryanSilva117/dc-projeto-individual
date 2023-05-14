@@ -57,9 +57,16 @@ body {
   }
 
   .wonder1 { 
-    background-image: url(https://cdn.shopify.com/s/files/1/0144/8961/6438/products/eugene-textiles---wonder-woman---comic-stack-toss-multi.jpg?v=1652263789);
+    box-shadow: inset rgba(0, 0, 0, 0.801) 0 100px 50px -15px;
+    background-image: url(../img/background\ wonder.png);
     background-size: cover;
-    
+    height: 106vh;
+  }
+
+  .superman1 { 
+    box-shadow: inset rgba(0, 0, 0, 0.801) 0 100px 50px -15px;
+    background-image: url(https://images8.alphacoders.com/386/386239.jpg);
+    background-size: cover;
     height: 106vh;
   }
 
@@ -244,7 +251,7 @@ nav ul {
     display: flex;
     justify-content:flex-start;
     position: relative;
-    top: 15vh;
+    top: 12vh;
     
 }
 
@@ -350,7 +357,7 @@ nav ul {
 
 .parte_aquaman img {
     margin-top: 3vh;
-    margin-left: 74vh;
+    margin-left: 83vh;
     transition: 0.4s;
     animation: aumentar-logo 5s linear infinite;
 }
@@ -371,7 +378,7 @@ nav ul {
 .parte_aquaman span {
     font-size: 4.2vh;
     color: rgb(202, 64, 0);
-    -webkit-text-stroke: 0.6px black;
+    -webkit-text-stroke: 0.1px black;
 }
 
 
@@ -407,19 +414,21 @@ nav ul {
 }
 
 .parte_wonder {
-    margin-left: 2vh;
-    color:  rgba(255, 204, 0, 0.699);
-    -webkit-text-stroke: 1px black;
+    padding-top: 1vh;
+    padding-left: 2vh;
+    background-color: rgba(0, 0, 0, 0.671);
+    color:  rgb(255, 196, 0);
+    -webkit-text-stroke: 0.8px rgb(8, 8, 8);
     display: flex;
     justify-content: left;
-    text-align: left;
+    text-align: center;
     font-family: 'Oswald', sans-serif;
     font-size: 4vh;
 }
 
 .parte_wonder .Wimg {
     margin-top: 3vh;
-    margin-left: 0vh;
+    margin-left: 68vh;
     transition: 0.4s;
     animation: aumentar-logo 5s linear infinite;
 }
@@ -428,7 +437,15 @@ nav ul {
     display: flex;
     justify-content: right;
     align-items: end;
-    margin-bottom: -4.7vh;
+}
+
+.parte_wonder span {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 4.3vh;
+    color: rgb(255, 255, 255);
+    -webkit-text-stroke: 0.1px rgb(0, 0, 0);
 }
 
 
