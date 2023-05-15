@@ -68,6 +68,7 @@ function cadastrar(req, res) {
     var senha = req.body.senhaServer;
     var dtNasc = req.body.dtNascServer;
     var genero = req.body.generoServer;
+    var personagemFav = req.body.heroFavoritoServer;
 
     // Faça as validações dos valores
     if (nome == undefined) {
@@ -82,10 +83,12 @@ function cadastrar(req, res) {
         res.status(400).send("Seu dtNasc está undefined!");
     }  else if (genero == undefined) {
         res.status(400).send("Seu genero está undefined!");
+    } else if (personagemFav == undefined) {
+        res.status(400).send("Seu genero está undefined!");
     } else {
         
         // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
-        usuarioModel.cadastrar(nome, sobrenome, email, senha, dtNasc, genero)
+        usuarioModel.cadastrar(nome, sobrenome, email, senha, dtNasc, genero, personagemFav)
             .then(
                 function (resultado) {
                     res.json(resultado);

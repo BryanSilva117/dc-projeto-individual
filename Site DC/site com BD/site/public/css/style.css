@@ -70,6 +70,27 @@ body {
     height: 106vh;
   }
 
+  .batman1 { 
+    box-shadow: inset rgba(0, 0, 0, 0.801) 0 100px 50px -15px;
+    background-image: url(../img/background\ batman.jpg);
+    background-size: cover;
+    height: 106vh;
+  }
+
+  .flash1 { 
+    box-shadow: inset rgba(0, 0, 0, 0.801) 0 100px 50px -15px;
+    background-image: url(../img/imgfl.jpg);
+    background-size: cover;
+    height: 106vh;
+  }
+
+  .cyborg1 { 
+    box-shadow: inset rgba(0, 0, 0, 0.801) 0 100px 50px -15px;
+    background-image: url(../img/background\ cyborg.jpg);
+    background-size: cover;
+    height: 106vh;
+  }
+
 
 
 .quatro {
@@ -84,7 +105,7 @@ body {
 .cinco {
     background-color: rgba(0, 0, 0, 0.89);
     background-image: none;
-    height: 14vh;
+    height: 15vh;
     border-bottom: 0;
 }
 
@@ -357,7 +378,7 @@ nav ul {
 
 .parte_aquaman img {
     margin-top: 3vh;
-    margin-left: 83vh;
+    margin-left: 87vh;
     transition: 0.4s;
     animation: aumentar-logo 5s linear infinite;
 }
@@ -401,6 +422,7 @@ nav ul {
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.418);
     background-color: rgba(255, 255, 0, 0.822);
     color: rgb(202, 64, 0);
+    transform: scale(1.15);
 }
 
 
@@ -458,6 +480,7 @@ nav ul {
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.418);
     background-color: rgb(0, 75, 0);
     color: rgb(0, 255, 0);
+    transform: scale(1.15);
 }
 
 
@@ -517,7 +540,8 @@ nav ul {
 .parte_wonder a:hover {
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.418);
     background-color: rgb(255, 196, 0);
-    color: white
+    color: white;
+    transform: scale(1.15);
 }
 
 
@@ -577,6 +601,175 @@ nav ul {
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.418);
     background-color: rgb(170, 0, 0);
     color: rgb(252, 209, 22);
+    transform: scale(1.15);
+}
+
+
+
+
+.parte_batman {
+    margin-left: 1vh;
+    color:  rgb(255, 255, 255);
+    -webkit-text-stroke: 1px black;
+    display: flex;
+    justify-content: left;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 4vh;
+}
+
+.parte_batman img {
+    margin-top: 3vh;
+    margin-left: 83vh;
+    transition: 0.4s;
+    animation: aumentar-logo 5s linear infinite;
+}
+
+.parte_batman span {
+    font-size: 4.2vh;
+    color: rgb(0, 0, 0);
+    -webkit-text-stroke: 0.1px rgba(143, 140, 140, 0.466);
+}
+
+.parte_batman a {
+    margin-top: 2vh;
+    font-family: 'Oswald', sans-serif;
+    text-decoration: none;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    background-color: rgb(44, 44, 43);
+    color: rgba(255, 255, 255, 0.822);
+    border-radius: 2vh;
+    margin-left: 51vh;
+    padding-left: 2vh;
+    width: 15vh;
+    height: 8vh;
+    transition: 0.5s;
+}
+
+.parte_batman a:hover {
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.418);
+    background-color: rgba(255, 255, 255, 0.822);
+    color: rgb(44, 44, 43);
+    transform: scale(1.15);
+}
+
+
+
+
+.parte_flash {
+    margin-left: 80vh;
+    color:  rgb(255, 255, 255);
+    -webkit-text-stroke: 1px rgb(77, 76, 76);
+    display: flex;
+    justify-content: right;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 4vh;
+    margin-right: 2vh;
+}
+
+.parte_flash .Wimg {
+    margin-top: 3vh;
+    margin-right: 81vh;
+    transition: 0.4s;
+    animation: aumentar-logo 5s linear infinite;
+}
+
+.parte_flash .back_img {
+    margin-top: 20.3vh;
+    margin-right: -24vh;
+    display: flex;
+    justify-content: left;
+    
+}
+
+.parte_flash p {   
+    margin-top: -6vh;
+    text-align: center;
+}
+
+.parte_flash span {
+    display: flex;
+    justify-content: center;
+    font-size: 4.2vh;
+    color: rgb(252, 209, 22);
+    -webkit-text-stroke: 0.1px rgb(0, 0, 0);
+}
+
+
+.parte_flash a {
+    font-family: 'Oswald', sans-serif;
+    text-decoration: none;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    background-color: rgb(252, 209, 22);
+    color: rgb(167, 10, 10);
+    border-radius: 2vh;
+    margin-top: 2vh;
+    margin-left: 48vh;
+    padding-left: 2vh;
+    width: 15vh;
+    height: 8vh;
+    transition: 0.5s;
+}
+
+.parte_flash a:hover {
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.418);
+    background-color: rgb(170, 0, 0);
+    color: rgb(255, 255, 255);
+    transform: scale(1.15);
+}
+
+
+.parte_cyborg {
+    margin-left: 1vh;
+    color:  rgb(255, 255, 255);
+    -webkit-text-stroke: 1px black;
+    display: flex;
+    justify-content: left;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 4.1vh;
+}
+
+.parte_cyborg img {
+    margin-top: 3vh;
+    margin-left: 83vh;
+    transition: 0.4s;
+    animation: aumentar-logo 5s linear infinite;
+}
+
+.parte_cyborg span {
+    font-size: 4.2vh;
+    color: rgb(255, 0, 0);
+    -webkit-text-stroke: 0.1px rgb(0, 0, 0);
+}
+
+.parte_cyborg a {
+    margin-top: 2vh;
+    font-family: 'Oswald', sans-serif;
+    text-decoration: none;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    background-color: rgba(1, 132, 255, 0.822);
+    color: rgb(36, 36, 36);
+    border-radius: 2vh;
+    margin-left: 51vh;
+    padding-left: 2vh;
+    width: 15vh;
+    height: 8vh;
+    transition: 0.5s;
+}
+
+.parte_cyborg a:hover {
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.418);
+    background-color: rgb(36, 36, 36);
+    color: rgba(1, 132, 255, 0.822);
+    transform: scale(1.15);
 }
 
 
@@ -588,7 +781,7 @@ nav ul {
     justify-content: space-around;
 }
 .imgSocial {
-    width: 70.5vh;
+    width: 70.8vh;
     margin-left: -10vh;
 }
 .social {
@@ -704,7 +897,7 @@ nav ul {
   }
 
   .loading-div {
-    width: 107px;
+    width: 116px;
     margin-top: 1vh;
     display: none;
   }
