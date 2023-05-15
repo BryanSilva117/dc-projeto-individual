@@ -660,8 +660,8 @@ nav ul {
 
 .parte_flash {
     margin-left: 80vh;
-    color:  rgb(255, 255, 255);
-    -webkit-text-stroke: 1px rgb(77, 76, 76);
+    color:  rgb(0, 0, 0);
+    -webkit-text-stroke: 1px rgb(0, 0, 0);
     display: flex;
     justify-content: right;
     text-align: center;

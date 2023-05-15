@@ -72,7 +72,7 @@
 
             <div class="inputs">
 
-                <input class="nome" placeholder="Nome" id="nome_input">
+                <input class="nome" placeholder="Nome*" id="nome_input">
 
                 <input class="sobrenome" placeholder="Sobrenome" id="sobrenome_input">
 
@@ -80,16 +80,16 @@
 
             <div class="inputs">
 
-                <input class="email" placeholder="Email" id="email_input">
+                <input class="email" placeholder="Email*" id="email_input">
 
 
             </div>
 
             <div class="inputs">
 
-                <input class="senha" type="password" placeholder="Senha" id="senha_input">
+                <input class="senha" type="password" placeholder="Senha*" id="senha_input">
 
-                <input class="confirmar" type="password" placeholder="Confirmar Senha" id="confirmacao_senha_input">
+                <input class="confirmar" type="password" placeholder="Confirmar Senha*" id="confirmacao_senha_input">
 
             </div>
             <br>
@@ -166,7 +166,7 @@
 
         if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
             cardErro.style.display = "block"
-            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+            mensagem_erro.innerHTML = "(Todos os campos com * e obrigatorio! )";
 
             finalizarAguardar();
             return false;
