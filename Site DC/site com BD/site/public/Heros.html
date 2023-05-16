@@ -26,27 +26,46 @@
 
     <header class="header">
 
-        <div class="logo">
-            <a href="./index.html">
-                <img src="./img/DCLOGO3.png" alt="LOGOPG">
-            </a>
-        </div>
+            <div class="fechar">
+                <a onclick="fechar()">
+                    <img src="https://cdn-icons-png.flaticon.com/512/56/56763.png" alt="" width="30px">
+                </a>
+            </div>
+    
+            <div class="logo">
+                <a href="./index.html">
+                    <img src="./img/DCLOGO3.png" alt="LOGOPG">
+                </a>
+            </div>
 
-        <a class="jl" href="#JL">
-            <img src="./img/LogoJL.png" alt="" width="40px">
-        </a>
-
-
-
+        
 
     </header>
 
-    <div class="inicio" id="inicio">
+    <div class="inicio lateral1" id="lateralI" style="display: block;">
         <div class="lateral">
 
+            <h1>Equipes DC</h1>
 
+            <div>
+                <a href="#">Liga da Justiça</a>
+            </div>
 
 
         </div>
 
+
 </body>
+
+</html>
+
+<script>
+    function fechar() {
+        var lateral = document.getElementById('lateralI');
+        if (lateral.style.display == 'block') {
+            lateral.style.display = 'none';
+        } else {
+            lateral.style.display = 'block';
+        }
+    }
+</script>

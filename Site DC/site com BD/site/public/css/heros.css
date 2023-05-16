@@ -4,17 +4,18 @@
 }
 
 .lateral {
-    display: flex;
     background-color: rgb(92, 92, 92);
     width: 30vh;
-    height: 98vh;
+    height: 100vh;
     position: fixed;
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.418);
+    border-radius: 0.5vh;
 }
+
 
 header {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-around;
     box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.418);
     padding: 1vh 5vh;
     position: fixed;
@@ -26,6 +27,11 @@ header {
     background-color: rgba(0, 0, 255, 0.596);
 }
 
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .logo img {
     display: flex;
@@ -41,44 +47,26 @@ header {
 
 }
 
-.jl {
-    font-size: 3.3vh;
-    display: flex;
-    color: white;
-    margin-left: -60vh;
-    cursor: pointer;
-    transition: 0.4s;
-    font-family: 'Oswald', sans-serif;
-    text-decoration: none;
-}
-.jl:hover {
-    color: black;
-    transform: scale(1.2);
-}
-
-
 nav ul {
     display: flex;
     list-style: none;
 }
 
 
-.container a {
-    font-size: 2.5vh;
-    background-color: rgba(0, 0, 0, 0.61);
-    border: 5px black;
-    border-radius: 2vh;
-    padding: 2vh 2vh;
-    text-decoration: none;
-    color: white;
-    margin: 2vh;
-    font-family: 'Oswald', sans-serif;
+.fechar {
+    width: 5vh;
+    height: 5vh;
+    /* background-color: rgb(92, 92, 92); */
 }
 
-
-.container a:hover {
-    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.418);
-    background-color: white;
-    color: black;
+.fechar a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 6vh;
     transition: 0.4s;
+}
+
+.fechar a:hover {
+    transform: scale(1.15);
 }
