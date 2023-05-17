@@ -3,19 +3,20 @@
     padding: 0;
 }
 
-.lateral {
+.lateral1 {
     background-color: rgb(92, 92, 92);
     width: 30vh;
     height: 100vh;
     position: fixed;
     box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.418);
     border-radius: 0.5vh;
+    transition: 0.4s;
 }
 
 
 header {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.418);
     padding: 1vh 5vh;
     position: fixed;
@@ -59,14 +60,45 @@ nav ul {
     /* background-color: rgb(92, 92, 92); */
 }
 
-.fechar a {
+.fechar {
+    margin-left: 27vh;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 6vh;
     transition: 0.4s;
+    margin-top: 3vh;
 }
+
 
 .fechar a:hover {
     transform: scale(1.15);
+}
+
+.fechar1 a:hover {
+    transform: scale(1.15);
+}
+
+
+/* parte lateral */
+
+.lateral {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+    margin-top: 3vh;
+}
+.lateral span {
+    color: rgba(0, 0, 255, 0.596);
+    display: flex;
+    font-size: 5vh;
+    
+}
+.lateral h1 {
+    margin-top: 5vh;
+    display: flex;
+    justify-content: center;
 }

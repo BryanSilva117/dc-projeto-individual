@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./img/DCLOGO3.png">
     <title>Detective Comics Inicio</title>
-    <link rel="stylesheet" href="./css/heros.css">
+    <link rel="stylesheet" href="./css/hero.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
@@ -26,7 +26,7 @@
 
     <header class="header">
 
-            <div class="fechar">
+            <div class="fechar" id="diminuir">
                 <a onclick="fechar()">
                     <img src="https://cdn-icons-png.flaticon.com/512/56/56763.png" alt="" width="30px">
                 </a>
@@ -44,11 +44,21 @@
 
     <div class="inicio lateral1" id="lateralI" style="display: block;">
         <div class="lateral">
-
+            <div >
+                <h3>Seja bem Vindo <br> <span id="div_usuario">usuário!</span></h3>
+            </div>
             <h1>Equipes DC</h1>
+            <br>
+            <br>
 
             <div>
                 <a href="#">Liga da Justiça</a>
+                <br><br>
+                <a href="#">Sociedade da Justiça</a>
+                <br><br>
+                <a href="#">Justiça Jovem</a>
+                <br><br>
+                <a href="#">Jovens Titã</a>
             </div>
 
 
@@ -60,12 +70,20 @@
 </html>
 
 <script>
+
+    div_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+
+
     function fechar() {
         var lateral = document.getElementById('lateralI');
+        var margin = document.getElementById('diminuir');
         if (lateral.style.display == 'block') {
             lateral.style.display = 'none';
+            margin.style.marginLeft = '2vh'
         } else {
             lateral.style.display = 'block';
+            margin.style.marginLeft = '27vh'
         }
     }
 </script>
+
