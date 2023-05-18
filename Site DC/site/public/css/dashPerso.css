@@ -3,23 +3,6 @@
     padding: 0;
 }
 
-.inicio {
-    background-color: rgba(255, 255, 255, 0.589);
-    height: 145vh;
-}
-.dois {
-    background-color: black;
-    height: 145vh;
-}
-.tres {
-    background-color: aqua;
-    height: 145vh;
-}
-.quatro {
-    background-color:pink;
-    height: 145vh;
-}
-
 .lateral1 {
     background-color: rgb(92, 92, 92);
     width: 40vh;
@@ -66,13 +49,11 @@ nav ul {
 }
 
 
+
+
 .fechar {
     width: 5vh;
     height: 5vh;
-    /* background-color: rgb(92, 92, 92); */
-}
-
-.fechar {
     margin-left: 37vh;
     display: flex;
     justify-content: center;
@@ -126,57 +107,3 @@ nav ul {
     display: flex;
     justify-content: center;
 }
-
-
-/* parte herois */
-
-.imgHero {
-    border: 1vh solid rgba(0, 0, 255, 0.596);
-    border-radius: 7vh;
-}
-
-.quadros {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.quadros2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-.herois {
-    margin-left: 2vh;
-    margin-top: 20vh;
-    transition: 0.6s;
-}
-
-.herois:hover {
-    transform: scale(1.15);
-}
-
-.herois span {
-    font-family: 'Oswald', sans-serif;
-    font-size: 4vh;
-    display: flex;
-}
-
-.herois2 {
-    margin-left: 2vh;
-    margin-top: 2vh;
-    transition: 0.6s;
-}
-
-.herois2:hover {
-    transform: scale(1.15);
-}
-
-.herois2 span {
-    font-family: 'Oswald', sans-serif;
-    font-size: 4vh;
-    display: flex;
-}
-

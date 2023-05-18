@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./img/DCLOGO3.png">
-    <title>Detective Comics Inicio</title>
+    <title>Detective Comics Herois</title>
     <link rel="stylesheet" href="./css/hero.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,6 +32,10 @@
             </a>
         </div>
 
+        <div>
+            <input id="input_pesquisar"> <button onclick="pesquisar()">Pesquisar</button>
+        </div>
+
         <div class="logo">
             <a href="./index.html">
                 <img src="./img/DCLOGO3.png" alt="LOGOPG">
@@ -51,7 +55,7 @@
         <div class="lateral1" id="lateralI" style="display: block; margin-left: 0vh;">
             <div class="lateral">
                 <div>
-                    <h3>Seja bem Vindo <br> <span id="div_usuario">usuário!</span></h3>
+                    <h2>Seja bem Vindo<span id="div_usuario"><br>usuário!</span></h2>
                 </div>
                 <h1>Equipes DC</h1>
                 <br>
@@ -74,17 +78,10 @@
                     <br><br>
                     <a href="#">Galeria de Vilões</a>
                     <br><br>
-                    <a href="#">Galeria de Vilões</a>
-                    <br><br>
-                    <a href="#">Galeria de Vilões</a>
-                    <br><br>
-                    <a href="#">Galeria de Vilões</a>
-                    <br><br>
-                    <a href="#">Galeria de Vilões</a>
-                    <br><br>
-                    <a href="#">Galeria de Vilões</a>
-                    <br><br>
-                    <a href="#">Galeria de Vilões</a>
+                    <h1>Dash</h1>
+                    <br>
+                    <a href="#">Membros da Liga mais preferidos</a>
+                   
                 </div>
             </div>
         </div>
@@ -94,16 +91,16 @@
         
             <div class="quadros">
                 <div class="herois">
-                    <span>Mulher Maravilha</span> <br>
+                    <span id="mulhermaravilha">Mulher Maravilha</span> <br>
                     <a href="#"><img class="imgHero" src="https://cdn.wallpapersafari.com/59/36/k8Jsnm.jpg" alt=""
                             width="250px" height="300px"></a>
                 </div>
-                <div class="herois">
+                <div class="herois" id="superman">
                     <span>Superman</span><br>
                     <a href="#"><img class="imgHero" src="https://cdn.wallpapersafari.com/59/36/k8Jsnm.jpg" alt=""
                             width="250px" height="300px"></a>
                 </div>
-                <div class="herois">
+                <div class="herois" id="batman">
                     <span>Batman</span><br>
                     <a href="#"><img class="imgHero" src="https://cdn.wallpapersafari.com/59/36/k8Jsnm.jpg" alt=""
                             width="250px" height="300px"></a>
@@ -111,22 +108,22 @@
 
             </div>
             <div class="quadros2">
-                <div class="herois2">
+                <div class="herois2" id="id_personagem">
                     <span>Aquaman</span><br>
                     <a href="#"><img class="imgHero" src="https://cdn.wallpapersafari.com/59/36/k8Jsnm.jpg" alt=""
                             width="250px" height="300px"></a>
                 </div>
-                <div class="herois2">
+                <div class="herois2" id="id_personagem">
                     <span>Lanterna Verde</span><br>
                     <a href="#"><img class="imgHero" src="https://cdn.wallpapersafari.com/59/36/k8Jsnm.jpg" alt=""
                             width="250px" height="300px"></a>
                 </div>
-                <div class="herois2">
+                <div class="herois2" id="id_personagem">
                     <span>Flash</span><br>
                     <a href="#"><img class="imgHero" src="https://cdn.wallpapersafari.com/59/36/k8Jsnm.jpg" alt=""
                             width="250px" height="300px"></a>
                 </div>
-                <div class="herois2">
+                <div class="herois2" id="id_personagem">
                     <span>Ciborgue</span><br>
                     <a href="#"><img class="imgHero" src="https://cdn.wallpapersafari.com/59/36/k8Jsnm.jpg" alt=""
                             width="250px" height="300px"></a>
@@ -136,17 +133,17 @@
 
     <div class="inicio dois">
             <div class="quadros">
-                <div class="herois">
+                <div class="herois" id="id_Personagem">
                     <span>Mulher Maravilha</span> <br>
                     <a href="#"><img class="imgHero" src="https://cdn.wallpapersafari.com/59/36/k8Jsnm.jpg" alt=""
                             width="250px" height="300px"></a>
                 </div>
-                <div class="herois">
+                <div class="herois" id="id_Personagem">
                     <span>Superman</span><br>
                     <a href="#"><img class="imgHero" src="https://cdn.wallpapersafari.com/59/36/k8Jsnm.jpg" alt=""
                             width="250px" height="300px"></a>
                 </div>
-                <div class="herois">
+                <div class="herois" id="id_Personagem">
                     <span>Batman</span><br>
                     <a href="#"><img class="imgHero" src="https://cdn.wallpapersafari.com/59/36/k8Jsnm.jpg" alt=""
                             width="250px" height="300px"></a>
@@ -154,22 +151,22 @@
 
             </div>
             <div class="quadros2">
-                <div class="herois2">
+                <div class="herois2" id="id_personagem">
                     <span>Aquaman</span><br>
                     <a href="#"><img class="imgHero" src="https://cdn.wallpapersafari.com/59/36/k8Jsnm.jpg" alt=""
                             width="250px" height="300px"></a>
                 </div>
-                <div class="herois2">
+                <div class="herois2" id="id_personagem">
                     <span>Lanterna Verde</span><br>
                     <a href="#"><img class="imgHero" src="https://cdn.wallpapersafari.com/59/36/k8Jsnm.jpg" alt=""
                             width="250px" height="300px"></a>
                 </div>
-                <div class="herois2">
+                <div class="herois2" id="id_personagem">
                     <span>Flash</span><br>
                     <a href="#"><img class="imgHero" src="https://cdn.wallpapersafari.com/59/36/k8Jsnm.jpg" alt=""
                             width="250px" height="300px"></a>
                 </div>
-                <div class="herois2">
+                <div class="herois2" id="id_personagem">
                     <span>Ciborgue</span><br>
                     <a href="#"><img class="imgHero" src="https://cdn.wallpapersafari.com/59/36/k8Jsnm.jpg" alt=""
                             width="250px" height="300px"></a>
@@ -180,17 +177,17 @@
 
     <div class="inicio tres">
         <div class="quadros">
-            <div class="herois">
+            <div class="herois" id="id_Personagem">
                 <span>Mulher Maravilha</span> <br>
                 <a href="#"><img class="imgHero" src="https://cdn.wallpapersafari.com/59/36/k8Jsnm.jpg" alt=""
                         width="250px" height="300px"></a>
             </div>
-            <div class="herois">
+            <div class="herois" id="id_Personagem">
                 <span>Superman</span><br>
                 <a href="#"><img class="imgHero" src="https://cdn.wallpapersafari.com/59/36/k8Jsnm.jpg" alt=""
                         width="250px" height="300px"></a>
             </div>
-            <div class="herois">
+            <div class="herois" id="id_Personagem">
                 <span>Batman</span><br>
                 <a href="#"><img class="imgHero" src="https://cdn.wallpapersafari.com/59/36/k8Jsnm.jpg" alt=""
                         width="250px" height="300px"></a>
@@ -198,22 +195,22 @@
 
         </div>
         <div class="quadros2">
-            <div class="herois2">
+            <div class="herois2" id="id_personagem">
                 <span>Aquaman</span><br>
                 <a href="#"><img class="imgHero" src="https://cdn.wallpapersafari.com/59/36/k8Jsnm.jpg" alt=""
                         width="250px" height="300px"></a>
             </div>
-            <div class="herois2">
+            <div class="herois2" id="id_personagem">
                 <span>Lanterna Verde</span><br>
                 <a href="#"><img class="imgHero" src="https://cdn.wallpapersafari.com/59/36/k8Jsnm.jpg" alt=""
                         width="250px" height="300px"></a>
             </div>
-            <div class="herois2">
+            <div class="herois2" id="id_personagem">
                 <span>Flash</span><br>
                 <a href="#"><img class="imgHero" src="https://cdn.wallpapersafari.com/59/36/k8Jsnm.jpg" alt=""
                         width="250px" height="300px"></a>
             </div>
-            <div class="herois2">
+            <div class="herois2" id="id_personagem">
                 <span>Ciborgue</span><br>
                 <a href="#"><img class="imgHero" src="https://cdn.wallpapersafari.com/59/36/k8Jsnm.jpg" alt=""
                         width="250px" height="300px"></a>
@@ -225,17 +222,17 @@
     <div class="inicio quatro">
 
         <div class="quadros">
-            <div class="herois">
+            <div class="herois" id="id_Personagem">
                 <span>Mulher Maravilha</span> <br>
                 <a href="#"><img class="imgHero" src="https://cdn.wallpapersafari.com/59/36/k8Jsnm.jpg" alt=""
                         width="250px" height="300px"></a>
             </div>
-            <div class="herois">
+            <div class="herois" id="id_Personagem">
                 <span>Superman</span><br>
                 <a href="#"><img class="imgHero" src="https://cdn.wallpapersafari.com/59/36/k8Jsnm.jpg" alt=""
                         width="250px" height="300px"></a>
             </div>
-            <div class="herois">
+            <div class="herois" id="id_Personagem">
                 <span>Batman</span><br>
                 <a href="#"><img class="imgHero" src="https://cdn.wallpapersafari.com/59/36/k8Jsnm.jpg" alt=""
                         width="250px" height="300px"></a>
@@ -243,22 +240,22 @@
 
         </div>
         <div class="quadros2">
-            <div class="herois2">
+            <div class="herois2" id="id_personagem">
                 <span>Aquaman</span><br>
                 <a href="#"><img class="imgHero" src="https://cdn.wallpapersafari.com/59/36/k8Jsnm.jpg" alt=""
                         width="250px" height="300px"></a>
             </div>
-            <div class="herois2">
+            <div class="herois2" id="id_personagem">
                 <span>Lanterna Verde</span><br>
                 <a href="#"><img class="imgHero" src="https://cdn.wallpapersafari.com/59/36/k8Jsnm.jpg" alt=""
                         width="250px" height="300px"></a>
             </div>
-            <div class="herois2">
+            <div class="herois2" id="id_personagem">
                 <span>Flash</span><br>
                 <a href="#"><img class="imgHero" src="https://cdn.wallpapersafari.com/59/36/k8Jsnm.jpg" alt=""
                         width="250px" height="300px"></a>
             </div>
-            <div class="herois2">
+            <div class="herois2" id="id_personagem">
                 <span>Ciborgue</span><br>
                 <a href="#"><img class="imgHero" src="https://cdn.wallpapersafari.com/59/36/k8Jsnm.jpg" alt=""
                         width="250px" height="300px"></a>
@@ -272,6 +269,28 @@
 
 <script>
 
+    lista_herois = []
+    var maravilha = document.getElementById('mulhermaravilha');
+
+
+    lista_herois.push(maravilha)
+
+    function pesquisar() {
+        var personagem = input_pesquisar.value
+        var personagemMod = personagem.replaceAll(" ", "").toLowerCase();
+
+
+        console.log(personagemMod)
+        for(var i = 0; i < lista_herois.length; i++)
+        if (personagemMod == lista_herois[i]) {
+            alert('tem')
+            break
+        }
+        else {
+            alert('naotem')
+        }
+    }
+
     div_usuario.innerHTML = sessionStorage.NOME_USUARIO;
 
 
@@ -283,7 +302,7 @@
             margin.style.marginLeft = '2vh'
         } else {
             lateral.style.marginLeft = '0vh';
-            margin.style.marginLeft = '27vh'
+            margin.style.marginLeft = '37vh'
         }
     }
 </script>
