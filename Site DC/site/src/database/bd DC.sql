@@ -29,7 +29,15 @@ insert into personagemFav values
 (null, 'Outro'),
 (null, 'Prefiro a Marvel');
 
-select * from usuario;
+select count(*) from usuario where fkPersonagemFav = 1;
+select count(*) from usuario where fkPersonagemFav = 2;
+select count(*) from usuario where fkPersonagemFav = 3;
+select count(*) from usuario where fkPersonagemFav = 4;
+select count(*) from usuario where fkPersonagemFav = 5;
+select count(*) from usuario where fkPersonagemFav = 6;
+select count(*) from usuario where fkPersonagemFav = 7;
+select count(*) from usuario where fkPersonagemFav = 8;
+select count(*) from usuario where fkPersonagemFav = 9;
 
 select usuario.nome as 'Nome Usuario', email, senha, dtNasc, Genero, personagemFav.nomeP as 'Personagem Favorito' 
 	from usuario join personagemFav on fkPersonagemFav = idPersonagemFav;

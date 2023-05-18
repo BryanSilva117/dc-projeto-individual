@@ -3,6 +3,23 @@
     padding: 0;
 }
 
+.inicio {
+    background-color: rgba(255, 255, 255, 0.589);
+    height: 145vh;
+}
+.dois {
+    background-color: black;
+    height: 145vh;
+}
+.tres {
+    background-color: aqua;
+    height: 145vh;
+}
+.quatro {
+    background-color:pink;
+    height: 145vh;
+}
+
 .lateral1 {
     background-color: rgb(92, 92, 92);
     width: 30vh;
@@ -10,7 +27,9 @@
     position: fixed;
     box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.418);
     border-radius: 0.5vh;
-    transition: 0.4s;
+    transition: 0.5s;
+    z-index: 1;
+    overflow-y: auto;
 }
 
 
@@ -38,15 +57,8 @@ header {
     display: flex;
     height: 12vh;
     cursor: pointer;
-    transition: 0.4s;
 }
 
-
-.logo :hover {
-    transform: scale(1.2); /* Aumenta a escala da logo em 20% quando o mouse passa por cima */
-    margin-top: 5px;
-
-}
 
 nav ul {
     display: flex;
@@ -75,9 +87,21 @@ nav ul {
     transform: scale(1.15);
 }
 
-.fechar1 a:hover {
+.sair {
+    display: flex;
+    justify-content: center;
+    margin-top: 3.5vh;
+    margin-right: 1vh;
+    width: 10vh;
+    height: 4vh;
+    transition: 0.4s;
+}
+
+.sair:hover {
     transform: scale(1.15);
 }
+
+
 
 
 /* parte lateral */
@@ -102,3 +126,57 @@ nav ul {
     display: flex;
     justify-content: center;
 }
+
+
+/* parte herois */
+
+.imgHero {
+    border: 1vh solid rgba(0, 0, 255, 0.596);
+    border-radius: 7vh;
+}
+
+.quadros {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quadros2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.herois {
+    margin-left: 2vh;
+    margin-top: 20vh;
+    transition: 0.6s;
+}
+
+.herois:hover {
+    transform: scale(1.15);
+}
+
+.herois span {
+    font-family: 'Oswald', sans-serif;
+    font-size: 4vh;
+    display: flex;
+}
+
+.herois2 {
+    margin-left: 2vh;
+    margin-top: 2vh;
+    transition: 0.6s;
+}
+
+.herois2:hover {
+    transform: scale(1.15);
+}
+
+.herois2 span {
+    font-family: 'Oswald', sans-serif;
+    font-size: 4vh;
+    display: flex;
+}
+
