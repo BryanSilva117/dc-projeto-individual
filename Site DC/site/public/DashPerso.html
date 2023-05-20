@@ -5,49 +5,99 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../assets/imgs/logo naruto.png" type="image/x-icon">
-    <link rel="stylesheet" href="../css/scrollbar.css">
-    <link rel="stylesheet" href="../css/dash.css">
-    <link rel="stylesheet" href="../css/sidebar.css">
+    <link rel="icon" href="./img/DCLOGO3.png">
+    <title>Detective Comics Herois</title>
+    <link rel="stylesheet" href="./css/dashPerso.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital@1&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
         <!-- scripts do Chart.js - 2022-1 -->
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <script src="https://kit.fontawesome.com/3f0399636b.js" crossorigin="anonymous"></script>
         <script src="../js/funcoes.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
         <script src="http://www.chartjs.org/dist/2.7.1/Chart.js"></script>
-        <script src="http://www.chartjs.org/samples/latest/utils.js"></script>
+        
 
     <title>Dashboard</title>
 </head>
 
 <body>
-    <div id="dashboard-container">
-        <nav class="select-disable" id="nav">
-            <img src="../assets/imgs/logo naruto.png" href="index.html" class="logo-naruto">
-            <div class="texto-user">
-                <span>Bem-vindo</span>
-                <span id="b_usuario"></span>
+
+
+    <header class="header">
+
+        <div class="fechar" id="diminuir">
+            <a onclick="fechar()">
+                <img src="https://cdn-icons-png.flaticon.com/512/56/56763.png" alt="" width="30px">
+            </a>
+        </div>
+
+        <div class="logo">
+            <a href="./index.html">
+                <img src="./img/DCLOGO3.png" alt="LOGOPG">
+            </a>
+        </div>
+
+        <div class="sair">
+            <a href="./index.html"><img src="https://cdn-icons-png.flaticon.com/512/1828/1828479.png" alt=""
+                    width="30px"></a>
+        </div>
+
+
+
+    </header>
+
+    <div class="inicio">
+        <div class="lateral1" id="lateralI" style="display: block; margin-left: 0vh;">
+            <div class="lateral">
+                <div>
+                    <h2>Seja bem Vindo<span id="div_usuario"><br>usuário!</span></h2>
+                </div>
+                <h1>Equipes DC</h1>
+                <br>
+                <br>
+
+                <div>
+                    <a href="#">Liga da Justiça</a>
+                    <br><br>
+                    <a href="#">Sociedade da Justiça</a>
+                    <br><br>
+                    <a href="#">Justiça Jovem</a>
+                    <br><br>
+                    <a href="#">Jovens Titã</a>
+                    <br><br>
+                    <h1>Vilões/Anti-Herois</h1>
+                    <br><br>
+                    <a href="#">Liga da Injustiça</a>
+                    <br><br>
+                    <a href="#">Esquadrão Suicida</a>
+                    <br><br>
+                    <a href="#">Galeria de Vilões</a>
+                    <br><br>
+                    <h1>Dash</h1>
+                    <br>
+                    <a href="./DashPerso.html">Membros da Liga mais preferidos</a>
+                   
+                </div>
             </div>
-            <ul class="nav-list">
-                <li><a href="quiz.personalidade.html"><img class="icon-nav" src="../assets/imgs/itachi-uchiha.png" alt="icone anime">
-                    <span>Personalidade</span></a>
-            </li>
-                <li><a href="../index.html"><img class="icon-nav" src="../assets/imgs/sharingan.png"
-                            alt="icone sharigan"><span>Geral</span></a></li>
-                <li><a href="../quiz.html"><img class="icon-nav" src="../assets/imgs/icone-anime.png" alt="icone anime">
-                        <span>Quiz</span></a>
-                </li>
-                <li class="pag-atual"><a href="../pontuacao.html"><img class="icon-nav" src="../assets/imgs/naruto-sign.png"
-                            alt="icone banadana"><span>Pontuações</span></a>
-                </li>
-            </ul>
-            <a href="../login.html"><button>SAIR</button></a>
-        </nav>
-        <div id="content">
-            <div class="slide-show select-disable">
-                <h2>Personagens favoritos</h2>
-                <ul class="slides-list">
-                    <li class="slide">
+        </div>
+
+        
+        <div>
+            <div >
+                <h2>Personagens preferidos pelos usuarios da Liga da Justiça</h2>
+                <br>
+                <br>
+                <ul >
+                    <li class="">
                         <canvas id="myChart"></canvas>
                     </li>
 
@@ -60,6 +110,21 @@
 </html>
 
 <script>
+
+div_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+
+
+function fechar() {
+    var lateral = document.getElementById('lateralI');
+    var margin = document.getElementById('diminuir');
+    if (lateral.style.marginLeft == '0vh') {
+        lateral.style.marginLeft = '-40vh';
+        margin.style.marginLeft = '2vh'
+    } else {
+        lateral.style.marginLeft = '0vh';
+        margin.style.marginLeft = '37vh'
+    }
+}
 
 
 
@@ -102,28 +167,25 @@ function plotarGrafico(resposta, idAquario) {
         datasets: [
             {
                 label: '',
-
                 data: []
             },
             {
                 yAxisID: 'y-totalpersonagens',
                 label: 'Personagem Favorito',
-                backgroundColor: ['#FF1493', '#FFFF00', '#FF4500', '#00FF00', '#4B0082', '#0000FF', '#FFF','#ADD8e6','#FF007F','#008000'],
+                backgroundColor: ['rgb(0, 120, 240)', 'rgb(0, 0, 0)', 'rgb(204, 165, 17)', 'rgb(255, 0, 0)', 'rgb( 0, 153, 0)', 'rgb(255, 204, 0, 0.822)', 'rgb( 192, 192, 192)', 'rgb(5, 5, 238)', 'rgb(5, 125, 238)'],
                 fill: true,
                 data: []
             }
         ]
     };
-    
 
     for (i = 0; i < resposta.length; i++) {
         var registro = resposta[i];
         dados.labels.push(registro.personagem);
         dados.datasets[0].data.push(registro.personagem);
         dados.datasets[1].data.push(registro.voto);
-        console.log(registro.voto)
-
-
+        console.log(registro.voto);
+    }
 
     console.log(JSON.stringify(dados));
 
@@ -139,7 +201,6 @@ function plotarGrafico(resposta, idAquario) {
                 display: true,
                 text: 'Os Personagens mais Escolhidos'
             },
-
             scales: {
                 yAxes: [{
                     type: 'linear',
@@ -148,7 +209,7 @@ function plotarGrafico(resposta, idAquario) {
                     id: 'y-totalpersonagens',
                     ticks: {
                         beginAtZero: true,
-                        max: 50,
+                        max: 30,
                         min: 0
                     }
                 }, {
@@ -157,6 +218,7 @@ function plotarGrafico(resposta, idAquario) {
             }
         }
     });
+}
 
     
 
@@ -220,9 +282,8 @@ function plotarGrafico(resposta, idAquario) {
 
     }
 
-}
 
 
-}
+
 
 </script>
