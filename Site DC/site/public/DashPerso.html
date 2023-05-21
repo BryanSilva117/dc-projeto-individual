@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./img/DCLOGO3.png">
-    <title>Detective Comics Herois</title>
+    <title>Detective Comics Dash</title>
     <link rel="stylesheet" href="./css/dashPerso.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,48 +18,51 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital@1&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
-        <!-- scripts do Chart.js - 2022-1 -->
-        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-        <script src="https://kit.fontawesome.com/3f0399636b.js" crossorigin="anonymous"></script>
-        <script src="../js/funcoes.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
-        <script src="http://www.chartjs.org/dist/2.7.1/Chart.js"></script>
-        
+    <!-- scripts do Chart.js - 2022-1 -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://kit.fontawesome.com/3f0399636b.js" crossorigin="anonymous"></script>
+    <script src="../js/funcoes.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <script src="http://www.chartjs.org/dist/2.7.1/Chart.js"></script>
+
 
     <title>Dashboard</title>
 </head>
 
 <body>
 
-
-    <header class="header">
-
-        <div class="fechar" id="diminuir">
-            <a onclick="fechar()">
-                <img src="https://cdn-icons-png.flaticon.com/512/56/56763.png" alt="" width="30px">
-            </a>
-        </div>
-
-        <div class="logo">
-            <a href="./index.html">
-                <img src="./img/DCLOGO3.png" alt="LOGOPG">
-            </a>
-        </div>
-
-        <div class="sair">
-            <a href="./index.html"><img src="https://cdn-icons-png.flaticon.com/512/1828/1828479.png" alt=""
-                    width="30px"></a>
-        </div>
-
-
-
-    </header>
-
     <div class="inicio">
+        <header class="header">
+
+            <div class="fechar" id="diminuir">
+                <a onclick="fechar()">
+                    <img src="https://cdn-icons-png.flaticon.com/512/56/56763.png" alt="" width="30px">
+                </a>
+            </div>
+
+            <div class="logo">
+                <a href="./index.html">
+                    <img src="./img/DCLOGO3.png" alt="LOGOPG">
+                </a>
+            </div>
+
+            <div class="sair">
+                <a href="./index.html"><img src="https://cdn-icons-png.flaticon.com/512/1828/1828479.png" alt=""
+                        width="30px"></a>
+            </div>
+
+
+
+        </header>
+
+
         <div class="lateral1" id="lateralI" style="display: block; margin-left: 0vh;">
             <div class="lateral">
                 <div>
-                    <h2>Seja bem Vindo<span id="div_usuario"><br>usuário!</span></h2>
+                    <h1>Membros da Liga preferidos</h1>
+                    <br>
+                    <a href="./hero.html">Voltar</a>
+                    <br><br>
                 </div>
                 <h1>Equipes DC</h1>
                 <br>
@@ -67,113 +70,111 @@
 
                 <div>
                     <a href="#">Liga da Justiça</a>
-                    <br><br>
+                    <br>
                     <a href="#">Sociedade da Justiça</a>
-                    <br><br>
+                    <br>
                     <a href="#">Justiça Jovem</a>
-                    <br><br>
+                    <br>
                     <a href="#">Jovens Titã</a>
+                    <br>
+                    <a href="#">Família Marvel</a>
                     <br><br>
                     <h1>Vilões/Anti-Herois</h1>
-                    <br><br>
+                    <br>
                     <a href="#">Liga da Injustiça</a>
-                    <br><br>
+                    <br>
                     <a href="#">Esquadrão Suicida</a>
-                    <br><br>
+                    <br>
                     <a href="#">Galeria de Vilões</a>
                     <br><br>
-                    <h1>Dash</h1>
-                    <br>
-                    <a href="./DashPerso.html">Membros da Liga mais preferidos</a>
-                   
+                
+
                 </div>
             </div>
         </div>
 
-        
+
         <div>
-            <div >
-                <h2>Personagens preferidos pelos usuarios da Liga da Justiça</h2>
+            <div>
                 <br>
                 <br>
-                <ul >
-                    <li class="">
+                <ul>
+                    <li class="Dash" id="dash" style="margin-left: 50vh;">
                         <canvas id="myChart"></canvas>
                     </li>
 
-                
+
                 </ul>
             </div>
         </div>
+    </div>
 </body>
 
 </html>
 
 <script>
 
-div_usuario.innerHTML = sessionStorage.NOME_USUARIO;
 
-
-function fechar() {
-    var lateral = document.getElementById('lateralI');
-    var margin = document.getElementById('diminuir');
-    if (lateral.style.marginLeft == '0vh') {
-        lateral.style.marginLeft = '-40vh';
-        margin.style.marginLeft = '2vh'
-    } else {
-        lateral.style.marginLeft = '0vh';
-        margin.style.marginLeft = '37vh'
-    }
-}
-
-
-
-let proximaAtualizacao;
-
-window.onload = obterDadosGrafico(1);
-
-
-function obterDadosGrafico(idAquario) {
-
-    if (proximaAtualizacao != undefined) {
-        clearTimeout(proximaAtualizacao);
-    }
-
-
-    fetch(`/medidas/ultimas/${idAquario}`, { cache: 'no-store' }).then(function (response) {
-        if (response.ok) {
-            response.json().then(function (resposta) {
-                console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
-                plotarGrafico(resposta, idAquario);
-
-            });
+    function fechar() {
+        var lateral = document.getElementById('lateralI');
+        var margin = document.getElementById('diminuir');
+        var dash = document.getElementById('dash');
+        if (lateral.style.marginLeft == '0vh') {
+            lateral.style.marginLeft = '-40vh';
+            margin.style.marginLeft = '2vh'
+            dash.style.marginLeft = '30vh'
         } else {
-            console.error('Nenhum dado encontrado ou erro na API');
+            lateral.style.marginLeft = '0vh';
+            margin.style.marginLeft = '37vh';
+            dash.style.marginLeft = '50vh'
         }
-    })
-        .catch(function (error) {
-            console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
-        });
-}
+    }
 
-// Esta função *plotarGrafico* usa os dados capturados na função anterior para criar o gráfico
-// Configura o gráfico (cores, tipo, etc), materializa-o na página e, 
-// A função *plotarGrafico* também invoca a função *atualizarGrafico*
-function plotarGrafico(resposta, idAquario) {
+
+
+    let proximaAtualizacao;
+
+    window.onload = obterDadosGrafico(1);
+
+
+    function obterDadosGrafico(idAquario) {
+
+        if (proximaAtualizacao != undefined) {
+            clearTimeout(proximaAtualizacao);
+        }
+
+
+        fetch(`/medidas/ultimas/${idAquario}`, { cache: 'no-store' }).then(function (response) {
+            if (response.ok) {
+                response.json().then(function (resposta) {
+                    console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+                    plotarGrafico(resposta, idAquario);
+
+                });
+            } else {
+                console.error('Nenhum dado encontrado ou erro na API');
+            }
+        })
+            .catch(function (error) {
+                console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+            });
+    }
+
+    // Esta função *plotarGrafico* usa os dados capturados na função anterior para criar o gráfico
+    // Configura o gráfico (cores, tipo, etc), materializa-o na página e, 
+    // A função *plotarGrafico* também invoca a função *atualizarGrafico*
+    function plotarGrafico(resposta, idAquario) {
     console.log('iniciando plotagem do gráfico...');
 
     var dados = {
         labels: [],
         datasets: [
             {
-                label: '',
-                data: []
-            },
-            {
                 yAxisID: 'y-totalpersonagens',
                 label: 'Personagem Favorito',
-                backgroundColor: ['rgb(0, 120, 240)', 'rgb(0, 0, 0)', 'rgb(204, 165, 17)', 'rgb(255, 0, 0)', 'rgb( 0, 153, 0)', 'rgb(255, 204, 0, 0.822)', 'rgb( 192, 192, 192)', 'rgb(5, 5, 238)', 'rgb(5, 125, 238)'],
-                fill: true,
+                backgroundColor: ['rgb(44, 129, 233)', 'rgb(48, 48, 48)', 'rgb(255, 196, 0)', 'rgb(255, 0, 0)', 'rgb(0, 255, 0)', 'rgb(0, 66, 37)', 'rgb( 192, 192, 192)', 'rgb(5, 5, 238)', 'rgb(200, 50, 79)'],
+                borderColor: 'black',
+                borderWidth: 3,
                 data: []
             }
         ]
@@ -182,15 +183,12 @@ function plotarGrafico(resposta, idAquario) {
     for (i = 0; i < resposta.length; i++) {
         var registro = resposta[i];
         dados.labels.push(registro.personagem);
-        dados.datasets[0].data.push(registro.personagem);
-        dados.datasets[1].data.push(registro.voto);
-        console.log(registro.voto);
+        dados.datasets[0].data.push(registro.voto);
     }
 
-    console.log(JSON.stringify(dados));
-
     var ctx = myChart.getContext('2d');
-    window.myChart = Chart.Bar(ctx, {
+    window.myChart = new Chart(ctx, {
+        type: 'bar',
         data: dados,
         options: {
             responsive: true,
@@ -199,7 +197,10 @@ function plotarGrafico(resposta, idAquario) {
             stacked: false,
             title: {
                 display: true,
-                text: 'Os Personagens mais Escolhidos'
+                text: 'Os Personagens da Liga da Justiça mais Escolhidos',
+                fontSize: 18,
+                fontColor: 'rgba(255, 255, 255)',
+                fontFamily: 'Oswald, sans-serif'
             },
             scales: {
                 yAxes: [{
@@ -209,20 +210,29 @@ function plotarGrafico(resposta, idAquario) {
                     id: 'y-totalpersonagens',
                     ticks: {
                         beginAtZero: true,
-                        max: 30,
-                        min: 0
-                    }
-                }, {
-                    display: false,
-                }],
-            }
+                        max: 25,
+                        min: 0,
+                        fontColor: 'white', // Define a cor preta para os números do eixo y
+                        fontSize: 16
+                },
+                gridLines: {
+                    color: 'rgba(0, 0, 0, 0.377)' // Define a cor preta para as linhas do fundo do eixo y
+                }
+            }],
+            xAxes: [{
+                ticks: {
+                    fontColor: 'rgba(255, 255, 255)',
+                    fontFamily: 'Oswald, sans-serif'
+                },
+                gridLines: {
+                    color: 'rgba(0, 0, 0, 0.377)' // Define a cor preta para as linhas do fundo do eixo x
+                }
+            }]
         }
-    });
+    }
+});
 }
 
-    
-
-  
 
     // Esta função *atualizarGrafico* atualiza o gráfico que foi renderizado na página,
     // buscando a última medida inserida em tabela contendo as capturas, 
@@ -251,7 +261,7 @@ function plotarGrafico(resposta, idAquario) {
                         dados.datasets[1].data.push(registro.voto);
                     }
 
-                    
+
                     for (i = 0; i < novoRegistro.length; i++) {
                         var registro = novoRegistro[i];
                         // tirando e colocando valores no gráfico

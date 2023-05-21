@@ -6,9 +6,10 @@
 .inicio {
     background-color: rgba(255, 255, 255, 0.589);
     height: 145vh;
+    overflow-x: hidden;
 }
 .dois {
-    background-color: black;
+    background-color: rgb(53, 53, 53);
     height: 145vh;
 }
 .tres {
@@ -21,7 +22,7 @@
 }
 
 .lateral1 {
-    background-color: rgb(92, 92, 92);
+    background-color: rgba(255, 255, 255, 0.459);
     width: 40vh;
     height: 100vh;
     position: fixed;
@@ -69,7 +70,7 @@ nav ul {
 .fechar {
     width: 5vh;
     height: 5vh;
-    /* background-color: rgb(92, 92, 92); */
+    text-decoration: none;
 }
 
 .fechar {
@@ -108,23 +109,43 @@ nav ul {
 
 .lateral {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
     flex-direction: column;
     font-family: 'Oswald', sans-serif;
-    text-align: center;
+    text-align: left;
     margin-top: 3vh;
 }
+
+
 .lateral span {
-    color: rgba(0, 0, 255, 0.596);
+    color: rgb(0, 0, 151);
     display: flex;
     font-size: 5vh;
     
 }
+
 .lateral h1 {
-    margin-top: 5vh;
     display: flex;
-    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.lateral a {
+    display: flex;
+    justify-content: left;
+    text-align: left;
+    text-decoration: none;
+    margin-left: 3vh;
+    font-size: 3.7vh;
+    color: rgb(0, 0, 151);
+    transition:  0.3s;
+}
+
+.lateral a:hover {
+    font-size: 3.75vh;
+    text-decoration:underline black;
 }
 
 
@@ -133,18 +154,21 @@ nav ul {
 .imgHero {
     border: 1vh solid rgba(0, 0, 255, 0.596);
     border-radius: 7vh;
+    background-color: rgb(37, 37, 37);
 }
 
 .quadros {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: 0.5s;
 }
 
 .quadros2 {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: 0.5s;
 }
 
 
@@ -152,6 +176,7 @@ nav ul {
     margin-left: 2vh;
     margin-top: 20vh;
     transition: 0.6s;
+    
 }
 
 .herois:hover {
