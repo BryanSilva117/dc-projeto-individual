@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
- 
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -80,16 +80,16 @@
 
             <div class="inputs">
 
-                <input class="email" placeholder="Email*" id="email_input">
+                <input class="email" placeholder="Email*" id="email_input" style="box-shadow: none">
 
 
             </div>
 
             <div class="inputs">
 
-                <input class="senha" type="password" placeholder="Senha*" id="senha_input">
+                <input class="senha" type="password" placeholder="Senha*" id="senha_input" style="box-shadow: none">
 
-                <input class="confirmar" type="password" placeholder="Confirmar Senha*" id="confirmacao_senha_input">
+                <input class="confirmar" type="password" placeholder="Confirmar Senha*" id="confirmacao_senha_input" style="box-shadow: none">
 
             </div>
             <br>
@@ -138,12 +138,13 @@
 
             </div>
             <div id="div_aguardar" class="loading-div">
-                <img src="https://raw.githubusercontent.com/Codelessly/FlutterLoadingGIFs/master/packages/cupertino_activity_indicator_selective.gif" id="loading-gif">
+                <img src="https://raw.githubusercontent.com/Codelessly/FlutterLoadingGIFs/master/packages/cupertino_activity_indicator_selective.gif"
+                    id="loading-gif">
             </div>
 
             <div id="div_erros_login"></div>
         </section>
-        
+
 
     </div>
 
@@ -155,22 +156,60 @@
 
         //Recupere o valor da nova input pelo nome do id
         // Agora vá para o método fetch logo abaixo
-        var nomeVar = nome_input.value;
-        var sobrenomeVar = sobrenome_input.value;
-        var emailVar = email_input.value;
-        var senhaVar = senha_input.value;
-        var confirmacaoSenhaVar = confirmacao_senha_input.value;
-        var dtNascVar = dtNasc_input.value;
-        var generoVar = genero_input.value;
-        var heroFavoritoVar = personagemFav_input.value;
+        var cadastro = {
+            nomeVar: nome_input.value,
+            sobrenomeVar: sobrenome_input.value,
+            emailVar: email_input.value,
+            senhaVar: senha_input.value,
+            confirmacaoSenhaVar: confirmacao_senha_input.value,
+            dtNascVar: dtNasc_input.value,
+            generoVar: genero_input.value,
+            heroFavoritoVar: personagemFav_input.value
+        }
 
-        if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
+        var email = document.getElementById('email_input')
+        var senha = document.getElementById('senha_input')
+        var senhaConf = document.getElementById('confirmacao_senha_input')
+
+
+        if (cadastro.nomeVar == "" || cadastro.emailVar == "" || cadastro.senhaVar == "" || cadastro.confirmacaoSenhaVar == "" || cadastro.dtNascVar == "" || cadastro.generoVar == "" || cadastro.heroFavoritoVar == "") {
             cardErro.style.display = "block"
-            mensagem_erro.innerHTML = "(Todos os campos com * e obrigatorio! )";
+            mensagem_erro.innerHTML = "(Todos os campos com * e obrigatorio!)";
 
             finalizarAguardar();
             return false;
+        } 
+        
+        else if (cadastro.emailVar.indexOf("@") == - 1 || cadastro.emailVar.length < 3) {
+            alert('Email Inválido!')
+            email.style.boxShadow = 'inset 0 0 3px 2px rgb(255, 0, 0)'
+            finalizarAguardar();
+            return false;
         }
+        
+        else if (cadastro.senhaVar.length < 4) {
+            alert('Senha Muito Pequena!')
+            email.style.boxShadow = 'none'
+            senha.style.boxShadow = 'inset 0 0 3px 2px rgb(255, 0, 0)'
+            finalizarAguardar();
+            return false;
+        }
+
+        else if (cadastro.senhaVar.length > 20) {
+            alert('Senha Muito Grande!')
+            senha.style.boxShadow = 'inset 0 0 3px 2px rgb(255, 0, 0)'
+            finalizarAguardar();
+            return false;
+        }
+
+        else if (cadastro.confirmacaoSenhaVar != cadastro.senhaVar) {
+            alert('Senhas Diferentes')
+            senha.style.boxShadow = 'none'
+            senhaConf.style.boxShadow = 'inset 0 0 3px 2px rgb(255, 0, 0)'
+            finalizarAguardar();
+            return false;
+        }
+        
         else {
             setInterval(sumirMensagem, 5000)
         }
@@ -184,13 +223,13 @@
             body: JSON.stringify({
                 // crie um atributo que recebe o valor recuperado aqui
                 // Agora vá para o arquivo routes/usuario.js
-                nomeServer: nomeVar,
-                sobrenomeServer: sobrenomeVar,
-                emailServer: emailVar,
-                senhaServer: senhaVar,
-                dtNascServer: dtNascVar,
-                generoServer: generoVar,
-                heroFavoritoServer: heroFavoritoVar
+                nomeServer: cadastro.nomeVar,
+                sobrenomeServer: cadastro.sobrenomeVar,
+                emailServer: cadastro.emailVar,
+                senhaServer: cadastro.senhaVar,
+                dtNascServer: cadastro.dtNascVar,
+                generoServer: cadastro.generoVar,
+                heroFavoritoServer: cadastro.heroFavoritoVar
             })
         }).then(function (resposta) {
 

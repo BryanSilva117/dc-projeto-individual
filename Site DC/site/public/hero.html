@@ -33,8 +33,9 @@
             </a>
         </div>
 
-        <div>
-            <input id="input_pesquisar"> <button onclick="pesquisar()">Pesquisar</button>
+        <div class="pesquisa">
+            <input id="input_pesquisar" placeholder="Pesquisar Heroi">
+            <button onclick="pesquisar()">Pesquisar</button>
         </div>
 
         <div class="logo">
@@ -53,10 +54,11 @@
     </header>
 
     <div class="inicio">
-        <div class="lateral1" id="lateralI" style="display: block; margin-left: 0vh;">
+        <div class="lateral1" id="lateralI" style="margin-left: 0vh;">
             <div class="lateral">
                 <div>
-                    <h1>Seja bem Vindo!<div  id="div_usuario">usuário!</div ></h1>
+                    <h1>Seja bem Vindo!<div id="div_usuario">usuário!</div>
+                    </h1>
                     <br><br>
                 </div>
                 <h1>Equipes DC</h1>
@@ -82,8 +84,6 @@
                     <br>
                     <a href="#suicideScquade">Esquadrão Suicida</a>
                     <br><br>
-                    <!-- <a href="#sindCrime">Sindicato do Crime</a>
-                    <br><br> -->
                     <h1>Dash</h1>
                     <br>
                     <a href="./DashPerso.html">Membros da Liga preferidos</a>
@@ -94,181 +94,182 @@
         </div>
 
 
-            <div id="justice">
-                <div class="quadros" id="quadrosJL">
-                    <div class="herois">
-                        <div id="mulhermaravilha">Mulher Maravilha</div> <br>
-                        <a href="#"><img class="imgHero" src="./img/hero/wonder-removebg-preview.png" alt=""
-                                width="250px" height="300px"></a>
-                    </div>
-                    <div class="herois">
-                        <div id="superman">Superman</div ><br>
-                        <a href="#"><img class="imgHero" src="./img/hero/Superman-removebg-preview.png" alt=""
-                                width="250px" height="300px"></a>
-                    </div>
-                    <div class="herois">
-                        <div id="batman">Batman</div ><br>
-                        <a href="#"><img class="imgHero" src="./img/hero/batman-removebg-preview.png" alt=""
-                                width="250px" height="300px"></a>
-                    </div>
-    
+        <div id="justice">
+            
+            <div class="quadros" id="quadrosJL">
+                <div class="herois">
+                    <div id="mulhermaravilha">Mulher Maravilha</div> <br>
+                    <a href="#"><img class="imgHero" src="./img/hero/wonder-removebg-preview.png" alt="" width="250px"
+                            height="300px"></a>
                 </div>
-                <div class="quadros2" id="quadros2JL">
-                    <div class="herois2" id="id_personagem">
-                        <div >Aquaman</div ><br>
-                        <a href="#"><img class="imgHero" src="./img/hero/aquaman-removebg-preview.png" alt=""
-                                width="250px" height="300px"></a>
-                    </div>
-                    <div class="herois2" id="id_personagem">
-                        <div >Lanterna Verde</div ><br>
-                        <a href="#"><img class="imgHero" src="./img/hero/lanterna-removebg-preview.png" alt=""
-                                width="250px" height="300px"></a>
-                    </div>
-                    <div class="herois2" id="id_personagem">
-                        <div >Flash</div ><br>
-                        <a href="#"><img class="imgHero" src="./img/hero/flash-removebg-preview.png" alt=""
-                                width="250px" height="300px"></a>
-                    </div>
-                    <div class="herois2" id="id_personagem">
-                        <div >Ciborgue</div ><br>
-                        <a href="#"><img class="imgHero" src="./img/hero/ciborgue-removebg-preview.png" alt=""
-                                width="250px" height="300px"></a>
-                    </div>
+                <div class="herois">
+                    <div id="superman">Superman</div><br>
+                    <a href="#"><img class="imgHero" src="./img/hero/Superman-removebg-preview.png" alt="" width="250px"
+                            height="300px"></a>
+                </div>
+                <div class="herois">
+                    <div id="batman">Batman</div><br>
+                    <a href="#"><img class="imgHero" src="./img/hero/batman-removebg-preview.png" alt="" width="250px"
+                            height="300px"></a>
                 </div>
 
             </div>
-        
-            
+            <div class="quadros2" id="quadros2JL">
+                <div class="herois2">
+                    <div id="aquaman">Aquaman</div><br>
+                    <a href="#"><img class="imgHero" src="./img/hero/aquaman-removebg-preview.png" alt="" width="250px"
+                            height="300px"></a>
+                </div>
+                <div class="herois2">
+                    <div id="lanternaverde">Lanterna Verde</div><br>
+                    <a href="#"><img class="imgHero" src="./img/hero/lanterna-removebg-preview.png" alt="" width="250px"
+                            height="300px"></a>
+                </div>
+                <div class="herois2">
+                    <div id="flash">Flash</div><br>
+                    <a href="#"><img class="imgHero" src="./img/hero/flash-removebg-preview.png" alt="" width="250px"
+                            height="300px"></a>
+                </div>
+                <div class="herois2">
+                    <div id="ciborgue">Ciborgue</div><br>
+                    <a href="#"><img class="imgHero" src="./img/hero/ciborgue-removebg-preview.png" alt="" width="250px"
+                            height="300px"></a>
+                </div>
+            </div>
+
+        </div>
+
+
     </div>
 
     <div class="inicio dois" id="justiceSombira">
-            <div class="quadros">
-                <div class="herois" id="id_Personagem">
-                    <div >John Constantine</div > <br>
-                    <a href="#"><img class="imgHero" src="./img/hero/constantine-removebg-preview.png" alt=""
-                            width="250px" height="300px"></a>
-                </div>
-                <div class="herois" id="id_Personagem">
-                    <div >Zatanna</div ><br>
-                    <a href="#"><img class="imgHero" src="./img/hero/zatanna-removebg-preview.png" alt=""
-                            width="250px" height="300px"></a>
-                </div>
-                <div class="herois" id="id_Personagem">
-                    <div >Deadman</div ><br>
-                    <a href="#"><img class="imgHero" src="./img/hero/deadman-removebg-preview.png" alt=""
-                            width="250px" height="300px"></a>
-                </div>
-
-            </div>
-            <div class="quadros2">
-                <div class="herois2" id="id_personagem">
-                    <div >Etrigan</div ><br>
-                    <a href="#"><img class="imgHero" src="./img/hero/etrigan-removebg-preview.png" alt=""
-                            width="250px" height="300px"></a>
-                </div>
-                <div class="herois2" id="id_personagem">
-                    <div >Madame Xanadu</div ><br>
-                    <a href="#"><img class="imgHero" src="./img/hero/madame_xanadu-removebg-preview.png" alt=""
-                            width="250px" height="300px"></a>
-                </div>
-                <div class="herois2" id="id_personagem">
-                    <div >Swamp Thing</div ><br>
-                    <a href="#"><img class="imgHero" src="./img/hero/monstroPantano-removebg-preview.png" alt=""
-                            width="250px" height="300px"></a>
-                </div>
-                <div class="herois2" id="id_personagem">
-                    <div >Shade</div ><br>
-                    <a href="#"><img class="imgHero" src="./img/hero/shade-removebg-preview.png" alt=""
-                            width="250px" height="300px"></a>
-                </div>
-            </div>
-        
-    </div>
-
-    <div class="inicio tres" id="Sociedade">
         <div class="quadros">
-            <div class="herois" id="id_Personagem">
-                <div >Jay Garrick(Flash)</div > <br>
-                <a href="#"><img class="imgHero" src="./img/hero/jayG-removebg-preview.png" alt=""
-                        width="250px" height="300px"></a>
+            <div class="herois">
+                <div id="constantine">Constantine</div> <br>
+                <a href="#"><img class="imgHero" src="./img/hero/constantine-removebg-preview.png" alt="" width="250px"
+                        height="300px"></a>
             </div>
-            <div class="herois" id="id_Personagem">
-                <div >Alan Scott(lanterna verde)</div ><br>
-                <a href="#"><img class="imgHero" src="./img/hero/alanLan-removebg-preview.png" alt=""
-                        width="250px" height="300px"></a>
+            <div class="herois">
+                <div id="zatanna">Zatanna</div><br>
+                <a href="#"><img class="imgHero" src="./img/hero/zatanna-removebg-preview.png" alt="" width="250px"
+                        height="300px"></a>
             </div>
-            <div class="herois" id="id_Personagem">
-                <div >Senhor Destino</div ><br>
-                <a href="#"><img class="imgHero" src="./img/hero/senhorD-removebg-preview.png" alt=""
-                        width="250px" height="300px"></a>
+            <div class="herois">
+                <div id="deadman">Deadman</div><br>
+                <a href="#"><img class="imgHero" src="./img/hero/deadman-removebg-preview.png" alt="" width="250px"
+                        height="300px"></a>
             </div>
 
         </div>
         <div class="quadros2">
-            <div class="herois2" id="id_personagem">
-                <div >Gavião Negro</div ><br>
-                <a href="#"><img class="imgHero" src="./img/hero/gaviao-removebg-preview.png" alt=""
+            <div class="herois2">
+                <div id="etrigan">Etrigan</div><br>
+                <a href="#"><img class="imgHero" src="./img/hero/etrigan-removebg-preview.png" alt="" width="250px"
+                        height="300px"></a>
+            </div>
+            <div class="herois2">
+                <div id="madamexanadu">Madame Xanadu</div><br>
+                <a href="#"><img class="imgHero" src="./img/hero/madame_xanadu-removebg-preview.png" alt=""
                         width="250px" height="300px"></a>
             </div>
-            <div class="herois2" id="id_personagem">
-                <div >Mulher-Gavião</div ><br>
-                <a href="#"><img class="imgHero" src="./img/hero/mulherG-removebg-preview.png" alt=""
+            <div class="herois2">
+                <div id="monstrodopantano">Monstro do Pantano</div><br>
+                <a href="#"><img class="imgHero" src="./img/hero/monstroPantano-removebg-preview.png" alt=""
                         width="250px" height="300px"></a>
             </div>
-            <div class="herois2" id="id_personagem">
-                <div >Pantera</div ><br>
-                <a href="#"><img class="imgHero" src="./img/hero/pantera-removebg-preview.png" alt=""
-                        width="250px" height="300px"></a>
-            </div>
-            <div class="herois2" id="id_personagem">
-                <div >Átomo</div ><br>
-                <a href="#"><img class="imgHero" src="./img/hero/atomo-removebg-preview.png" alt=""
-                        width="250px" height="300px"></a>
+            <div class="herois2">
+                <div id="shade">Shade</div><br>
+                <a href="#"><img class="imgHero" src="./img/hero/shade-removebg-preview.png" alt="" width="250px"
+                        height="300px"></a>
             </div>
         </div>
-        
+
+    </div>
+
+    <div class="inicio tres" id="Sociedade">
+        <div class="quadros">
+            <div class="herois">
+                <div id="jaygarrick">Jay Garrick</div> <br>
+                <a href="#"><img class="imgHero" src="./img/hero/jayG-removebg-preview.png" alt="" width="250px"
+                        height="300px"></a>
+            </div>
+            <div class="herois">
+                <div id="alanscott">Alan Scott</div><br>
+                <a href="#"><img class="imgHero" src="./img/hero/alanLan-removebg-preview.png" alt="" width="250px"
+                        height="300px"></a>
+            </div>
+            <div class="herois">
+                <div id="senhordestino">Senhor Destino</div><br>
+                <a href="#"><img class="imgHero" src="./img/hero/senhorD-removebg-preview.png" alt="" width="250px"
+                        height="300px"></a>
+            </div>
+
+        </div>
+        <div class="quadros2">
+            <div class="herois2">
+                <div id="gaviãonegro">Gavião Negro</div><br>
+                <a href="#"><img class="imgHero" src="./img/hero/gaviao-removebg-preview.png" alt="" width="250px"
+                        height="300px"></a>
+            </div>
+            <div class="herois2">
+                <div id="mulhergavião">Mulher Gavião</div><br>
+                <a href="#"><img class="imgHero" src="./img/hero/mulherG-removebg-preview.png" alt="" width="250px"
+                        height="300px"></a>
+            </div>
+            <div class="herois2">
+                <div id="pantera">Pantera</div><br>
+                <a href="#"><img class="imgHero" src="./img/hero/pantera-removebg-preview.png" alt="" width="250px"
+                        height="300px"></a>
+            </div>
+            <div class="herois2">
+                <div id="atomo">atomo</div><br>
+                <a href="#"><img class="imgHero" src="./img/hero/atomo-removebg-preview.png" alt="" width="250px"
+                        height="300px"></a>
+            </div>
+        </div>
+
     </div>
 
     <div class="inicio quatro" id="JusticeJovem">
 
         <div class="quadros">
-            <div class="herois" id="id_Personagem">
-                <div >Asa Noturna(Dick Grayson)</div > <br>
-                <a href="#"><img class="imgHero" src="./img/hero/asaN-removebg-preview.png" alt=""
-                        width="250px" height="300px"></a>
+            <div class="herois">
+                <div id="asanoturna">Asa Noturna</div> <br>
+                <a href="#"><img class="imgHero" src="./img/hero/asaN-removebg-preview.png" alt="" width="250px"
+                        height="300px"></a>
             </div>
-            <div class="herois" id="id_Personagem">
-                <div >Kid Flash(Wally West)</div ><br>
-                <a href="#"><img class="imgHero" src="./img/hero/kid_flash-removebg-preview.png" alt=""
-                        width="250px" height="300px"></a>
+            <div class="herois">
+                <div id="kidflash">Kid Flash</div><br>
+                <a href="#"><img class="imgHero" src="./img/hero/kid_flash-removebg-preview.png" alt="" width="250px"
+                        height="300px"></a>
             </div>
-            <div class="herois" id="id_Personagem">
-                <div >Superboy</div ><br>
-                <a href="#"><img class="imgHero" src="./img/hero/superboy-removebg-preview.png" alt=""
-                        width="250px" height="300px"></a>
+            <div class="herois">
+                <div id="superboy">Superboy</div><br>
+                <a href="#"><img class="imgHero" src="./img/hero/superboy-removebg-preview.png" alt="" width="250px"
+                        height="300px"></a>
             </div>
 
         </div>
         <div class="quadros2">
-            <div class="herois2" id="id_personagem">
-                <div >Miss Marte</div ><br>
-                <a href="#"><img class="imgHero" src="./img/hero/missM-removebg-preview.png" alt=""
-                        width="250px" height="300px"></a>
+            <div class="herois2">
+                <div id="missmarte">Miss Marte</div><br>
+                <a href="#"><img class="imgHero" src="./img/hero/missM-removebg-preview.png" alt="" width="250px"
+                        height="300px"></a>
             </div>
-            <div class="herois2" id="id_personagem">
-                <div >Aqualad</div ><br>
-                <a href="#"><img class="imgHero" src="./img/hero/aqualad-removebg-preview.png" alt=""
-                        width="250px" height="300px"></a>
+            <div class="herois2">
+                <div id="aqualad">Aqualad</div><br>
+                <a href="#"><img class="imgHero" src="./img/hero/aqualad-removebg-preview.png" alt="" width="250px"
+                        height="300px"></a>
             </div>
-            <div class="herois2" id="id_personagem">
-                <div >Artemis</div ><br>
-                <a href="#"><img class="imgHero" src="./img/hero/artimis-removebg-preview.png" alt=""
-                        width="250px" height="300px"></a>
+            <div class="herois2">
+                <div id="artemis">Artemis</div><br>
+                <a href="#"><img class="imgHero" src="./img/hero/artimis-removebg-preview.png" alt="" width="250px"
+                        height="300px"></a>
             </div>
-            <div class="herois2" id="id_personagem">
-                <div >Moça Maravilha</div ><br>
-                <a href="#"><img class="imgHero" src="./img/hero/mocaMa-removebg-preview.png" alt=""
-                        width="250px" height="300px"></a>
+            <div class="herois2">
+                <div id="moçamaravilha">Moça Maravilha</div><br>
+                <a href="#"><img class="imgHero" src="./img/hero/mocaMa-removebg-preview.png" alt="" width="250px"
+                        height="300px"></a>
             </div>
         </div>
     </div>
@@ -277,38 +278,38 @@
     <div class="inicio quatro" id="JovensTita">
 
         <div class="quadros">
-            <div class="herois" id="id_Personagem">
-                <div >Robin (Dick Grayson)</div > <br>
-                <a href="#"><img class="imgHero" src="./img/hero/robinD-removebg-preview.png" alt=""
-                        width="250px" height="300px"></a>
+            <div class="herois">
+                <div id="robin">Robin</div> <br>
+                <a href="#"><img class="imgHero" src="./img/hero/robinD-removebg-preview.png" alt="" width="250px"
+                        height="300px"></a>
             </div>
-            <div class="herois" id="id_Personagem">
-                <div >Ravena</div ><br>
-                <a href="#"><img class="imgHero" src="./img/hero/ravena-removebg-preview.png" alt=""
-                        width="250px" height="300px"></a>
+            <div class="herois">
+                <div id="ravena">Ravena</div><br>
+                <a href="#"><img class="imgHero" src="./img/hero/ravena-removebg-preview.png" alt="" width="250px"
+                        height="300px"></a>
             </div>
-            <div class="herois" id="id_Personagem">
-                <div >Estelar</div ><br>
-                <a href="#"><img class="imgHero" src="./img/hero/estelar-removebg-preview.png" alt=""
-                        width="250px" height="300px"></a>
+            <div class="herois">
+                <div id="estelar">Estelar</div><br>
+                <a href="#"><img class="imgHero" src="./img/hero/estelar-removebg-preview.png" alt="" width="250px"
+                        height="300px"></a>
             </div>
 
         </div>
         <div class="quadros2">
-            <div class="herois2" id="id_personagem">
-                <div >Mutano</div ><br>
-                <a href="#"><img class="imgHero" src="./img/hero/mutano-removebg-preview.png" alt=""
-                        width="250px" height="300px"></a>
+            <div class="herois2">
+                <div id="mutano">Mutano</div><br>
+                <a href="#"><img class="imgHero" src="./img/hero/mutano-removebg-preview.png" alt="" width="250px"
+                        height="300px"></a>
             </div>
-            <div class="herois2" id="id_personagem">
-                <div >Ciborgue</div ><br>
-                <a href="#"><img class="imgHero" src="./img/hero/ciborgueT-removebg-preview.png" alt=""
-                        width="250px" height="300px"></a>
+            <div class="herois2">
+                <div id="ciborguetitã">Ciborgue titã</div><br>
+                <a href="#"><img class="imgHero" src="./img/hero/ciborgueT-removebg-preview.png" alt="" width="250px"
+                        height="300px"></a>
             </div>
-            <div class="herois2" id="id_personagem">
-                <div >Terra</div ><br>
-                <a href="#"><img class="imgHero" src="./img/hero/terra-removebg-preview.png" alt=""
-                        width="250px" height="300px"></a>
+            <div class="herois2">
+                <div id="terra">Terra</div><br>
+                <a href="#"><img class="imgHero" src="./img/hero/terra-removebg-preview.png" alt="" width="250px"
+                        height="300px"></a>
             </div>
         </div>
     </div>
@@ -316,38 +317,38 @@
     <div class="inicio quatro" id="FamíliaMarvel">
 
         <div class="quadros">
-            <div class="herois" id="id_Personagem">
-                <div >Mary Marvel</div > <br>
-                <a href="#"><img class="imgHero" src="./img/hero/maryMarvel-removebg-preview.png" alt=""
-                        width="250px" height="300px"></a>
+            <div class="herois">
+                <div id="marymarvel">Mary Marvel</div> <br>
+                <a href="#"><img class="imgHero" src="./img/hero/maryMarvel-removebg-preview.png" alt="" width="250px"
+                        height="300px"></a>
             </div>
-            <div class="herois" id="id_Personagem">
-                <div >Capitão Marvel</div ><br>
-                <a href="#"><img class="imgHero" src="./img/hero/shazam-removebg-preview.png" alt=""
-                        width="250px" height="300px"></a>
+            <div class="herois">
+                <div id="shazam">Shazam</div><br>
+                <a href="#"><img class="imgHero" src="./img/hero/shazam-removebg-preview.png" alt="" width="250px"
+                        height="300px"></a>
             </div>
-            <div class="herois" id="id_Personagem">
-                <div >Capitão Marvel Jr</div ><br>
-                <a href="#"><img class="imgHero" src="./img/hero/capitãoJr-removebg-preview.png" alt=""
-                        width="250px" height="300px"></a>
+            <div class="herois">
+                <div id="capitãomarveljr">Capitão Marvel Jr</div><br>
+                <a href="#"><img class="imgHero" src="./img/hero/capitãoJr-removebg-preview.png" alt="" width="250px"
+                        height="300px"></a>
             </div>
 
         </div>
         <div class="quadros2">
-            <div class="herois2" id="id_personagem">
-                <div >Eugene Choi</div ><br>
-                <a href="#"><img class="imgHero" src="./img/hero/eugene-PhotoRoom-PhotoRoom.png" alt=""
-                        width="250px" height="300px"></a>
+            <div class="herois2">
+                <div id="eugene">Eugene</div><br>
+                <a href="#"><img class="imgHero" src="./img/hero/eugene-PhotoRoom-PhotoRoom.png" alt="" width="250px"
+                        height="300px"></a>
             </div>
-            <div class="herois2" id="id_personagem">
-                <div > Pedro Peña</div ><br>
-                <a href="#"><img class="imgHero" src="./img/hero/pedroP-removebg-preview.png" alt=""
-                        width="250px" height="300px"></a>
+            <div class="herois2">
+                <div id="pedro"> Pedro</div><br>
+                <a href="#"><img class="imgHero" src="./img/hero/pedroP-removebg-preview.png" alt="" width="250px"
+                        height="300px"></a>
             </div>
-            <div class="herois2" id="id_personagem">
-                <div >Darla Dudley</div ><br>
-                <a href="#"><img class="imgHero" src="./img/hero/darla-removebg-preview.png" alt=""
-                        width="250px" height="300px"></a>
+            <div class="herois2">
+                <div id="darla">Darla</div><br>
+                <a href="#"><img class="imgHero" src="./img/hero/darla-removebg-preview.png" alt="" width="250px"
+                        height="300px"></a>
             </div>
         </div>
     </div>
@@ -355,43 +356,43 @@
     <div class="inicio quatro" id="leagueIn">
 
         <div class="quadros">
-            <div class="herois" id="id_Personagem">
-                <div >Lex Luthor</div > <br>
-                <a href="#"><img class="imgHero" src="./img/hero/lexL-removebg-preview.png" alt=""
-                        width="250px" height="300px"></a>
+            <div class="herois">
+                <div id="lexluthor">Lex Luthor</div> <br>
+                <a href="#"><img class="imgHero" src="./img/hero/lexL-removebg-preview.png" alt="" width="250px"
+                        height="300px"></a>
             </div>
-            <div class="herois" id="id_Personagem">
-                <div >Coringa</div ><br>
-                <a href="#"><img class="imgHero" src="./img/hero/joker-removebg-preview.png" alt=""
-                        width="250px" height="300px"></a>
+            <div class="herois">
+                <div id="coringa">Coringa</div><br>
+                <a href="#"><img class="imgHero" src="./img/hero/joker-removebg-preview.png" alt="" width="250px"
+                        height="300px"></a>
             </div>
-            <div class="herois" id="id_Personagem">
-                <div >Adão Negro</div ><br>
-                <a href="#"><img class="imgHero" src="./img/hero/adaoN-removebg-preview.png" alt=""
-                        width="250px" height="300px"></a>
+            <div class="herois">
+                <div id="adãonegro">Adão Negro</div><br>
+                <a href="#"><img class="imgHero" src="./img/hero/adaoN-removebg-preview.png" alt="" width="250px"
+                        height="300px"></a>
             </div>
 
         </div>
         <div class="quadros2">
-            <div class="herois2" id="id_personagem">
-                <div >Era Venenosa</div ><br>
-                <a href="#"><img class="imgHero" src="./img/hero/eraV-removebg-preview.png" alt=""
-                        width="250px" height="300px"></a>
+            <div class="herois2">
+                <div id="eravenenosa">Era Venenosa</div><br>
+                <a href="#"><img class="imgHero" src="./img/hero/eraV-removebg-preview.png" alt="" width="250px"
+                        height="300px"></a>
             </div>
-            <div class="herois2" id="id_personagem">
-                <div >Exterminador</div ><br>
-                <a href="#"><img class="imgHero" src="./img/hero/Exterminador-removebg-preview.png" alt=""
-                        width="250px" height="300px"></a>
+            <div class="herois2">
+                <div id="exterminador">Exterminador</div><br>
+                <a href="#"><img class="imgHero" src="./img/hero/Exterminador-removebg-preview.png" alt="" width="250px"
+                        height="300px"></a>
             </div>
-            <div class="herois2" id="id_personagem">
-                <div >Sinestro</div ><br>
-                <a href="#"><img class="imgHero" src="./img/hero/sinestro-removebg-preview.png" alt=""
-                        width="250px" height="300px"></a>
+            <div class="herois2">
+                <div id="sinestro">Sinestro</div><br>
+                <a href="#"><img class="imgHero" src="./img/hero/sinestro-removebg-preview.png" alt="" width="250px"
+                        height="300px"></a>
             </div>
-            <div class="herois2" id="id_personagem">
-                <div >Arraia Negra</div ><br>
-                <a href="#"><img class="imgHero" src="./img/hero/arraiaN-removebg-preview.png" alt=""
-                        width="250px" height="300px"></a>
+            <div class="herois2">
+                <div id="arraianegra">Arraia Negra</div><br>
+                <a href="#"><img class="imgHero" src="./img/hero/arraiaN-removebg-preview.png" alt="" width="250px"
+                        height="300px"></a>
             </div>
         </div>
     </div>
@@ -399,90 +400,46 @@
     <div class="inicio quatro" id="suicideScquade">
 
         <div class="quadros">
-            <div class="herois" id="id_Personagem">
-                <div >Pistoleiro </div > <br>
-                <a href="#"><img class="imgHero" src="./img/hero/pistoleiro-removebg-preview.png" alt=""
-                        width="250px" height="300px"></a>
+            <div class="herois">
+                <div id="pistoleiro">Pistoleiro </div> <br>
+                <a href="#"><img class="imgHero" src="./img/hero/pistoleiro-removebg-preview.png" alt="" width="250px"
+                        height="300px"></a>
             </div>
-            <div class="herois" id="id_Personagem">
-                <div >Arlequina</div ><br>
-                <a href="#"><img class="imgHero" src="./img/hero/arlequina-removebg-preview.png" alt=""
-                        width="250px" height="300px"></a>
+            <div class="herois">
+                <div id="arlequina">Arlequina</div><br>
+                <a href="#"><img class="imgHero" src="./img/hero/arlequina-removebg-preview.png" alt="" width="250px"
+                        height="300px"></a>
             </div>
-            <div class="herois" id="id_Personagem">
-                <div >Capitão Bumerangue</div ><br>
-                <a href="#"><img class="imgHero" src="./img/hero/capitãoB-removebg-preview.png" alt=""
-                        width="250px" height="300px"></a>
+            <div class="herois">
+                <div id="capitãobumerangue">Capitão Bumerangue</div><br>
+                <a href="#"><img class="imgHero" src="./img/hero/capitãoB-removebg-preview.png" alt="" width="250px"
+                        height="300px"></a>
             </div>
 
         </div>
         <div class="quadros2">
-            <div class="herois2" id="id_personagem">
-                <div >Rick Flag</div ><br>
-                <a href="#"><img class="imgHero" src="./img/hero/rick-removebg-preview.png" alt=""
-                        width="250px" height="300px"></a>
+            <div class="herois2">
+                <div id="rickflag">Rick Flag</div><br>
+                <a href="#"><img class="imgHero" src="./img/hero/rick-removebg-preview.png" alt="" width="250px"
+                        height="300px"></a>
             </div>
-            <div class="herois2" id="id_personagem">
-                <div >Katana</div ><br>
-                <a href="#"><img class="imgHero" src="./img/hero/katana-removebg-preview.png" alt=""
-                        width="250px" height="300px"></a>
+            <div class="herois2">
+                <div id="katana">Katana</div><br>
+                <a href="#"><img class="imgHero" src="./img/hero/katana-removebg-preview.png" alt="" width="250px"
+                        height="300px"></a>
             </div>
-            <div class="herois2" id="id_personagem">
-                <div >Pacificador</div ><br>
-                <a href="#"><img class="imgHero" src="./img/hero/pacificador-removebg-preview.png" alt=""
-                        width="250px" height="300px"></a>
+            <div class="herois2">
+                <div id="pacificador">Pacificador</div><br>
+                <a href="#"><img class="imgHero" src="./img/hero/pacificador-removebg-preview.png" alt="" width="250px"
+                        height="300px"></a>
             </div>
-            <div class="herois2" id="id_personagem">
-                <div >Crocodilo </div ><br>
-                <a href="#"><img class="imgHero" src="./img/hero/crocodilo-removebg-preview.png" alt=""
-                        width="250px" height="300px"></a>
+            <div class="herois2">
+                <div id="crocodilo">Crocodilo </div><br>
+                <a href="#"><img class="imgHero" src="./img/hero/crocodilo-removebg-preview.png" alt="" width="250px"
+                        height="300px"></a>
             </div>
         </div>
     </div>
-
-    <!-- <div class="inicio quatro" id="sindCrime">
-
-        <div class="quadros">
-            <div class="herois" id="id_Personagem">
-                <div >Mulher Maravilha</div > <br>
-                <a href="#"><img class="imgHero" src="./img/hero/" alt=""
-                        width="250px" height="300px"></a>
-            </div>
-            <div class="herois" id="id_Personagem">
-                <div >Superman</div ><br>
-                <a href="#"><img class="imgHero" src="./img/hero/" alt=""
-                        width="250px" height="300px"></a>
-            </div>
-            <div class="herois" id="id_Personagem">
-                <div >Batman</div ><br>
-                <a href="#"><img class="imgHero" src="./img/hero/" alt=""
-                        width="250px" height="300px"></a>
-            </div>
-
-        </div>
-        <div class="quadros2">
-            <div class="herois2" id="id_personagem">
-                <div >Aquaman</div ><br>
-                <a href="#"><img class="imgHero" src="./img/hero/" alt=""
-                        width="250px" height="300px"></a>
-            </div>
-            <div class="herois2" id="id_personagem">
-                <div >Lanterna Verde</div ><br>
-                <a href="#"><img class="imgHero" src="./img/hero/" alt=""
-                        width="250px" height="300px"></a>
-            </div>
-            <div class="herois2" id="id_personagem">
-                <div >Flash</div ><br>
-                <a href="#"><img class="imgHero" src="./img/hero/" alt=""
-                        width="250px" height="300px"></a>
-            </div>
-            <div class="herois2" id="id_personagem">
-                <div >Ciborgue</div ><br>
-                <a href="#"><img class="imgHero" src="./img/hero/" alt=""
-                        width="250px" height="300px"></a>
-            </div>
-        </div>
-    </div> -->
 
 </body>
 
@@ -491,27 +448,107 @@
 <script>
 
     div_usuario.innerHTML = sessionStorage.NOME_USUARIO;
-    
-    lista_herois = []
-    var maravilha = mulhermaravilha.innerHTML.replaceAll(" ", "").toLowerCase();
-    var supermans = superman.innerHTML.replaceAll(" ", "").toLowerCase();
-    var bat = batman.innerHTML.replaceAll(" ", "").toLowerCase();
-    lista_herois.push(maravilha, supermans, bat)
+
+    lista_herois = [
+        mulhermaravilha.innerHTML.replaceAll(" ", "").toLowerCase(),
+        superman.innerHTML.replaceAll(" ", "").toLowerCase(),
+        batman.innerHTML.replaceAll(" ", "").toLowerCase(),
+        aquaman.innerHTML.replaceAll(" ", "").toLowerCase(),
+        lanternaverde.innerHTML.replaceAll(" ", "").toLowerCase(),
+        flash.innerHTML.replaceAll(" ", "").toLowerCase(),
+        ciborgue.innerHTML.replaceAll(" ", "").toLowerCase(),
+        constantine.innerHTML.replaceAll(" ", "").toLowerCase(),
+        zatanna.innerHTML.replaceAll(" ", "").toLowerCase(),
+        deadman.innerHTML.replaceAll(" ", "").toLowerCase(),
+        etrigan.innerHTML.replaceAll(" ", "").toLowerCase(),
+        madamexanadu.innerHTML.replaceAll(" ", "").toLowerCase(),
+        monstrodopantano.innerHTML.replaceAll(" ", "").toLowerCase(),
+        shade.innerHTML.replaceAll(" ", "").toLowerCase(),
+        jaygarrick.innerHTML.replaceAll(" ", "").toLowerCase(),
+        alanscott.innerHTML.replaceAll(" ", "").toLowerCase(),
+        senhordestino.innerHTML.replaceAll(" ", "").toLowerCase(),
+        gaviãonegro.innerHTML.replaceAll(" ", "").toLowerCase(),
+        mulhergavião.innerHTML.replaceAll(" ", "").toLowerCase(),
+        pantera.innerHTML.replaceAll(" ", "").toLowerCase(),
+        atomo.innerHTML.replaceAll(" ", "").toLowerCase(),
+        asanoturna.innerHTML.replaceAll(" ", "").toLowerCase(),
+        kidflash.innerHTML.replaceAll(" ", "").toLowerCase(),
+        superboy.innerHTML.replaceAll(" ", "").toLowerCase(),
+        missmarte.innerHTML.replaceAll(" ", "").toLowerCase(),
+        aqualad.innerHTML.replaceAll(" ", "").toLowerCase(),
+        artemis.innerHTML.replaceAll(" ", "").toLowerCase(),
+        moçamaravilha.innerHTML.replaceAll(" ", "").toLowerCase(),
+        robin.innerHTML.replaceAll(" ", "").toLowerCase(),
+        ravena.innerHTML.replaceAll(" ", "").toLowerCase(),
+        estelar.innerHTML.replaceAll(" ", "").toLowerCase(),
+        mutano.innerHTML.replaceAll(" ", "").toLowerCase(),
+        ciborguetitã.innerHTML.replaceAll(" ", "").toLowerCase(),
+        terra.innerHTML.replaceAll(" ", "").toLowerCase(),
+        marymarvel.innerHTML.replaceAll(" ", "").toLowerCase(),
+        shazam.innerHTML.replaceAll(" ", "").toLowerCase(),
+        capitãomarveljr.innerHTML.replaceAll(" ", "").toLowerCase(),
+        eugene.innerHTML.replaceAll(" ", "").toLowerCase(),
+        pedro.innerHTML.replaceAll(" ", "").toLowerCase(),
+        darla.innerHTML.replaceAll(" ", "").toLowerCase(),
+        lexluthor.innerHTML.replaceAll(" ", "").toLowerCase(),
+        coringa.innerHTML.replaceAll(" ", "").toLowerCase(),
+        adãonegro.innerHTML.replaceAll(" ", "").toLowerCase(),
+        eravenenosa.innerHTML.replaceAll(" ", "").toLowerCase(),
+        exterminador.innerHTML.replaceAll(" ", "").toLowerCase(),
+        sinestro.innerHTML.replaceAll(" ", "").toLowerCase(),
+        arraianegra.innerHTML.replaceAll(" ", "").toLowerCase(),
+        pistoleiro.innerHTML.replaceAll(" ", "").toLowerCase(),
+        arlequina.innerHTML.replaceAll(" ", "").toLowerCase(),
+        capitãobumerangue.innerHTML.replaceAll(" ", "").toLowerCase(),
+        rickflag.innerHTML.replaceAll(" ", "").toLowerCase(),
+        katana.innerHTML.replaceAll(" ", "").toLowerCase(),
+        pacificador.innerHTML.replaceAll(" ", "").toLowerCase(),
+        crocodilo.innerHTML.replaceAll(" ", "").toLowerCase(),
+    ]
+
+    // function destacarPersonagem() {
+    //         var input = document.getElementById('input_pesquisar').value.toLowerCase();
+    //         var herois = document.getElementsByClassName('herois');
+    //         var herois2 = document.getElementsByClassName('herois2');
+
+    //         for (var i = 0; i < herois.length; i++) {
+    //             var personagem = herois[i].getElementsByTagName('div')[0].innerHTML.toLowerCase();
+    //             if (personagem.includes(input)) {
+    //                 herois[i].style.backgroundColor = 'rgba(0, 0, 255, 0.596)';
+    //                 herois[i].style.borderRadius = '2vh'
+                    
+    //             } else {
+    //                 herois[i].style.backgroundColor = 'initial';
+    //                 herois[i].style.borderRadius = 'none'
+    //             }
+    //         }
+
+    //         for (var i = 0; i < herois2.length; i++) {
+    //             var personagem = herois2[i].getElementsByTagName('div')[0].innerHTML.toLowerCase();
+    //             if (personagem.includes(input)) {
+    //                 herois2[i].style.backgroundColor = 'rgba(0, 0, 255, 0.596)';
+    //             } else {
+    //                 herois2[i].style.backgroundColor = 'initial';
+    //             }
+    //         }
+    //     }
+
 
     function pesquisar() {
-        var personagem = input_pesquisar.value
+        var personagem = input_pesquisar.value;
         var personagemMod = personagem.replaceAll(" ", "").toLowerCase();
 
+        console.log(personagemMod);
 
-        console.log(personagemMod)
-        for(var i = 0; i < lista_herois.length; i++)
-        if (personagemMod == lista_herois[i]) {
-            window.location = "hero.html#lista_herois[i]";
-
-            break
+        for (var i = 0; i < lista_herois.length; i++) {
+            if (personagemMod == lista_herois[i]) {
+                window.location = "#" + lista_herois[i];
+                break;
+            }
         }
-        else {
-            alert('naotem')
+
+        if (i === lista_herois.length) {
+            alert("Personagem não encontrado.");
         }
     }
 
@@ -520,12 +557,11 @@
     function fechar() {
         var lateral = document.getElementById('lateralI');
         var margin = document.getElementById('diminuir');
-       
-        
+
+
         if (lateral.style.marginLeft == '0vh') {
             lateral.style.marginLeft = '-40vh';
             margin.style.marginLeft = '2vh';
-           
         } else {
             lateral.style.marginLeft = '0vh';
             margin.style.marginLeft = '37vh';

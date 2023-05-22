@@ -102,7 +102,37 @@ nav ul {
     transform: scale(1.15);
 }
 
+.header input {
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+    font-size: 3vh;
+    width: 30vh;
+    height: 5vh;
+    margin-left: -35vh;
+    margin-top: 2.5vh;
+    border-radius: 1vh;
+    border: solid 2px rgba(0, 0, 0, 0.767);
+    transition: 0.4s;
+}
 
+.header input:hover {
+    box-shadow: 1vh 1vh 1vh 0vh rgba(0, 0, 0, 0.623);
+}
+
+.header button {
+    width: 13vh;
+    height: 6vh;
+    border-radius: 2vh;
+    background-color: rgba(0, 4, 255, 0.616);
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    transition: 0.4s;
+    
+}
+
+.header button:hover {
+    box-shadow: 1vh 1vh 1vh 0vh rgba(0, 0, 0, 0.623);
+}
 
 
 /* parte lateral */
@@ -152,9 +182,9 @@ nav ul {
 /* parte herois */
 
 .imgHero {
-    border: 1vh solid rgba(0, 0, 255, 0.596);
-    border-radius: 7vh;
-    background-color: rgb(37, 37, 37);
+    border: 0.5vh solid rgba(0, 0, 255, 0.596);
+    border-radius: 3vh;
+    background-color: rgba(0, 4, 255, 0.582);
 }
 
 .quadros {
@@ -164,11 +194,23 @@ nav ul {
     transition: 0.5s;
 }
 
+.quadros div {
+    font-size: 4vh;
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+}
+
 .quadros2 {
     display: flex;
     justify-content: center;
     align-items: center;
     transition: 0.5s;
+}
+
+.quadros2 div {
+    font-size: 4vh;
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
 }
 
 
@@ -180,13 +222,7 @@ nav ul {
 }
 
 .herois:hover {
-    transform: scale(1.15);
-}
-
-.herois span {
-    font-family: 'Oswald', sans-serif;
-    font-size: 4vh;
-    display: flex;
+    transform: scale(1.09);
 }
 
 .herois2 {
@@ -196,7 +232,7 @@ nav ul {
 }
 
 .herois2:hover {
-    transform: scale(1.15);
+    transform: scale(1.09);
 }
 
 .herois2 span {
@@ -205,3 +241,7 @@ nav ul {
     display: flex;
 }
 
+p {
+    display: flex;
+    justify-content: center;
+}
