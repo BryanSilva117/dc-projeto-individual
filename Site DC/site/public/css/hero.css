@@ -4,29 +4,52 @@
 }
 
 .inicio {
-    background-color: rgba(255, 255, 255, 0.589);
+    background-color: rgba(255, 255, 255, 0.856);
     height: 145vh;
     overflow-x: hidden;
 }
 .dois {
-    background-color: rgb(53, 53, 53);
+    background-color: rgb(197, 197, 197);
     height: 145vh;
+    box-shadow: inset rgba(0, 0, 0, 0.425) 0 100px 50px -15px;
 }
 .tres {
-    background-color: aqua;
+    background-color: rgba(114, 114, 114, 0.705);
     height: 145vh;
+    box-shadow: inset rgba(0, 0, 0, 0.425) 0 100px 50px -15px;
 }
 .quatro {
-    background-color:pink;
+    background-color:rgb(87, 87, 87);
     height: 145vh;
+    box-shadow: inset rgba(0, 0, 0, 0.425) 0 100px 50px -15px;
+}
+.cinco {
+    background-color:rgb(53, 53, 53);
+    height: 145vh;
+    box-shadow: inset rgba(0, 0, 0, 0.425) 0 100px 50px -15px;
+}
+.seis {
+    background-color:rgb(41, 41, 41);
+    height: 145vh;
+    box-shadow: inset rgba(0, 0, 0, 0.425) 0 100px 50px -15px;
+}
+.sete {
+    background-color:rgb(31, 31, 31);
+    height: 145vh;
+    box-shadow: inset rgba(0, 0, 0, 0.425) 0 100px 50px -15px;
+}
+.oito {
+    background-color:rgb(17, 17, 17);
+    height: 145vh;
+    box-shadow: inset rgba(0, 0, 0, 0.425) 0 100px 50px -15px;
 }
 
 .lateral1 {
-    background-color: rgba(255, 255, 255, 0.459);
+    background-color: rgb(17, 0, 255);
     width: 40vh;
     height: 100vh;
     position: fixed;
-    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.418);
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.418), 0 100px 300px -15px black inset;
     border-radius: 0.5vh;
     transition: 0.5s;
     z-index: 1;
@@ -52,6 +75,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-left: -70vh;
 }
 
 .logo img {
@@ -108,7 +132,7 @@ nav ul {
     font-size: 3vh;
     width: 30vh;
     height: 5vh;
-    margin-left: -35vh;
+    margin-left: -60vh;
     margin-top: 2.5vh;
     border-radius: 1vh;
     border: solid 2px rgba(0, 0, 0, 0.767);
@@ -123,10 +147,16 @@ nav ul {
     width: 13vh;
     height: 6vh;
     border-radius: 2vh;
+    border: 2px solid rgba(0, 0, 0, 0.342);
     background-color: rgba(0, 4, 255, 0.616);
     color: white;
     font-family: 'Oswald', sans-serif;
     transition: 0.4s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -5.8vh;
+    margin-left: -28vh;
     
 }
 
@@ -169,7 +199,7 @@ nav ul {
     text-decoration: none;
     margin-left: 3vh;
     font-size: 3.7vh;
-    color: rgb(0, 0, 151);
+    color: rgb(255, 255, 255);
     transition:  0.3s;
 }
 
@@ -241,7 +271,18 @@ nav ul {
     display: flex;
 }
 
-p {
+.quadros p {
+    border: 2px solid rgba(0, 0, 0, 0.384);
+    background-color: rgba(0, 0, 255, 0.479);
+    border-radius: 2vh;
+    width: 50vh;
+    height: 20vh;
     display: flex;
+    font-size: 5vh;
     justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    margin-top: 30vh;
+    margin-left: 2vh;
 }
