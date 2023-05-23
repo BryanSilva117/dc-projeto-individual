@@ -271,6 +271,53 @@ button:hover {
     font-size: 20px;
   }
 
+                                    /* parte login */
 
+.login-inicio {
+    margin-left: 73vh;
+    margin-top: -45vh;
+    border-radius: 3vh;
+    display: none;
+    width: 30vh;
+    padding: 3vh;
+    background-color: rgba(0, 0, 255, 0.596);
+    
+  }
+  .login-inicio h2 {
+    font-family: 'Oswald', sans-serif;
+    color: white;
+    text-align: center;
+  }
+
+  .login-inicio input {
+    width: 27vh;
+    padding: 1.3vh;
+    margin-bottom: 1vh;
+    border-radius: 0.5vh;
+    transition: 0.4s;
+    border: none;
+  }
+  .login-inicio input:hover {
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.897);
+  }
+  
+  .login-inicio button {
+    font-family: 'Oswald', sans-serif;
+    width: 29.5vh;
+    padding: 1.3vh;
+    background-color: rgba(0, 0, 0, 0.61);;
+    color: white;
+    font-size: 2.5vh;
+    border: none;
+    border-radius: 1vh;
+    cursor: pointer;
+    transition: 0.4s;
+  }
+
+  .login-inicio button:hover {
+    background-color: white;
+    color: black;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.897);
+  }
 
 

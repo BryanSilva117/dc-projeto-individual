@@ -49,7 +49,7 @@
     width: 40vh;
     height: 100vh;
     position: fixed;
-    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.418), 0 100px 300px -15px black inset;
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.418), 0 100px 300px -15px rgb(41, 41, 41) inset;
     border-radius: 0.5vh;
     transition: 0.5s;
     z-index: 1;
@@ -217,17 +217,28 @@ nav ul {
     background-color: rgba(0, 4, 255, 0.582);
 }
 
+.imgHeroE {
+    border: 0.5vh solid rgba(0, 5, 82, 0.836);
+    border-radius: 3vh;
+    background-color: rgba(0, 68, 255, 0.582);
+    transition: 0.6s;
+    width: 50vh;
+    height: 59vh;
+}
+
 .quadros {
     display: flex;
     justify-content: center;
     align-items: center;
     transition: 0.5s;
+    overflow-y: initial;
 }
 
 .quadros div {
     font-size: 4vh;
     font-family: 'Oswald', sans-serif;
     text-align: center;
+    
 }
 
 .quadros2 {
@@ -235,6 +246,7 @@ nav ul {
     justify-content: center;
     align-items: center;
     transition: 0.5s;
+    overflow-y: initial;
 }
 
 .quadros2 div {
