@@ -195,7 +195,7 @@
             return false;
         }
 
-        else if (cadastro.senhaVar.length > 20) {
+        else if (cadastro.senhaVar.length > 14) {
             alert('Senha Muito Grande!')
             senha.style.boxShadow = 'inset 0 0 3px 2px rgb(255, 0, 0)'
             finalizarAguardar();
@@ -206,6 +206,12 @@
             alert('Senhas Diferentes')
             senha.style.boxShadow = 'none'
             senhaConf.style.boxShadow = 'inset 0 0 3px 2px rgb(255, 0, 0)'
+            finalizarAguardar();
+            return false;
+        }
+
+        else if (cadastro.heroFavoritoVar == 9) {
+            alert('SAIA DO MEU SITE IMEDIATAMENTE!!!!!')
             finalizarAguardar();
             return false;
         }

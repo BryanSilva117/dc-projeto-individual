@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./img/DCLOGO3.png">
+    <title>Detective Comics Personagens</title>
+    <link rel="stylesheet" href="./css/personagem.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital@1&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+
+    <script src="./js/funcoes.js"></script>
+
+</head>
+
+<body>
+
+    <header class="header">
+
+        <div class="fechar" id="diminuir">
+            <a onclick="fechar()">
+                <img src="https://cdn-icons-png.flaticon.com/512/56/56763.png" alt="" width="30px">
+            </a>
+        </div>
+
+        <div class="logo">
+            <a href="./index.html">
+                <img src="./img/DCLOGO3.png" alt="LOGOPG">
+            </a>
+        </div>
+
+        <div class="sair">
+            <a href="./index.html"><img src="https://cdn-icons-png.flaticon.com/512/1828/1828479.png" alt=""
+                    width="30px"></a>
+        </div>
+
+
+
+    </header>
+
+    <div class="inicio">
+        <div class="lateral1" id="lateralI" style="margin-left: 0vh;">
+            <div class="lateral">
+                <div>
+                    <h1>Seja bem Vindo!<div id="div_usuario">usuário!</div>
+                    </h1>
+                    <br><br>
+                </div>
+                <h1>Equipes DC</h1>
+                <br>
+                <br>
+
+                <div>
+                    <a href="#justice">Liga da Justiça</a>
+                    <br>
+                    <a href="#justiceSombira">Liga da Justisa Sombria</a>
+                    <br>
+                    <a href="#Sociedade">Sociedade da Justiça</a>
+                    <br>
+                    <a href="#JusticeJovem">Justiça Jovem</a>
+                    <br>
+                    <a href="#JovensTita">Jovens Titã</a>
+                    <br>
+                    <a href="#FamíliaMarvel">Família Marvel</a>
+                    <br><br>
+                    <h1>Vilões/Anti-Herois</h1>
+                    <br>
+                    <a href="#leagueIn">Liga da Injustiça</a>
+                    <br>
+                    <a href="#suicideScquade">Esquadrão Suicida</a>
+                    <br><br>
+                    <h1>Dash</h1>
+                    <br>
+                    <a href="./DashPerso.html">Membros da Liga preferidos</a>
+                    <br><br>
+
+                </div>
+            </div>
+        </div>
+            <div class="sobreP">
+                <img src="https://pngimg.com/uploads/superman/superman_PNG77.png" alt="" width="500px">
+            </div>
+    </div>
+</body>
+
+<script>
+
+function fechar() {
+        var lateral = document.getElementById('lateralI');
+        var margin = document.getElementById('diminuir');
+
+        if (lateral.style.marginLeft == '0vh') {
+            lateral.style.marginLeft = '-40vh';
+            margin.style.marginLeft = '2vh';
+        } else {
+            lateral.style.marginLeft = '0vh';
+            margin.style.marginLeft = '37vh';
+        }
+    }
+
+</script>
