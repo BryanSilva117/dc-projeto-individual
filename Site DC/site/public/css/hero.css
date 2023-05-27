@@ -4,44 +4,52 @@
 }
 
 .inicio {
-    background-color: rgba(255, 255, 255, 0.856);
+    background-image: url(../img/hero/1920X1080\ Wallpaper\ 4K\ Space\ Gallery.jpg);
+    background-size: cover;
+    /* background-color: rgba(255, 255, 255, 0.856); */
     height: 145vh;
     overflow-x: hidden;
 }
 .dois {
     background-color: rgb(197, 197, 197);
     height: 145vh;
-    box-shadow: inset rgba(0, 0, 0, 0.425) 0 100px 50px -15px;
+    box-shadow: inset rgba(0, 1, 44, 0.664) 0 100px 50px -15px;
+   
 }
 .tres {
     background-color: rgba(114, 114, 114, 0.705);
     height: 145vh;
-    box-shadow: inset rgba(0, 0, 0, 0.425) 0 100px 50px -15px;
+    box-shadow: inset rgba(0, 1, 44, 0.664) 0 100px 50px -15px;
+   
 }
 .quatro {
     background-color:rgb(87, 87, 87);
     height: 145vh;
-    box-shadow: inset rgba(0, 0, 0, 0.425) 0 100px 50px -15px;
+    box-shadow: inset rgba(0, 1, 44, 0.664) 0 100px 50px -15px;
+   
 }
 .cinco {
     background-color:rgb(53, 53, 53);
     height: 145vh;
-    box-shadow: inset rgba(0, 0, 0, 0.425) 0 100px 50px -15px;
+    box-shadow: inset rgba(0, 1, 44, 0.664) 0 100px 50px -15px;
+    
 }
 .seis {
     background-color:rgb(41, 41, 41);
     height: 145vh;
-    box-shadow: inset rgba(0, 0, 0, 0.425) 0 100px 50px -15px;
+    box-shadow: inset rgba(0, 1, 44, 0.664) 0 100px 50px -15px;
+   
 }
 .sete {
     background-color:rgb(31, 31, 31);
     height: 145vh;
-    box-shadow: inset rgba(0, 0, 0, 0.425) 0 100px 50px -15px;
+    box-shadow: inset rgba(0, 1, 44, 0.664) 0 100px 50px -15px;
+  
 }
 .oito {
     background-color:rgb(17, 17, 17);
     height: 145vh;
-    box-shadow: inset rgba(0, 0, 0, 0.425) 0 100px 50px -15px;
+    box-shadow: inset rgba(0, 1, 44, 0.664) 0 100px 50px -15px;
 }
 
 .lateral1 {
@@ -231,6 +239,7 @@ nav ul {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: white;
     transition: 0.5s;
     overflow-y: initial;
 }
@@ -246,6 +255,7 @@ nav ul {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: white;
     transition: 0.5s;
     overflow-y: initial;
 }
@@ -285,7 +295,7 @@ nav ul {
 }
 
 .quadros p {
-    border: 2px solid rgba(0, 0, 0, 0.384);
+    border: 2px solid rgba(0, 68, 255, 0.582);
     background-color: rgba(0, 0, 255, 0.479);
     border-radius: 2vh;
     width: 50vh;
