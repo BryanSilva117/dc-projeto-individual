@@ -29,6 +29,27 @@ insert into personagemFav values
 (null, 'Outro'),
 (null, 'Prefiro a Marvel');
 
+
+create table QuizCharada (
+idQuizCharada int auto_increment,
+fkUsuario int,
+acertos int,
+erros int,
+constraint fkQU foreign key (fkUsuario) references usuario(idUsuario),
+constraint pkQU primary key (idQuizCharada, fkUsuario)
+);
+
+select * from usuario;
+
+insert into quizCharada values
+(null, 4, 4, 1);
+
+
+SELECT (SUM(acertos) / (COUNT(*) * 5)) * 100 AS PorcentagemAcertosTotal FROM quizCharada;
+
+SELECT (SUM(erros) / (COUNT(*) * 5)) * 100 AS PorcentagemErrosTotal FROM quizCharada;
+
+
 select count(usuario.fkPersonagemFav) as qntVotos, personagemFav.nomeP as 'Nome Heroi'
 	from usuario join personagemFav on personagemFav.idPersonagemFav = usuario.fkPersonagemFav 
 		group by usuario.fkPersonagemFav;

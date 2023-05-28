@@ -11,14 +11,14 @@
 }
 
 .lateral1 {
-    background-color: rgba(255, 255, 255, 0.459);
+    background-color: rgb(0, 47, 255);
     width: 40vh;
     height: 100vh;
     position: fixed;
-    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.418);
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.418), 0 100px 300px -15px rgb(0, 4, 63) inset;
     border-radius: 0.5vh;
-    transition: 0.5s;
-    z-index: 1;
+    transition: 0.6s;
+    z-index: 6;
     overflow-y: auto;
 }
 
