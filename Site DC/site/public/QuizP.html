@@ -52,8 +52,10 @@
         <div class="lateral1" id="lateralI" style="margin-left: 0vh;">
             <div class="lateral">
                 <div>
-                    <h1>Seja bem Vindo!<div id="div_usuario">usuário!</div>
+                    <h1>Quiz Do Charada
                     </h1>
+                    <br>
+                    <a href="./hero.html">Voltar</a>
                     <br><br>
                 </div>
                 <h1>Equipes DC</h1>
@@ -61,35 +63,32 @@
                 <br>
 
                 <div>
-                    <a href="#justice">Liga da Justiça</a>
+                    <a href="hero.html#justice">Liga da Justiça</a>
                     <br>
-                    <a href="#justiceSombira">Liga da Justisa Sombria</a>
+                    <a href="hero.html#justiceSombira">Liga da Justisa Sombria</a>
                     <br>
-                    <a href="#Sociedade">Sociedade da Justiça</a>
+                    <a href="hero.html#Sociedade">Sociedade da Justiça</a>
                     <br>
-                    <a href="#JusticeJovem">Justiça Jovem</a>
+                    <a href="hero.html#JusticeJovem">Justiça Jovem</a>
                     <br>
-                    <a href="#JovensTita">Jovens Titã</a>
+                    <a href="hero.html#JovensTita">Jovens Titã</a>
                     <br>
-                    <a href="#FamíliaMarvel">Família Marvel</a>
+                    <a href="hero.html#FamíliaMarvel">Família Marvel</a>
                     <br><br>
                     <h1>Vilões/Anti-Herois</h1>
                     <br>
-                    <a href="#leagueIn">Liga da Injustiça</a>
+                    <a href="hero.html#leagueIn">Liga da Injustiça</a>
                     <br>
-                    <a href="#suicideScquade">Esquadrão Suicida</a>
+                    <a href="hero.html#suicideScquade">Esquadrão Suicida</a>
                     <br><br>
-                    <h1>Dash</h1>
+                    <h1>Interação</h1>
                     <br>
-                    <a href="./DashPerso.html">Membros da Liga preferidos</a>
+                    <a href="./DashPerso.html">Dash Herois JL Pref</a>
                     <br><br>
 
                 </div>
             </div>
         </div>
-        <!-- <div>
-            <img id="trofeu" src="./img/trofeu-removebg-preview.png" alt="" style="position: absolute;">
-        </div> -->
 
         <div>
             <div>
@@ -112,16 +111,16 @@
                     <div class="quizH" id="quizH" style="display: none; margin-left: 57vh;">
                         <h1><span>Responda as Perguntas do Charada</span></h1>
                         <br>
-                        <h3>O que é que se compra para comer, mas não se come?</h3>
+                        <h3>Quando você me tem, quer compartilhar-me. Quando compartilha comigo, não me tem mais. O que sou eu?</h3>
                         <br>
                         <select class="OpcoesR" id="pergunta_1">
                             <option value="" disabled selected hidden>Escolher</option>
-                            <option value="0">Talheres</option>
-                            <option value="0">Guardanapo</option>
-                            <option value="0">Copo</option>
-                            <option value="1">Prato</option>
-                            <option value="0">Toalha de mesa</option>
-                            <option value="0">Colher</option>
+                            <option value="0">Amizade</option>
+                            <option value="0">Amor</option>
+                            <option value="0">Solidão</option>
+                            <option value="1">Segredo</option>
+                            <option value="0">Memória</option>
+                            <option value="0">Esperança</option>
                         </select><br>
                         <br>
 
@@ -147,13 +146,13 @@
                             <option value="0">O tempo</option>
                             <option value="0">A paciência</option>
                             <option value="0">A memória</option>
-                            <option value="0">O segredo</option>
+                            <option value="0">A raiva</option>
                             <option value="1">O silêncio</option>
                         </select><br><br>
 
 
                         <h3> Posso trazer lágrimas em seu rosto, sou criado<br>
-                             em um instante mas duro a vida toda, o que
+                            em um instante mas duro a vida toda, o que
                             eu sou?</h3>
                         <br>
                         <select class="OpcoesR" id="pergunta_4">
@@ -192,6 +191,9 @@
 </body>
 
 <script>
+
+    div_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+
     function responder() {
         var quizH = document.getElementById('quizH')
         var resposta = document.getElementById('responder')
@@ -289,93 +291,47 @@
                 corR5.style.backgroundColor = 'red'
             }
 
+            console.log(` Acertos ${totalAcertos} erros ${totalErros} porcentagem ${totalAcertos / 5 * 100}`)
+            
+
             // Enviando o valor da nova input
-        fetch("/usuarios/cadastrar", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                // crie um atributo que recebe o valor recuperado aqui
-                // Agora vá para o arquivo routes/usuario.js
-                nomeServer: cadastro.nomeVar,
-                sobrenomeServer: cadastro.sobrenomeVar,
-                emailServer: cadastro.emailVar,
-                senhaServer: cadastro.senhaVar,
-                dtNascServer: cadastro.dtNascVar,
-                generoServer: cadastro.generoVar,
-                heroFavoritoServer: cadastro.heroFavoritoVar
-            })
-        }).then(function (resposta) {
+            fetch("/quiz/concluir", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    // crie um atributo que recebe o valor recuperado aqui
+                    // Agora vá para o arquivo routes/usuario.js
+                    totalAcertosSever: totalAcertos,
+                    totalErros: totalErros,
+                    fkUsuarioServer: sessionStorage.ID_USUARIO
+                })
+            }).then(function (resposta) {
 
-            console.log("resposta: ", resposta);
+                console.log("resposta: ", resposta);
 
-            if (resposta.ok) {
-                cardErro.style.display = "block";
-
-                mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
-
-                setTimeout(() => {
-                    window.location = "index.html";
-                }, "2000")
-
-                limparFormulario();
+                if (resposta.ok) {
+                    cardErro.style.display = "block";
+                    mensagem_erro.innerHTML = "Foi"
+                    limparFormulario();
+                    finalizarAguardar();
+                } else {
+                    throw ("Não foi");
+                }
+            }).catch(function (resposta) {
+                console.log(`#ERRO: ${resposta}`);
                 finalizarAguardar();
-            } else {
-                throw ("Houve um erro ao tentar realizar o cadastro!");
-            }
-        }).catch(function (resposta) {
-            console.log(`#ERRO: ${resposta}`);
-            finalizarAguardar();
-        });
+            });
 
-        return false;
-    }
-
-    function sumirMensagem() {
-        cardErro.style.display = "none"
-    
-    }
+            return false;
         }
 
-        console.log(` Acertos ${totalAcertos} erros ${totalErros} porcentagem ${totalAcertos / 5 * 100}`)
+        function sumirMensagem() {
+            cardErro.style.display = "none"
 
-
-
-
-//     function exibirImagemAleatoria() {
-//     // Obtenha a largura e altura da janela do navegador
-//     const janelaLargura = window.innerWidth;
-//     const janelaAltura = window.innerHeight;
-
-//     // Obtenha uma referência ao elemento de imagem
-//     const trofeu = document.getElementById('trofeu');
-
-//     // Defina as coordenadas x e y aleatórias para a posição do troféu
-//     const posX = Math.random() * (janelaLargura - trofeu.width);
-//     const posY = Math.random() * (janelaAltura - trofeu.height);
-
-//     // Defina as coordenadas x e y como estilo da posição do troféu
-//     trofeu.style.left = posX + 'px';
-//     trofeu.style.top = posY + 'px';
-
-//     // Defina a opacidade como 0 para tornar o troféu invisível
-//     trofeu.style.opacity = 0;
-
-//     // Aguarde 200 milissegundos para iniciar a transição de opacidade
-//     setTimeout(function() {
-//         // Defina a opacidade como 1 para tornar o troféu visível novamente
-//         trofeu.style.opacity = 1;
-//     }, 200);
-
-//     // Aguarde 2500 milissegundos (2,5 segundos) antes de ocultar novamente o troféu
-//     setTimeout(function() {
-//         // Defina a opacidade como 0 para tornar o troféu invisível novamente
-//         trofeu.style.opacity = 0;
-//     }, 2500);
-// }
-
-// // Chame a função a cada 3 segundos (3000 milissegundos)
-// setInterval(exibirImagemAleatoria, 3000);
+        }
+    
+    }
 
 </script>

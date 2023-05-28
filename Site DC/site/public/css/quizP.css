@@ -137,7 +137,7 @@ nav ul {
 
 
 
-/* parte dash */
+/* parte quiz */
 
 
 .quizH {
@@ -156,7 +156,7 @@ nav ul {
 }
 
 .quizH h3 {
-    font-size: 4vh;
+    font-size: 3.4vh;
 }
 
 .quizH span {
@@ -165,7 +165,7 @@ nav ul {
 
 .OpcoesR {
     font-size: 4vh;
-    width: 50vh;
+    width: 30vh;
     height: 7vh;
     border-radius: 2vh;
     border: 2px solid rgba(4, 80, 4, 0.801);
@@ -177,6 +177,7 @@ nav ul {
 
 .OpcoesR option {
     font-size: 3vh;
+    
 }
 
 .quizH button {
