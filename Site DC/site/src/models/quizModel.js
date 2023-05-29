@@ -25,7 +25,7 @@ function concluir(acertos, erros, fkUsuario) {
     // Insira exatamente a query do banco aqui, lembrando da nomenclatura exata nos valores
     //  e na ordem de inserção dos dados.
     var instrucao = `
-        INSERT INTO QuizCharada (fkUsuario, acertos, erros) VALUES ('${fkUsuario}', '${acertos}', '${erros});
+        INSERT INTO QuizCharada (fkUsuario, acertos, erros) VALUES ('${fkUsuario}', '${acertos}', '${erros}');
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);

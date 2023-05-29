@@ -111,7 +111,8 @@
                     <div class="quizH" id="quizH" style="display: none; margin-left: 57vh;">
                         <h1><span>Responda as Perguntas do Charada</span></h1>
                         <br>
-                        <h3>Quando você me tem, quer compartilhar-me. Quando compartilha comigo, não me tem mais. O que sou eu?</h3>
+                        <h3>Quando você me tem, quer compartilhar-me. Quando compartilha comigo, não me tem mais. O que
+                            sou eu?</h3>
                         <br>
                         <select class="OpcoesR" id="pergunta_1">
                             <option value="" disabled selected hidden>Escolher</option>
@@ -191,8 +192,10 @@
 </body>
 
 <script>
+    var fk = sessionStorage.ID_USUARIO
 
-    div_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+    console.log(fk)
+
 
     function responder() {
         var quizH = document.getElementById('quizH')
@@ -292,7 +295,7 @@
             }
 
             console.log(` Acertos ${totalAcertos} erros ${totalErros} porcentagem ${totalAcertos / 5 * 100}`)
-            
+
 
             // Enviando o valor da nova input
             fetch("/quiz/concluir", {
@@ -331,7 +334,7 @@
             cardErro.style.display = "none"
 
         }
-    
+
     }
 
 </script>
