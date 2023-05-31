@@ -108,17 +108,27 @@
                             <button onclick="responder()">Responder</button>
                     </div>
 
-                    <div class="reponda" id="RespostaQ" style="margin-left: 76vh; display: none; position: absolute;">
-                        <h1 id="tituloQ">CHARADA ESCAPOU POR SUA CULPA</h1>
+
+
+                    <div class="repondaQ" id="RespostaQ" style="margin-left: 76vh; display: none; position: absolute; position: fixed;">
+                        <h1 id="tituloQ">O CHARADA ESCAPOU!!!</h1>
+                        <br>
+                        <h2>
+                            Agora o batman está triste<br>
+                            porque você só acertou ${calulo} das perguntas do charada
+                        </h2>
+                       <br><br>
                         
                         <div class="gif"><img src="https://gifs.eco.br/wp-content/uploads/2021/09/sad-batman-gifs-2.gif" alt=""></div>
-                        <button onclick="responder()">Tentar Novamente</button> <button onclick="DashQ()">Ver Resultado</button>
+                        <button onclick="respNova()">Tentar Novamente</button> <button onclick="DashQ()">Ver Resultado</button>
                     </div>
+
+
 
                     <div class="quizH" id="quizH" style="display: none; margin-left: 57vh;">
                         <h1><span>Responda as Perguntas do Charada</span></h1>
                         <br>
-                        <h3>Quando você me tem, quer compartilhar-me. Quando compartilha comigo, não me tem mais. O que
+                        <h3>Quando você me tem, quer compartilhar-me. Quando compartilha comigo, não me tem mais.<br> O que
                             sou eu?</h3>
                         <br>
                         <select class="OpcoesR" id="pergunta_1">
@@ -226,19 +236,32 @@
         var margin = document.getElementById('diminuir')
         var quizH = document.getElementById('quizH')
         var resposta = document.getElementById('responder')
+
+        var respostaQ = document.getElementById('RespostaQ')
+
         if (lateral.style.marginLeft == '0vh') {
             lateral.style.marginLeft = '-40vh'
             margin.style.marginLeft = '2vh'
             quizH.style.marginLeft = '39vh'
             resposta.style.marginLeft = '60vh'
+            respostaQ.style.marginLeft = '60vh'
         } else {
             lateral.style.marginLeft = '0vh'
             margin.style.marginLeft = '37vh'
             quizH.style.marginLeft = '57vh'
             resposta.style.marginLeft = '76vh'
+            respostaQ.style.marginLeft = '76vh'
         }
     }
 
+    function respNova() {
+        var respostaQ = document.getElementById('RespostaQ')
+
+        if (respostaQ.style.display == 'block') {
+            
+            respostaQ.style.display = 'none'
+        }
+    }
 
 
     function concluir() {
@@ -303,6 +326,16 @@
                 corR5.style.backgroundColor = 'red'
             }
 
+
+            var respostaQ = document.getElementById('RespostaQ')
+         if (respostaQ.style.display == 'none') {
+
+            respostaQ.style.display = 'block'
+         }
+         else {
+            respostaQ.style.display = 'none'
+         }
+
            
             console.log(` Acertos ${totalAcertos} erros ${totalErros} porcentagem ${totalAcertos / 5 * 100}`)
 
@@ -344,15 +377,6 @@
             cardErro.style.display = "none"
 
         }
-
-        var respostaQ = document.getElementById('RespostaQ')
-         if (respostaQ.style.display == 'none') {
-
-            respostaQ.style.display = 'block'
-         }
-         else {
-            respostaQ.style.display = 'none'
-         }
     }
 
 </script>

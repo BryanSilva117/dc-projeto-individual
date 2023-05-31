@@ -91,7 +91,6 @@ nav ul {
 
 
 
-
 /* parte lateral */
 
 .lateral {
@@ -150,7 +149,8 @@ nav ul {
     margin-top: 12vh;
     transition: 0.5s;
     border-radius: 4vh;
-    background-color: rgba(4, 80, 4, 0.548);
+    background-color: rgb(0, 32, 0);
+    background-size: cover;
     font-family: 'Oswald', sans-serif;
     color: white;
 }
@@ -160,7 +160,7 @@ nav ul {
 }
 
 .quizH span {
-    color: black;
+    color: rgb(0, 255, 0);
 }
 
 .OpcoesR {
@@ -193,7 +193,6 @@ nav ul {
 }
 
 .quizH button:hover {
-    transform: scale(1.02);
     box-shadow: 3px 3px 3px 0px rgb(0, 0, 0);
 }
 
@@ -207,13 +206,13 @@ nav ul {
     height: 90vh;
     transition: 0.5s;
     border-radius: 4vh;
-    background-color: rgba(4, 80, 4, 0.548);
+    background-color: rgb(0, 32, 0);
     font-family: 'Oswald', sans-serif;
     color: white;
 }
 
 .reponda h1 {
-    color: rgb(0, 5, 0);
+    color: rgb(0, 255, 0);
 }
 
 .reponda button {
@@ -224,7 +223,7 @@ nav ul {
     border: 2px solid black;
     font-size: 4vh;
     font-family: 'Oswald', sans-serif;
-    background-color: rgb(0, 56, 0);
+    background-color: rgb(0, 255, 0);
     transition: 0.4s;
     cursor: pointer;
 }
@@ -233,3 +232,44 @@ nav ul {
     transform: scale(1.02);
     box-shadow: 3px 3px 3px 0px rgb(0, 0, 0);
 }
+
+
+
+
+.repondaQ {
+    margin-top: -10vh;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 90vh;
+    height: 90vh;
+    transition: 0.5s;
+    border-radius: 4vh;
+    background-color: rgb(0, 32, 0);
+    font-family: 'Oswald', sans-serif;
+    color: white;
+}
+
+.repondaQ h1 {
+    color: rgb(0, 255, 0);
+}
+
+.repondaQ button {
+    margin-top: 5vh;
+    width: 30vh;
+    height: 10vh;
+    border-radius: 2vh;
+    border: 2px solid black;
+    font-size: 4vh;
+    font-family: 'Oswald', sans-serif;
+    background-color: rgb(0, 255, 0);
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.repondaQ button:hover {
+    transform: scale(1.02);
+    box-shadow: 3px 3px 3px 0px rgb(0, 0, 0);
+}
+
+
