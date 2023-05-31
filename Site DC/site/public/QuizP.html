@@ -108,6 +108,13 @@
                             <button onclick="responder()">Responder</button>
                     </div>
 
+                    <div class="reponda" id="RespostaQ" style="margin-left: 76vh; display: none; position: absolute;">
+                        <h1 id="tituloQ">CHARADA ESCAPOU POR SUA CULPA</h1>
+                        
+                        <div class="gif"><img src="https://gifs.eco.br/wp-content/uploads/2021/09/sad-batman-gifs-2.gif" alt=""></div>
+                        <button onclick="responder()">Tentar Novamente</button> <button onclick="DashQ()">Ver Resultado</button>
+                    </div>
+
                     <div class="quizH" id="quizH" style="display: none; margin-left: 57vh;">
                         <h1><span>Responda as Perguntas do Charada</span></h1>
                         <br>
@@ -138,7 +145,7 @@
                             <option value="1">Solidão</option>
                             <option value="0"> A água</option>
                         </select><br><br>
-
+                        
                         <h3>O que é tão frágil que pode ser quebrado apenas ao ser mencionado?</h3>
                         <br><br>
                         <select class="OpcoesR" id="pergunta_3">
@@ -186,6 +193,8 @@
 
 
                 </ul>
+
+                
             </div>
         </div>
     </div>
@@ -294,6 +303,7 @@
                 corR5.style.backgroundColor = 'red'
             }
 
+           
             console.log(` Acertos ${totalAcertos} erros ${totalErros} porcentagem ${totalAcertos / 5 * 100}`)
 
 
@@ -335,6 +345,14 @@
 
         }
 
+        var respostaQ = document.getElementById('RespostaQ')
+         if (respostaQ.style.display == 'none') {
+
+            respostaQ.style.display = 'block'
+         }
+         else {
+            respostaQ.style.display = 'none'
+         }
     }
 
 </script>
