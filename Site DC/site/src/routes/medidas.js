@@ -7,7 +7,7 @@ router.get("/ultimas/:idAquario", function (req, res) {
     medidaController.buscarUltimasMedidas(req, res);
 });
 
-router.get("/ultimas/:idAquario", function (req, res) {
+router.get("/ultimas2/:idAquario", function (req, res) {
     medidaController.buscarUltimasMedidas2(req, res);
 });
 

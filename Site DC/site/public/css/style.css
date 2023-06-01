@@ -118,6 +118,9 @@ header {
     align-items: center;
     box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.418);
     padding: 1vh 5vh;
+    position: fixed;
+    width: 200vh;
+    z-index: 10;
 }
 
 
@@ -193,6 +196,7 @@ nav ul {
 
 
 .container a {
+    cursor: pointer;
     font-size: 2.5vh;
     background-color: rgba(0, 0, 0, 0.61);
     border: 5px black;
@@ -416,6 +420,7 @@ nav ul {
     width: 15vh;
     height: 8vh;
     transition: 0.5s;
+    cursor: pointer;
 }
 
 .parte_aquaman a:hover {
@@ -474,6 +479,7 @@ nav ul {
     width: 15vh;
     height: 8vh;
     transition: 0.5s;
+    cursor: pointer;
 }
 
 .parte_lanterna a:hover {
@@ -535,6 +541,7 @@ nav ul {
     width: 15vh;
     height: 8vh;
     transition: 0.5s;
+    cursor: pointer;
 }
 
 .parte_wonder a:hover {
@@ -595,6 +602,7 @@ nav ul {
     width: 15vh;
     height: 8vh;
     transition: 0.5s;
+    cursor: pointer;
 }
 
 .parte_superman a:hover {
@@ -646,6 +654,7 @@ nav ul {
     width: 15vh;
     height: 8vh;
     transition: 0.5s;
+    cursor: pointer;
 }
 
 .parte_batman a:hover {
@@ -714,6 +723,7 @@ nav ul {
     width: 15vh;
     height: 8vh;
     transition: 0.5s;
+    cursor: pointer;
 }
 
 .parte_flash a:hover {
@@ -763,6 +773,7 @@ nav ul {
     width: 15vh;
     height: 8vh;
     transition: 0.5s;
+    cursor: pointer;
 }
 
 .parte_cyborg a:hover {
@@ -825,13 +836,15 @@ nav ul {
 
                                                             /*tela de login */
 .login-inicio {
-    margin-left: 73vh;
-    margin-top: -45vh;
+    margin-left: 145vh;
+    margin-top: -16vh;
     border-radius: 3vh;
     display: none;
     width: 30vh;
     padding: 3vh;
     background-color: rgba(0, 0, 255, 0.596);
+    position: fixed;
+    z-index: 10;
     
   }
   .login-inicio h2 {
@@ -910,3 +923,17 @@ nav ul {
   #div_erros_login {
     display: none;
   }
+
+
+
+  /* .triangulo {
+    display: inline-block;
+    margin-right: 50px;
+}
+#triangulo-para-cima {
+  width: 0; 
+  height: 0; 
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 25px solid #5386E4;
+} */

@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./img/DCLOGO3.png">
     <title>Detective Comics Dash Quiz</title>
-    <link rel="stylesheet" href="./css/quizP.css">
+    <link rel="stylesheet" href="./css/dashQuiz.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
@@ -91,46 +91,37 @@
         </div>
 
         <div>
-            <div>
-                <br>
-                <br>
-                <ul>
-                    <li class="Dash" id="dash" style="margin-left: 50vh;">
-                        <canvas id="myChart"></canvas>
-                    </li>
-
-
-                </ul>
-            </div>
+            <br>
+            <br>
+            <ul>
+                <li class="Dash" id="dash" style="margin-left: 50vh;">
+                    <canvas id="myChart"></canvas>
+                </li>
+            </ul>
         </div>
-
     </div>
+
+
 </body>
 
 </html>
 
 <script>
 
-function fechar() {
+    function fechar() {
         var lateral = document.getElementById('lateralI')
         var margin = document.getElementById('diminuir')
-        var quizH = document.getElementById('quizH')
-        var resposta = document.getElementById('responder')
+
 
         var respostaQ = document.getElementById('RespostaQ')
 
         if (lateral.style.marginLeft == '0vh') {
             lateral.style.marginLeft = '-40vh'
             margin.style.marginLeft = '2vh'
-            quizH.style.marginLeft = '39vh'
-            resposta.style.marginLeft = '60vh'
-            respostaQ.style.marginLeft = '60vh'
+
         } else {
             lateral.style.marginLeft = '0vh'
             margin.style.marginLeft = '37vh'
-            quizH.style.marginLeft = '57vh'
-            resposta.style.marginLeft = '76vh'
-            respostaQ.style.marginLeft = '76vh'
         }
     }
 
@@ -147,7 +138,7 @@ function fechar() {
         }
 
 
-        fetch(`/medidas/ultimas/${idAquario}`, { cache: 'no-store' }).then(function (response) {
+        fetch(`/medidas/ultimas2/${idAquario}`, { cache: 'no-store' }).then(function (response) {
             if (response.ok) {
                 response.json().then(function (resposta) {
                     console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
@@ -167,74 +158,74 @@ function fechar() {
     // Configura o gráfico (cores, tipo, etc), materializa-o na página e, 
     // A função *plotarGrafico* também invoca a função *atualizarGrafico*
     function plotarGrafico(resposta, idAquario) {
-    console.log('iniciando plotagem do gráfico...');
+        console.log('iniciando plotagem do gráfico...');
 
-    var dados = {
-        labels: [],
-        datasets: [
-            {
-                yAxisID: 'y-totalpersonagens',
-                label: 'Acertos Favorito',
-                backgroundColor: ['rgb(44, 129, 233)', 'rgb(48, 48, 48)', 'rgb(255, 196, 0)', 'rgb(255, 0, 0)', 'rgb(0, 255, 0)', 'rgb(0, 66, 37)', 'rgb( 192, 192, 192)', 'rgb(5, 5, 238)', 'rgb(200, 50, 79)'],
-                borderColor: 'black',
-                borderWidth: 3,
-                data: []
-            }
-        ]
-    };
-
-    for (i = 0; i < resposta.length; i++) {
-        var registro = resposta[i];
-        dados.labels.push(registro.Acertos);
-        dados.datasets[0].data.push(registro.Erros);
-    }
-
-    var ctx = myChart.getContext('2d');
-    window.myChart = new Chart(ctx, {
-        type: 'bar',
-        data: dados,
-        options: {
-            responsive: true,
-            animation: { duration: 900 },
-            hoverMode: 'index',
-            stacked: false,
-            title: {
-                display: true,
-                text: 'Os Personagens da Liga da Justiça mais Escolhidos',
-                fontSize: 18,
-                fontColor: 'rgba(255, 255, 255)',
-                fontFamily: 'Oswald, sans-serif'
-            },
-            scales: {
-                yAxes: [{
-                    type: 'linear',
-                    display: true,
-                    position: 'left',
-                    id: 'y-totalpersonagens',
-                    ticks: {
-                        beginAtZero: true,
-                        max: 25,
-                        min: 0,
-                        fontColor: 'white', // Define a cor preta para os números do eixo y
-                        fontSize: 16
-                },
-                gridLines: {
-                    color: 'rgba(0, 0, 0, 0.377)' // Define a cor preta para as linhas do fundo do eixo y
+        var dados = {
+            labels: [],
+            datasets: [
+                {
+                    yAxisID: 'y-totalpersonagens',
+                    label: 'Acertos Favorito',
+                    backgroundColor: ['rgb(44, 129, 233)', 'rgb(48, 48, 48)', 'rgb(255, 196, 0)', 'rgb(255, 0, 0)', 'rgb(0, 255, 0)', 'rgb(0, 66, 37)', 'rgb( 192, 192, 192)', 'rgb(5, 5, 238)', 'rgb(200, 50, 79)'],
+                    borderColor: 'black',
+                    borderWidth: 3,
+                    data: []
                 }
-            }],
-            xAxes: [{
-                ticks: {
+            ]
+        };
+
+        for (i = 0; i < resposta.length; i++) {
+            var registro = resposta[i];
+            dados.labels.push(registro.Acertos);
+            dados.datasets[0].data.push(registro.Erros);
+        }
+
+        var ctx = myChart.getContext('2d');
+        window.myChart = new Chart(ctx, {
+            type: 'bar',
+            data: dados,
+            options: {
+                responsive: true,
+                animation: { duration: 900 },
+                hoverMode: 'index',
+                stacked: false,
+                title: {
+                    display: true,
+                    text: 'Os Personagens da Liga da Justiça mais Escolhidos',
+                    fontSize: 18,
                     fontColor: 'rgba(255, 255, 255)',
                     fontFamily: 'Oswald, sans-serif'
                 },
-                gridLines: {
-                    color: 'rgba(0, 0, 0, 0.377)' // Define a cor preta para as linhas do fundo do eixo x
+                scales: {
+                    yAxes: [{
+                        type: 'linear',
+                        display: true,
+                        position: 'left',
+                        id: 'y-totalpersonagens',
+                        ticks: {
+                            beginAtZero: true,
+                            max: 25,
+                            min: 0,
+                            fontColor: 'white', // Define a cor preta para os números do eixo y
+                            fontSize: 16
+                        },
+                        gridLines: {
+                            color: 'rgba(0, 0, 0, 0.377)' // Define a cor preta para as linhas do fundo do eixo y
+                        }
+                    }],
+                    xAxes: [{
+                        ticks: {
+                            fontColor: 'rgba(255, 255, 255)',
+                            fontFamily: 'Oswald, sans-serif'
+                        },
+                        gridLines: {
+                            color: 'rgba(0, 0, 0, 0.377)' // Define a cor preta para as linhas do fundo do eixo x
+                        }
+                    }]
                 }
-            }]
-        }
+            }
+        });
     }
-});
-}
 
 
     // Esta função *atualizarGrafico* atualiza o gráfico que foi renderizado na página,
@@ -262,7 +253,9 @@ function fechar() {
 
                         dados.datasets[1].data.shift();
                         dados.datasets[1].data.push(registro.Erros);
+
                     }
+
 
 
                     for (i = 0; i < novoRegistro.length; i++) {

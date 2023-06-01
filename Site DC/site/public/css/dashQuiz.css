@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.inicio {
+    background-image: url(../img/backGround_charada.jpg);
+    background-color: rgb(4, 24, 0);
+    background-size: contain;
+    background-repeat: repeat-x;
+    box-shadow: inset 5px 5px 5px 5px rgba(0, 0, 0, 0.418);
+    border-bottom: 0;
+}
+
+.lateral1 {
+    background-color: rgb(12, 73, 0);
+    width: 40vh;
+    height: 100vh;
+    position: fixed;
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.418), 0 100px 300px -15px rgb(0, 39, 3) inset;
+    border-radius: 0.5vh;
+    transition: 0.6s;
+    z-index: 6;
+    overflow-y: auto;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.418);
+    padding: 1vh 5vh;
+    position: fixed;
+}
+
+
+.header {
+    width: 200vh;
+    background-color: rgba(0, 75, 0, 0.603);
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img {
+    display: flex;
+    height: 12vh;
+    cursor: pointer;
+}
+
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+
+
+
+.fechar {
+    width: 5vh;
+    height: 5vh;
+    margin-left: 37vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 6vh;
+    transition: 0.6s;
+    margin-top: 3vh;
+}
+
+
+.fechar a:hover {
+    transform: scale(1.15);
+}
+
+.sair {
+    display: flex;
+    justify-content: center;
+    margin-top: 3.5vh;
+    margin-right: 1vh;
+    width: 10vh;
+    height: 4vh;
+    transition: 0.4s;
+}
+
+.sair:hover {
+    transform: scale(1.15);
+}
+
+
+
+/* parte lateral */
+
+.lateral {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Oswald', sans-serif;
+    text-align: left;
+    margin-top: 3vh;
+}
+
+
+.lateral span {
+    color: rgb(0, 0, 151);
+    display: flex;
+    font-size: 5vh;
+
+}
+
+.lateral h1 {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.lateral a {
+    display: flex;
+    justify-content: left;
+    text-align: left;
+    text-decoration: none;
+    margin-left: 3vh;
+    font-size: 3.7vh;
+    color: rgb(255, 255, 255);
+    transition: 0.3s;
+}
+
+.lateral a:hover {
+    font-size: 3.75vh;
+    text-decoration: underline black;
+}
+
+/* parte dash */
+
+.Dash {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150vh;
+    margin-top: 12vh;
+    transition: 0.5s;
+    border-radius: 4vh;
+    background-color: rgba(14, 83, 0, 0.644);
+}
