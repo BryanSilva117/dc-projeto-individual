@@ -5,8 +5,10 @@
 
 .inicio {
     background-image: url(../img/backGround_charada.jpg);
-    background-size :cover;
-    background-repeat: no-repeat;
+    background-color: rgb(4, 24, 0);
+    background-size: contain;
+    background-repeat: repeat-x;
+    box-shadow: inset 5px 5px 5px 5px rgba(0, 0, 0, 0.418);
     border-bottom: 0;
 }
 
@@ -149,7 +151,7 @@ nav ul {
     margin-top: 12vh;
     transition: 0.5s;
     border-radius: 4vh;
-    background-color: rgb(0, 32, 0);
+    background-color: rgba(0, 43, 0, 0.781);
     background-size: cover;
     font-family: 'Oswald', sans-serif;
     color: white;

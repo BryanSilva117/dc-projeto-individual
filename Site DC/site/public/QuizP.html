@@ -52,8 +52,10 @@
         <div class="lateral1" id="lateralI" style="margin-left: 0vh;">
             <div class="lateral">
                 <div>
-                    <h1>Quiz Do Charada
+                    <h1>QUIZ CHARADA
                     </h1>
+                    <br>
+                    <a href="./dashQuiz.html">Dash Quiz</a>
                     <br>
                     <a href="./hero.html">Voltar</a>
                     <br><br>
@@ -111,16 +113,6 @@
 
 
                     <div class="repondaQ" id="RespostaQ" style="margin-left: 76vh; display: none; position: absolute; position: fixed;">
-                        <h1 id="tituloQ">O CHARADA ESCAPOU!!!</h1>
-                        <br>
-                        <h2>
-                            Agora o batman está triste<br>
-                            porque você só acertou ${calulo} das perguntas do charada
-                        </h2>
-                       <br><br>
-                        
-                        <div class="gif"><img src="https://gifs.eco.br/wp-content/uploads/2021/09/sad-batman-gifs-2.gif" alt=""></div>
-                        <button onclick="respNova()">Tentar Novamente</button> <button onclick="DashQ()">Ver Resultado</button>
                     </div>
 
 
@@ -128,7 +120,8 @@
                     <div class="quizH" id="quizH" style="display: none; margin-left: 57vh;">
                         <h1><span>Responda as Perguntas do Charada</span></h1>
                         <br>
-                        <h3>Quando você me tem, quer compartilhar-me. Quando compartilha comigo, não me tem mais.<br> O que
+                        <h3>Quando você me tem, quer compartilhar-me. Quando compartilha comigo, não me tem mais.<br> O
+                            que
                             sou eu?</h3>
                         <br>
                         <select class="OpcoesR" id="pergunta_1">
@@ -155,7 +148,7 @@
                             <option value="1">Solidão</option>
                             <option value="0"> A água</option>
                         </select><br><br>
-                        
+
                         <h3>O que é tão frágil que pode ser quebrado apenas ao ser mencionado?</h3>
                         <br><br>
                         <select class="OpcoesR" id="pergunta_3">
@@ -204,7 +197,7 @@
 
                 </ul>
 
-                
+
             </div>
         </div>
     </div>
@@ -258,7 +251,7 @@
         var respostaQ = document.getElementById('RespostaQ')
 
         if (respostaQ.style.display == 'block') {
-            
+
             respostaQ.style.display = 'none'
         }
     }
@@ -273,6 +266,7 @@
 
         var totalAcertos = 0
         var totalErros = 0
+
 
         var corR1 = document.getElementById('pergunta_1')
         var corR2 = document.getElementById('pergunta_2')
@@ -326,17 +320,84 @@
                 corR5.style.backgroundColor = 'red'
             }
 
+            var media = totalAcertos / 5 * 100
+
+            if (totalAcertos >= 0 && totalAcertos <= 2) {
+                console.log(media)
+    
+
+                RespostaQ.innerHTML = `
+
+                <h1 id="tituloQ">O CHARADA ESCAPOU!!!</h1>
+                        <br>
+                        <h2>
+                            O Charada fugiu, Agora o batman está triste<br>
+                            porque você só acertou ${media}% das perguntas do charada
+                        </h2>
+                       <br><br>
+
+                       <div class="gif"><img src="https://gifs.eco.br/wp-content/uploads/2021/09/sad-batman-gifs-2.gif"
+                                alt=""></div>
+                                
+                        <button onclick="respNova()">Tentar Novamente</button> <button onclick="DashQ()">Ver
+                            Resultado</button>
+
+                       `
+
+            }
+
+            else if (totalAcertos >2 && totalAcertos < 5) {
+                RespostaQ.innerHTML = `
+
+                <h1 id="tituloQ">O CHARADA ESCAPOU POR POUCO!!!</h1>
+                        <br>
+                        <h2>
+                            Você está cada vez mais perto de 
+                            ajudar o Batman capturar o Charada
+                            porque você acertou ${media}% das perguntas do Charada
+                        </h2>
+                       <br><br>
+
+                       <div class="gif"><img src="https://media.tenor.com/gmUmuAcdK78AAAAC/batman.gif"
+                                alt="" width="280px heigth="400px""></div>
+                                
+                        <button onclick="respNova()">Tentar Novamente</button> <button onclick="DashQ()">Ver
+                            Resultado</button>
+
+                       `
+            }
+
+            else {
+                RespostaQ.innerHTML = `
+
+                <h1 id="tituloQ">BATMAN CAPTUROU O CHARADA!!!</h1>
+                        <br>
+                        <h2>
+                            O Batman capturou o Charada! ele conseguiu porque você
+                            acertou ${media}% das perguntas do charada
+                        </h2>
+                       <br><br>
+
+                       <div class="gif"><img src="https://media.giphy.com/media/uNp22kQO4QCxa/giphy.gif"
+                                alt="" width="280px heigth="400px""></div>
+                                
+                        <button onclick="DashQ()">Ver
+                            Resultado</button>
+
+                       `
+            }
+
 
             var respostaQ = document.getElementById('RespostaQ')
-         if (respostaQ.style.display == 'none') {
+            if (respostaQ.style.display == 'none') {
 
-            respostaQ.style.display = 'block'
-         }
-         else {
-            respostaQ.style.display = 'none'
-         }
+                respostaQ.style.display = 'block'
+            }
+            else {
+                respostaQ.style.display = 'none'
+            }
 
-           
+
             console.log(` Acertos ${totalAcertos} erros ${totalErros} porcentagem ${totalAcertos / 5 * 100}`)
 
 
