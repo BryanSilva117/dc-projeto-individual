@@ -47,12 +47,13 @@ insert into quizCharada values
 select * from quizCharada;
 
 
-SELECT (SUM(acertos) / (COUNT(*) * 5)) * 100 AS "Porcentagem de acertos",
-	 (SUM(erros) / (COUNT(*) * 5)) * 100 AS "Porcentagem de erros" FROM quizCharada;
+SELECT nome as Nome, (SUM(acertos) / (COUNT(*) * 5)) * 100 AS Acertos,
+        (SUM(erros) / (COUNT(*) * 5)) * 100 AS Erros FROM quizCharada join usuario on fkUsuario = idUsuario	
+			group by fkUsuario;
      
-     SELECT (SUM(acertos) / (COUNT(*) * 5)) * 100 AS "Porcentagem de acertos",
-	 (SUM(erros) / (COUNT(*) * 5)) * 100 AS "Porcentagem de erros" FROM quizCharada where fkUsuario = 20;
-
+     SELECT (SUM(acertos) / (COUNT(*) * 5)) * 100 AS Acertos,
+        (SUM(erros) / (COUNT(*) * 5)) * 100 AS Erros FROM quizCharada where fkUsuario = 20;
+        
 
 
 select count(usuario.fkPersonagemFav) as qntVotos, personagemFav.nomeP as 'Nome Heroi'

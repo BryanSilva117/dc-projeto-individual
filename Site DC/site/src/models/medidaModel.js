@@ -27,13 +27,15 @@ function buscarUltimasMedidas2(idAquario, limite_linhas) {
     instrucaoSql = ''
 
     if (process.env.AMBIENTE_PROCESSO == "producao") {
-        instrucaoSql = `SELECT (SUM(acertos) / (COUNT(*) * 5)) * 100 AS Acertos,
-        (SUM(erros) / (COUNT(*) * 5)) * 100 AS Erros FROM quizCharada;`;
+        instrucaoSql = `SELECT nome as Nome, (SUM(acertos) / (COUNT(*) * 5)) * 100 AS Acertos,
+        (SUM(erros) / (COUNT(*) * 5)) * 100 AS Erros FROM quizCharada join usuario on fkUsuario = idUsuario	
+			group by fkUsuario;`;
 
 
     } else if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
-        instrucaoSql = `SELECT (SUM(acertos) / (COUNT(*) * 5)) * 100 AS Acertos,
-        (SUM(erros) / (COUNT(*) * 5)) * 100 AS Erros FROM quizCharada;`;
+        instrucaoSql = `SELECT nome as Nome, (SUM(acertos) / (COUNT(*) * 5)) * 100 AS Acertos,
+        (SUM(erros) / (COUNT(*) * 5)) * 100 AS Erros FROM quizCharada join usuario on fkUsuario = idUsuario	
+			group by fkUsuario;`;
 
     } else {
         console.log("\nO AMBIENTE (produção OU desenvolvimento) NÃO FOI DEFINIDO EM app.js\n");

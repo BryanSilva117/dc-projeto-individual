@@ -4,12 +4,11 @@
 }
 
 .inicio {
-    background-image: url(../img/backGround_charada.jpg);
-    background-color: rgb(4, 24, 0);
-    background-size: contain;
-    background-repeat: repeat-x;
+    
+    background-color: rgb(4, 22, 0);
     box-shadow: inset 5px 5px 5px 5px rgba(0, 0, 0, 0.418);
     border-bottom: 0;
+    height: 100vh;
 }
 
 .lateral1 {
@@ -138,13 +137,15 @@ nav ul {
 
 /* parte dash */
 
-.Dash {
+.parte-dash {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 150vh;
-    margin-top: 12vh;
+    justify-content: left;
+    margin-left: -50vh;
+}
+
+.Dash {
+    margin-top: 15vh;
+    width: 100vh;
     transition: 0.5s;
-    border-radius: 4vh;
-    background-color: rgba(14, 83, 0, 0.644);
+    background-color: rgba(255, 255, 255, 0);
 }

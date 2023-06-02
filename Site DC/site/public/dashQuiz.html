@@ -91,7 +91,7 @@
             </div>
         </div>
 
-        <div>
+        <div class="parte-dash">
             <br>
             <br>
             <ul>
@@ -129,10 +129,7 @@
 
     let proximaAtualizacao;
 
-    window.onload = function() {
-        obterDadosGrafico(1);
-    };
-
+    window.onload = obterDadosGrafico(1);
 
     function obterDadosGrafico(idAquario) {
 
@@ -161,21 +158,23 @@
     // Configura o gráfico (cores, tipo, etc), materializa-o na página e, 
     // A função *plotarGrafico* também invoca a função *atualizarGrafico*
     function plotarGrafico(resposta, idAquario) {
-    console.log('Iniciando plotagem do gráfico...');
+    console.log('iniciando plotagem do gráfico...');
 
     var dados = {
         labels: [],
         datasets: [
             {
+                
                 label: 'Média Acertos',
-                backgroundColor: ['rgb(44, 129, 233)', 'rgb(48, 48, 48)', 'rgb(255, 196, 0)', 'rgb(255, 0, 0)', 'rgb(0, 255, 0)', 'rgb(0, 66, 37)', 'rgb( 192, 192, 192)', 'rgb(5, 5, 238)', 'rgb(200, 50, 79)'],
+                backgroundColor: ['green'],
                 borderColor: 'black',
                 borderWidth: 3,
                 data: []
             },
             {
-                label: 'Média Erros ',
-                backgroundColor: ['rgb(200, 50, 79)', 'rgb(5, 5, 238)', 'rgb( 192, 192, 192)', 'rgb(0, 66, 37)', 'rgb(0, 255, 0)', 'rgb(255, 0, 0)', 'rgb(255, 196, 0)', 'rgb(48, 48, 48)', 'rgb(44, 129, 233)'],
+              
+                label: 'Média Erros',
+                backgroundColor: ['red'],
                 borderColor: 'black',
                 borderWidth: 3,
                 data: []
@@ -183,9 +182,9 @@
         ]
     };
 
-    for (var i = 0; i < resposta.length; i++) {
+    for (i = 0; i < resposta.length; i++) {
         var registro = resposta[i];
-        dados.labels.push(registro.Acertos);
+        dados.labels.push(registro.Nome);
         dados.datasets[0].data.push(registro.Acertos);
         dados.datasets[1].data.push(registro.Erros);
     }
@@ -198,37 +197,44 @@
             indexAxis: 'y',
             responsive: true,
             animation: { duration: 900 },
+            hoverMode: 'index',
+            stacked: false,
             title: {
                 display: true,
-                text: 'Média de Acertos e Erros',
-                fontSize: 10,
+                text: 'Média de acertos e erros do quiz',
+                fontSize: 18,
                 fontColor: 'rgba(255, 255, 255)',
                 fontFamily: 'Oswald, sans-serif'
             },
             scales: {
                 yAxes: [{
+                    type: 'linear',
+                    display: true,
+                    position: 'left',
+                    id: 'y-totalpersonagens',
                     ticks: {
                         beginAtZero: true,
-                        max: 100,
+                        max: 25,
                         min: 0,
                         fontColor: 'white', // Define a cor preta para os números do eixo y
-                    },
-                    gridLines: {
-                        color: 'rgba(0, 0, 0, 0.377)'
-                    }
-                }],
-                xAxes: [{
-                    ticks: {
-                        fontColor: 'rgba(255, 255, 255)',
-                        fontFamily: 'Oswald, sans-serif'
-                    },
-                    gridLines: {
-                        color: 'rgba(0, 0, 0, 0.377)'
-                    }
-                }]
-            }
+                        fontSize: 16
+                },
+                gridLines: {
+                    color: 'rgba(0, 0, 0, 0.377)' // Define a cor preta para as linhas do fundo do eixo y
+                }
+            }],
+            xAxes: [{
+                ticks: {
+                    fontColor: 'rgba(255, 255, 255)',
+                    fontFamily: 'Oswald, sans-serif'
+                },
+                gridLines: {
+                    color: 'rgba(0, 0, 0, 0.377)' // Define a cor preta para as linhas do fundo do eixo x
+                }
+            }]
         }
-    });
+    }
+});
 }
 
 
