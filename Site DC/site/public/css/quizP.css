@@ -6,8 +6,7 @@
 .inicio {
     background-image: url(../img/backGround_charada.jpg);
     background-color: rgb(4, 24, 0);
-    background-size: contain;
-    background-repeat: repeat-x;
+    background-size: cover;
     box-shadow: inset 5px 5px 5px 5px rgba(0, 0, 0, 0.418);
     border-bottom: 0;
 }

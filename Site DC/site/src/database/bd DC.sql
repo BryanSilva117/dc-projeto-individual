@@ -48,8 +48,8 @@ select * from quizCharada;
 
 
 SELECT nome as Nome, (SUM(acertos) / (COUNT(*) * 5)) * 100 AS Acertos,
-        (SUM(erros) / (COUNT(*) * 5)) * 100 AS Erros FROM quizCharada join usuario on fkUsuario = idUsuario	
-			group by fkUsuario;
+        (SUM(erros) / (COUNT(*) * 5)) * 100 AS Erros FROM quizCharada join usuario on fkUsuario = idUsuario
+			group by fkUsuario order by  fkUsuario desc limit 5;
      
      SELECT (SUM(acertos) / (COUNT(*) * 5)) * 100 AS Acertos,
         (SUM(erros) / (COUNT(*) * 5)) * 100 AS Erros FROM quizCharada where fkUsuario = 20;
