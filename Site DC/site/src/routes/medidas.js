@@ -11,6 +11,10 @@ router.get("/ultimas2/:idAquario", function (req, res) {
     medidaController.buscarUltimasMedidas2(req, res);
 });
 
+router.get("/ultimas3/:idAquario", function (req, res) {
+    medidaController.buscarUltimasMedidas3(req, res);
+});
+
 router.get("/tempo-real/:idAquario", function (req, res) {
     medidaController.buscarMedidasEmTempoReal(req, res);
 })

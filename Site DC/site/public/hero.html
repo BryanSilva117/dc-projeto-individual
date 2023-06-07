@@ -39,13 +39,13 @@
         </div>
 
         <div class="logo">
-            <a href="./index.html">
+            <a onclick="limparSessao()">
                 <img src="./img/DCLOGO3.png" alt="LOGOPG">
             </a>
         </div>
 
         <div class="sair">
-            <a href="./index.html" title="Voltar para o Inicio"><img
+            <a onclick="limparSessao()" title="Voltar para o Inicio" ><img
                     src="https://cdn-icons-png.flaticon.com/512/1828/1828479.png" alt="" width="30px"></a>
         </div>
 
@@ -54,13 +54,6 @@
     </header>
 
     <div class="inicio">
-
-        <!-- <div> <a href="./QuizP.html">
-                <img id="trofeu" src="./img/trofeu-removebg-preview.png" alt=""
-                    style="position: fixed; transition: 1s;">
-            </a>
-        </div> -->
-
 
         <div class="lateral1" id="lateralI" style="margin-left: 0vh;">
             <div class="lateral">
@@ -95,6 +88,8 @@
                     <h1>Interação</h1>
                     <br>
                     <a href="./QuizP.html">Responder um Quiz</a>
+                    <br>
+                    <a href="./dashQuiz.html">Dashboard Quiz</a>
                     <br>
                     <a href="./DashPerso.html">Dash Herois JL Pref</a>
                     <br><br>
@@ -573,38 +568,5 @@
     console.log(fk)
 
 
-    // function exibirImagemAleatoria() {
-    //     // Obtenha a largura e altura da janela do navegador
-    //     var janelaLargura = window.innerWidth;
-    //     var janelaAltura = window.innerHeight;
 
-    //     // Obtenha uma referência ao elemento de imagem
-    //     var trofeu = document.getElementById('trofeu');
-
-    //     // Defina as coordenadas x e y aleatórias para a posição do troféu
-    //     var posX = Math.random() * (janelaLargura - trofeu.width);
-    //     var posY = Math.random() * (janelaAltura - trofeu.height);
-
-    //     // Defina as coordenadas x e y como estilo da posição do troféu
-    //     trofeu.style.left = posX + 'px';
-    //     trofeu.style.top = posY + 'px';
-
-    //     // Defina a opacidade como 0 para tornar o troféu invisível
-    //     trofeu.style.opacity = 0;
-
-    //     // Aguarde 2000 milissegundos para iniciar a transição de opacidade
-    //     setTimeout(function () {
-    //         // Defina a opacidade como 1 para tornar o troféu visível novamente
-    //         trofeu.style.opacity = 1;
-    //     }, 2000);
-
-    //     // Aguarde 2500 milissegundos (2,5 segundos) antes de ocultar novamente o troféu
-    //     setTimeout(function () {
-    //         // Defina a opacidade como 0 para tornar o troféu invisível novamente
-    //         trofeu.style.opacity = 0;
-    //     }, 3000);
-    // }
-
-    // // Chame a função a cada 3 segundos (3000 milissegundos)
-    // setInterval(exibirImagemAleatoria, 4000);
 </script>

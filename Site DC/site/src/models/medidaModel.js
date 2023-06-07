@@ -46,6 +46,29 @@ function buscarUltimasMedidas2(idAquario, limite_linhas) {
     return database.executar(instrucaoSql);
 }
 
+
+function buscarUltimasMedidas3(idAquario, limite_linhas) {
+
+    instrucaoSql = ''
+
+    if (process.env.AMBIENTE_PROCESSO == "producao") {
+        instrucaoSql = `SELECT (SUM(acertos) / (COUNT(*) * 5)) * 100 AS Acertos,
+        (SUM(erros) / (COUNT(*) * 5)) * 100 AS Erros FROM quizCharada where fkUsuario = ${idAquario};`;
+
+
+    } else if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
+        instrucaoSql = `SELECT (SUM(acertos) / (COUNT(*) * 5)) * 100 AS Acertos,
+        (SUM(erros) / (COUNT(*) * 5)) * 100 AS Erros FROM quizCharada where fkUsuario = ${idAquario};`;
+
+    } else {
+        console.log("\nO AMBIENTE (produção OU desenvolvimento) NÃO FOI DEFINIDO EM app.js\n");
+        return
+    }
+
+    console.log("Executando a instrução SQL: \n" + instrucaoSql);
+    return database.executar(instrucaoSql);
+}
+
 function buscarMedidasEmTempoReal(idAquario) {
 
     instrucaoSql = ''
@@ -80,5 +103,6 @@ function buscarMedidasEmTempoReal(idAquario) {
 module.exports = {
     buscarUltimasMedidas,
     buscarUltimasMedidas2,
+    buscarUltimasMedidas3,
     buscarMedidasEmTempoReal
 }
