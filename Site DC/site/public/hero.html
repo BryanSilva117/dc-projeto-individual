@@ -532,15 +532,26 @@
         console.log(personagemMod);
 
         for (var i = 0; i < lista_herois.length; i++) {
+
+            var listaH = document.getElementById(lista_herois[i])
+
+        
             if (personagemMod == lista_herois[i]) {
-                teste = lista_herois[i]
-                var listaH = document.getElementById(lista_herois[i])
+              
                 window.location = "#" + lista_herois[i];
                 listaH.className += ' imgHeroE'
             }
+
+            else {
+                listaH.className = listaH.className.replaceAll("imgHeroE", " ")
+            }
         }
 
+       
+
     }
+    
+    
 
 
 
