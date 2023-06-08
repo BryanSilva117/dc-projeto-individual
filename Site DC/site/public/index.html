@@ -77,9 +77,10 @@
                 </a>
             </h1>
 
-            <!-- <div class="triangulo" id="triangulo-para-cima"></div> -->
+            <div class="triangulo" id="triangulo" style="display: none;"></div>
 
             <div id="login-inicio" class="login-inicio" style="display: none;">
+              
                 <h2><u>Bem vindo!</u>
                     <br>
                     <span>Login</span>
@@ -302,7 +303,7 @@
                 <div class="back_img">
                     <img src="./img/flashteste.png" alt="" width="1000px">
                 </div>
-                <div><img class="Wimg" src="./img/logoFlash.png" alt="" width="250px"><br>
+                <div><img class="Wimg" src="./img/logoFlash.png" alt="" width="300px"><br>
                     <br>
                     <p>O Flash é um super-herói conhecido por sua identidade secreta como
                         Barry Allen. Ele é um símbolo de velocidade e agilidade, protegendo Central City e o mundo
@@ -412,10 +413,14 @@
 
     function login() {
         var logininicio = document.getElementById('login-inicio');
+        var triangulo = document.getElementById('triangulo');
+
         if (logininicio.style.display == 'none') {
             logininicio.style.display = 'block';
+            triangulo.style.display = 'block';
         } else {
             logininicio.style.display = 'none';
+            triangulo.style.display = 'none';
         }
     }
 

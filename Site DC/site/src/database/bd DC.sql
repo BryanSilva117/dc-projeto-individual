@@ -15,7 +15,7 @@ constraint fkPerso foreign key (fkPersonagemFav) references personagemFav(idPers
 
 create table personagemFav (
 idPersonagemFav int primary key auto_increment,
-nomeP varchar(45)
+nomeP varchar(30)
 );
 
 insert into personagemFav values 
@@ -48,13 +48,20 @@ select * from quizCharada;
 
 
 SELECT nome as Nome, (SUM(acertos) / (COUNT(*) * 5)) * 100 AS Acertos,
-        (SUM(erros) / (COUNT(*) * 5)) * 100 AS Erros FROM quizCharada join usuario on fkUsuario = idUsuario
-			group by fkUsuario order by  fkUsuario desc limit 5;
+	(SUM(erros) / (COUNT(*) * 5)) * 100 AS Erros FROM quizCharada join usuario on fkUsuario = idUsuario
+		group by fkUsuario order by  fkUsuario desc limit 5;
      
-     SELECT (SUM(acertos) / (COUNT(*) * 5)) * 100 AS Acertos,
-        (SUM(erros) / (COUNT(*) * 5)) * 100 AS Erros FROM quizCharada where fkUsuario = 20;
+SELECT (SUM(acertos) / (COUNT(*) * 5)) * 100 AS Acertos,
+	(SUM(erros) / (COUNT(*) * 5)) * 100 AS Erros FROM quizCharada where fkUsuario = 7;
         
-
+        
+SELECT nome AS Nome, round((SUM(acertos) / (COUNT(*) * 5)) * 100, 1) AS MediaAcertos FROM QuizCharada
+	JOIN Usuario ON fkUsuario = idUsuario GROUP BY fkUsuario ORDER BY MediaAcertos DESC LIMIT 1;
+        
+        
+SELECT nome AS Nome, round((SUM(erros) / (COUNT(*) * 5)) * 100, 1) AS MediaErros FROM QuizCharada
+	JOIN Usuario ON fkUsuario = idUsuario GROUP BY fkUsuario ORDER BY MediaErros DESC LIMIT 1;
+        
 
 select count(usuario.fkPersonagemFav) as qntVotos, personagemFav.nomeP as 'Nome Heroi'
 	from usuario join personagemFav on personagemFav.idPersonagemFav = usuario.fkPersonagemFav 

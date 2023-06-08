@@ -111,9 +111,15 @@
             </div>
         </div>
         <div class="textAE">
+            <div id="acertos">
 
-           O usuário que tem a maior média de acertos é: PEDRO <br>
-           O usuário que tem a maior média de erros é: Carlos
+            </div>
+
+            <div id="erros">
+
+            </div>
+
+           
 
         </div>
 
@@ -127,9 +133,73 @@
 
 <script>
 
-    var fk = sessionStorage.ID_USUARIO
+    window.onload = obterDadosGraficoA(1);
 
-    console.log('fdfffffffffffffffffffffffffffffffffffff'+fk)
+    function obterDadosGraficoA(idAquario) {
+        var nomeU;
+        var porc;
+
+        fetch(`/medidas/ultimas4/${idAquario}`, { cache: 'no-store' }).then(function (response) {
+            if (response.ok) {
+                response.json().then(function (resposta) {
+                    console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+                    for (var i = 0; i < resposta.length; i++) {
+                        var registro = resposta[i];
+                        nomeU = (registro.Nome);
+                        porc = (registro.MediaAcertos)
+                    }
+
+                
+
+                    acertos.innerHTML = ` O usuário que tem a maior média de acertos é: <span>${nomeU}</span>,<br>
+                    com <span>${porc}</span>%.`
+
+                });
+            } else {
+                console.error('Nenhum dado encontrado ou erro na API');
+            }
+        })
+            .catch(function (error) {
+                console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+            });
+
+    }
+
+    window.onload = obterDadosGraficoE(1);
+
+function obterDadosGraficoE(idAquario) {
+    var nomeU;
+    var porc;
+
+    fetch(`/medidas/ultimas5/${idAquario}`, { cache: 'no-store' }).then(function (response) {
+        if (response.ok) {
+            response.json().then(function (resposta) {
+                console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+                for (var i = 0; i < resposta.length; i++) {
+                    var registro = resposta[i];
+                    nomeU = (registro.Nome);
+                    porc = (registro.MediaErros)
+                }
+                
+                erros.innerHTML = `O usuário que tem a maior média de erros é: <span>${nomeU}</span>,<br>
+                com <span>${porc}</span>%.`
+
+            });
+        } else {
+            console.error('Nenhum dado encontrado ou erro na API');
+        }
+    })
+        .catch(function (error) {
+            console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+        });
+
+}
+    
+
+
+
+
+
 
     function fechar() {
         var lateral = document.getElementById('lateralI')
@@ -222,9 +292,9 @@
                 plugins: {
                     title: {
                         display: true,
-                        text: 'Média dos ultimos 5 usuários do quiz do charada',
+                        text: 'Média dos ultimos 5 usuários no quiz do charada',
                         font: {
-                            size: 20,
+                            size: 25,
                             family: 'Oswald, sans-serif'
                         },
                         color: 'rgb(0, 255, 0)'
@@ -232,6 +302,13 @@
                 },
                 scales: {
                     y: {
+                        ticks: {
+                            color: 'white',
+                            font: {
+                                family: 'Oswald, sans-serif',
+                                size: 19
+                            }
+                        },
                         beginAtZero: true,
                         grid: {
                             color: 'black'
@@ -241,7 +318,8 @@
                         ticks: {
                             color: 'white',
                             font: {
-                                family: 'Oswald, sans-serif'
+                                family: 'Oswald, sans-serif',
+                                size: 19
                             }
                         },
                         grid: {
@@ -319,7 +397,7 @@
                         display: true,
                         text: 'Sua média de acertos e erros',
                         font: {
-                            size: 20,
+                            size: 25,
                             family: 'Oswald, sans-serif'
                         },
                         color: 'rgb(0, 255, 0)'

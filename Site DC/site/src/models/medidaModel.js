@@ -53,12 +53,56 @@ function buscarUltimasMedidas3(idAquario, limite_linhas) {
 
     if (process.env.AMBIENTE_PROCESSO == "producao") {
         instrucaoSql = `SELECT (SUM(acertos) / (COUNT(*) * 5)) * 100 AS Acertos,
-        (SUM(erros) / (COUNT(*) * 5)) * 100 AS Erros FROM quizCharada where fkUsuario = ${idAquario};`;
+        (SUM(erros) / (COUNT(*) * 5)) * 100 AS Erros FROM quizCharada where fkUsuario = 53;`;
 
 
     } else if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
         instrucaoSql = `SELECT (SUM(acertos) / (COUNT(*) * 5)) * 100 AS Acertos,
-        (SUM(erros) / (COUNT(*) * 5)) * 100 AS Erros FROM quizCharada where fkUsuario = ${idAquario};`;
+        (SUM(erros) / (COUNT(*) * 5)) * 100 AS Erros FROM quizCharada where fkUsuario = 53;`;
+
+    } else {
+        console.log("\nO AMBIENTE (produção OU desenvolvimento) NÃO FOI DEFINIDO EM app.js\n");
+        return
+    }
+
+    console.log("Executando a instrução SQL: \n" + instrucaoSql);
+    return database.executar(instrucaoSql);
+}
+
+function buscarUltimasMedidas4(idAquario, limite_linhas) {
+
+    instrucaoSql = ''
+
+    if (process.env.AMBIENTE_PROCESSO == "producao") {
+        instrucaoSql = `SELECT nome AS Nome, round((SUM(acertos) / (COUNT(*) * 5)) * 100, 1) AS MediaAcertos FROM QuizCharada
+		JOIN Usuario ON fkUsuario = idUsuario GROUP BY fkUsuario ORDER BY MediaAcertos DESC LIMIT 1;`;
+
+
+    } else if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
+        instrucaoSql = `SELECT nome AS Nome, round((SUM(acertos) / (COUNT(*) * 5)) * 100, 1) AS MediaAcertos FROM QuizCharada
+		JOIN Usuario ON fkUsuario = idUsuario GROUP BY fkUsuario ORDER BY MediaAcertos DESC LIMIT 1;`;
+
+    } else {
+        console.log("\nO AMBIENTE (produção OU desenvolvimento) NÃO FOI DEFINIDO EM app.js\n");
+        return
+    }
+
+    console.log("Executando a instrução SQL: \n" + instrucaoSql);
+    return database.executar(instrucaoSql);
+}
+
+function buscarUltimasMedidas5(idAquario, limite_linhas) {
+
+    instrucaoSql = ''
+
+    if (process.env.AMBIENTE_PROCESSO == "producao") {
+        instrucaoSql = `SELECT nome AS Nome, round((SUM(erros) / (COUNT(*) * 5)) * 100, 1) AS MediaErros FROM QuizCharada
+		JOIN Usuario ON fkUsuario = idUsuario GROUP BY fkUsuario ORDER BY MediaErros DESC LIMIT 1;`;
+
+
+    } else if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
+        instrucaoSql = `SELECT nome AS Nome, round((SUM(erros) / (COUNT(*) * 5)) * 100, 1) AS MediaErros FROM QuizCharada
+		JOIN Usuario ON fkUsuario = idUsuario GROUP BY fkUsuario ORDER BY MediaErros DESC LIMIT 1;`;
 
     } else {
         console.log("\nO AMBIENTE (produção OU desenvolvimento) NÃO FOI DEFINIDO EM app.js\n");
@@ -104,5 +148,7 @@ module.exports = {
     buscarUltimasMedidas,
     buscarUltimasMedidas2,
     buscarUltimasMedidas3,
+    buscarUltimasMedidas4,
+    buscarUltimasMedidas5,
     buscarMedidasEmTempoReal
 }
