@@ -31,6 +31,9 @@
 
 <body>
 
+
+    <!-- parte navbar -->
+
     <div class="inicio">
         <header class="header">
 
@@ -47,14 +50,16 @@
             </div>
 
             <div class="sair">
-                <a onclick="limparSessao()" title="Voltar para o Inicio"><img src="https://cdn-icons-png.flaticon.com/512/1828/1828479.png" alt=""
-                        width="30px"></a>
+                <a onclick="limparSessao()" title="Voltar para o Inicio"><img
+                        src="https://cdn-icons-png.flaticon.com/512/1828/1828479.png" alt="" width="30px"></a>
             </div>
 
 
 
         </header>
 
+
+        <!-- parte da lateral  -->
 
         <div class="lateral1" id="lateralI" style="display: block; margin-left: 0vh;">
             <div class="lateral">
@@ -93,12 +98,13 @@
                     <br>
                     <a href="./dashQuiz.html">Dashboard Quiz</a>
                     <br><br>
-                
+
 
                 </div>
             </div>
         </div>
 
+        <!-- parde da dashboard  -->
 
         <div>
             <div>
@@ -121,6 +127,8 @@
 <script>
 
 
+    // funcão para fechar a parte lateral 
+
     function fechar() {
         var lateral = document.getElementById('lateralI');
         var margin = document.getElementById('diminuir');
@@ -137,6 +145,8 @@
     }
 
 
+
+    // parte para puxar os dados da dash 
 
     let proximaAtualizacao;
 
@@ -170,133 +180,133 @@
     // Configura o gráfico (cores, tipo, etc), materializa-o na página e, 
     // A função *plotarGrafico* também invoca a função *atualizarGrafico*
     function plotarGrafico(resposta, idAquario) {
-    console.log('iniciando plotagem do gráfico...');
+        console.log('iniciando plotagem do gráfico...');
 
-    var dados = {
-        labels: [],
-        datasets: [
-            {
-                yAxisID: 'y-totalpersonagens',
-                label: 'Personagem Favorito',
-                backgroundColor: ['rgb(44, 129, 233)', 'rgb(48, 48, 48)', 'rgb(255, 196, 0)', 'rgb(255, 0, 0)', 'rgb(0, 255, 0)', 'rgb(0, 66, 37)', 'rgb( 192, 192, 192)', 'rgb(5, 5, 238)', 'rgb(200, 50, 79)'],
-                borderColor: 'black',
-                borderWidth: 3,
-                data: []
-            }
-        ]
-    };
-
-    for (i = 0; i < resposta.length; i++) {
-        var registro = resposta[i];
-        dados.labels.push(registro.personagem);
-        dados.datasets[0].data.push(registro.voto);
-    }
-
-    var ctx = myChart.getContext('2d');
-    window.myChart = new Chart(ctx, {
-        type: 'bar',
-        data: dados,
-        options: {
-            responsive: true,
-            animation: { duration: 900 },
-            hoverMode: 'index',
-            stacked: false,
-            title: {
-                display: true,
-                text: 'Os Personagens da Liga da Justiça mais Escolhidos',
-                fontSize: 18,
-                fontColor: 'rgba(255, 255, 255)',
-                fontFamily: 'Oswald, sans-serif'
-            },
-            scales: {
-                yAxes: [{
-                    type: 'linear',
-                    display: true,
-                    position: 'left',
-                    id: 'y-totalpersonagens',
-                    ticks: {
-                        beginAtZero: true,
-                        max: 16,
-                        min: 0,
-                        fontColor: 'white', // Define a cor preta para os números do eixo y
-                        fontSize: 16
-                },
-                gridLines: {
-                    color: 'rgba(0, 0, 0, 0.377)' // Define a cor preta para as linhas do fundo do eixo y
+        var dados = {
+            labels: [],
+            datasets: [
+                {
+                    yAxisID: 'y-totalpersonagens',
+                    label: 'Personagem Favorito',
+                    backgroundColor: ['rgb(44, 129, 233)', 'rgb(48, 48, 48)', 'rgb(255, 196, 0)', 'rgb(255, 0, 0)', 'rgb(0, 255, 0)', 'rgb(0, 66, 37)', 'rgb( 192, 192, 192)', 'rgb(5, 5, 238)', 'rgb(200, 50, 79)'],
+                    borderColor: 'black',
+                    borderWidth: 3,
+                    data: []
                 }
-            }],
-            xAxes: [{
-                ticks: {
+            ]
+        };
+
+        for (i = 0; i < resposta.length; i++) {
+            var registro = resposta[i];
+            dados.labels.push(registro.personagem);
+            dados.datasets[0].data.push(registro.voto);
+        }
+
+        var ctx = myChart.getContext('2d');
+        window.myChart = new Chart(ctx, {
+            type: 'bar',
+            data: dados,
+            options: {
+                responsive: true,
+                animation: { duration: 900 },
+                hoverMode: 'index',
+                stacked: false,
+                title: {
+                    display: true,
+                    text: 'Os Personagens da Liga da Justiça mais Escolhidos',
+                    fontSize: 18,
                     fontColor: 'rgba(255, 255, 255)',
                     fontFamily: 'Oswald, sans-serif'
                 },
-                gridLines: {
-                    color: 'rgba(0, 0, 0, 0.377)' // Define a cor preta para as linhas do fundo do eixo x
+                scales: {
+                    yAxes: [{
+                        type: 'linear',
+                        display: true,
+                        position: 'left',
+                        id: 'y-totalpersonagens',
+                        ticks: {
+                            beginAtZero: true,
+                            max: 16,
+                            min: 0,
+                            fontColor: 'white', // Define a cor preta para os números do eixo y
+                            fontSize: 16
+                        },
+                        gridLines: {
+                            color: 'rgba(0, 0, 0, 0.377)' // Define a cor preta para as linhas do fundo do eixo y
+                        }
+                    }],
+                    xAxes: [{
+                        ticks: {
+                            fontColor: 'rgba(255, 255, 255)',
+                            fontFamily: 'Oswald, sans-serif'
+                        },
+                        gridLines: {
+                            color: 'rgba(0, 0, 0, 0.377)' // Define a cor preta para as linhas do fundo do eixo x
+                        }
+                    }]
                 }
-            }]
-        }
-    }
-});
-}
-
-
-    // Esta função *atualizarGrafico* atualiza o gráfico que foi renderizado na página,
-    // buscando a última medida inserida em tabela contendo as capturas, 
-
-    //     Se quiser alterar a busca, ajuste as regras de negócio em src/controllers
-    //     Para ajustar o "select", ajuste o comando sql em src/models
-    function atualizarGrafico(idAquario, dados) {
-
-        fetch(`/medidas/tempo-real/${idAquario}`, { cache: 'no-store' }).then(function (response) {
-            if (response.ok) {
-                response.json().then(function (novoRegistro) {
-
-                    console.log(`Dados recebidos Atualizar  Graficos: ${JSON.stringify(novoRegistro)}`);
-                    console.log(dados);
-
-                    for (i = 0; i < novoRegistro.length; i++) {
-                        var registro = novoRegistro[i];
-                        // tirando e colocando valores no gráfico
-                        dados.labels.shift(); // apagar o primeiro
-                        dados.labels.push(registro.personagem);// incluir um novo momento
-
-                        dados.datasets[0].data.shift();  // apagar o primeiro de umidade
-                        dados.datasets[0].data.push(registro.personagem); // incluir uma nova medida de umidade
-
-                        dados.datasets[1].data.shift();
-                        dados.datasets[1].data.push(registro.voto);
-                    }
-
-
-                    for (i = 0; i < novoRegistro.length; i++) {
-                        var registro = novoRegistro[i];
-                        // tirando e colocando valores no gráfico
-                        dados.labels.shift(); // apagar o primeiro
-                        dados.labels.push(registro.media);// incluir um novo momento
-
-                        dados.datasets[0].data.shift();  // apagar o primeiro de umidade
-                        dados.datasets[0].data.push(registro.media); // incluir uma nova medida de umidade
-
-                        dados.datasets[1].data.shift();
-                        dados.datasets[1].data.push(registro.media);
-                    }
-
-                    window.myChart.update();
-
-                    // Altere aqui o valor em ms se quiser que o gráfico atualize mais rápido ou mais devagar
-                    proximaAtualizacao = setTimeout(() => atualizarGrafico(idAquario, dados), 2000);
-                });
-            } else {
-                console.error('Nenhum dado encontrado ou erro na API');
-                // Altere aqui o valor em ms se quiser que o gráfico atualize mais rápido ou mais devagar
-                proximaAtualizacao = setTimeout(() => atualizarGrafico(idAquario, dados), 200000);
             }
-        })
-            .catch(function (error) {
-                console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
-            });
-
+        });
     }
+
+
+    // // Esta função *atualizarGrafico* atualiza o gráfico que foi renderizado na página,
+    // // buscando a última medida inserida em tabela contendo as capturas,
+
+    // //     Se quiser alterar a busca, ajuste as regras de negócio em src/controllers
+    // //     Para ajustar o "select", ajuste o comando sql em src/models
+    // function atualizarGrafico(idAquario, dados) {
+
+    //     fetch(`/medidas/tempo-real/${idAquario}`, { cache: 'no-store' }).then(function (response) {
+    //         if (response.ok) {
+    //             response.json().then(function (novoRegistro) {
+
+    //                 console.log(`Dados recebidos Atualizar  Graficos: ${JSON.stringify(novoRegistro)}`);
+    //                 console.log(dados);
+
+    //                 for (i = 0; i < novoRegistro.length; i++) {
+    //                     var registro = novoRegistro[i];
+    //                     // tirando e colocando valores no gráfico
+    //                     dados.labels.shift(); // apagar o primeiro
+    //                     dados.labels.push(registro.personagem);// incluir um novo momento
+
+    //                     dados.datasets[0].data.shift();  // apagar o primeiro de umidade
+    //                     dados.datasets[0].data.push(registro.personagem); // incluir uma nova medida de umidade
+
+    //                     dados.datasets[1].data.shift();
+    //                     dados.datasets[1].data.push(registro.voto);
+    //                 }
+
+
+    //                 for (i = 0; i < novoRegistro.length; i++) {
+    //                     var registro = novoRegistro[i];
+    //                     // tirando e colocando valores no gráfico
+    //                     dados.labels.shift(); // apagar o primeiro
+    //                     dados.labels.push(registro.media);// incluir um novo momento
+
+    //                     dados.datasets[0].data.shift();  // apagar o primeiro de umidade
+    //                     dados.datasets[0].data.push(registro.media); // incluir uma nova medida de umidade
+
+    //                     dados.datasets[1].data.shift();
+    //                     dados.datasets[1].data.push(registro.media);
+    //                 }
+
+    //                 window.myChart.update();
+
+    //                 // Altere aqui o valor em ms se quiser que o gráfico atualize mais rápido ou mais devagar
+    //                 proximaAtualizacao = setTimeout(() => atualizarGrafico(idAquario, dados), 2000);
+    //             });
+    //         } else {
+    //             console.error('Nenhum dado encontrado ou erro na API');
+    //             // Altere aqui o valor em ms se quiser que o gráfico atualize mais rápido ou mais devagar
+    //             proximaAtualizacao = setTimeout(() => atualizarGrafico(idAquario, dados), 200000);
+    //         }
+    //     })
+    //         .catch(function (error) {
+    //             console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+    //         });
+
+    // }
 
 
 

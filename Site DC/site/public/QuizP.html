@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./img/DCLOGO3.png">
-    <title>Detective Comics Herois</title>
+    <title>Detective Comics Quiz</title>
     <link rel="stylesheet" href="./css/quizP.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,6 +24,9 @@
 </head>
 
 <body>
+
+
+    <!-- parte da navbar  -->
 
     <header class="header">
 
@@ -49,6 +52,10 @@
     </header>
 
     <div class="inicio">
+
+
+        <!-- parte da lateral  -->
+
         <div class="lateral1" id="lateralI" style="margin-left: 0vh;">
             <div class="lateral">
                 <div>
@@ -94,6 +101,9 @@
 
         <div>
             <div>
+
+                <!-- parte de responder quiz  -->
+
                 <br>
                 <br>
                 <ul>
@@ -103,8 +113,7 @@
                         <br>
                         <h2>Responda as perguntas do Charada<br>
                             para o Batman conseguir capturar ele</h3>
-                            <img src="./img/batman-pixel-art.gif" alt=""
-                                width="300px">
+                            <img src="./img/batman-pixel-art.gif" alt="" width="300px">
                             <br><br>
 
                             <button onclick="responder()">Responder</button>
@@ -112,10 +121,11 @@
 
 
 
-                    <div class="repondaQ" id="RespostaQ" style="margin-left: 76vh; display: none; position: absolute; position: fixed;">
+                    <div class="repondaQ" id="RespostaQ"
+                        style="margin-left: 76vh; display: none; position: absolute; position: fixed;">
                     </div>
 
-
+                    <!-- parte perguntas  -->
 
                     <div class="quizH" id="quizH" style="display: none; margin-left: 57vh;">
                         <h1><span>Responda as Perguntas do Charada</span></h1>
@@ -209,6 +219,8 @@
     console.log(fk)
 
 
+    // aparecer a pergunta ao clicar em responder
+
     function responder() {
         var quizH = document.getElementById('quizH')
         var resposta = document.getElementById('responder')
@@ -223,6 +235,8 @@
         }
     }
 
+
+    // fechar a lateral quando clicar na função
 
     function fechar() {
         var lateral = document.getElementById('lateralI')
@@ -247,6 +261,10 @@
         }
     }
 
+
+
+    // parta tentar responder novamente responder
+
     function respNova() {
         var respostaQ = document.getElementById('RespostaQ')
 
@@ -256,6 +274,8 @@
         }
     }
 
+
+    // para valiadar as respostas 
 
     function concluir() {
         var resposta1 = pergunta_1.value
@@ -324,7 +344,7 @@
 
             if (totalAcertos >= 0 && totalAcertos <= 2) {
                 console.log(media)
-    
+
 
                 RespostaQ.innerHTML = `
 
@@ -346,7 +366,7 @@
 
             }
 
-            else if (totalAcertos >2 && totalAcertos < 5) {
+            else if (totalAcertos > 2 && totalAcertos < 5) {
                 RespostaQ.innerHTML = `
 
                 <h1 id="tituloQ">O CHARADA ESCAPOU POR POUCO!!!</h1>

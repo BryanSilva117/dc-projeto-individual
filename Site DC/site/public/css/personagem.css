@@ -118,7 +118,7 @@ nav ul {
     align-items: center;
     margin-top: -5.8vh;
     margin-left: -28vh;
-    
+
 }
 
 .header button:hover {
@@ -143,7 +143,7 @@ nav ul {
     color: rgb(0, 0, 151);
     display: flex;
     font-size: 5vh;
-    
+
 }
 
 .lateral h1 {
@@ -161,12 +161,12 @@ nav ul {
     margin-left: 3vh;
     font-size: 3.7vh;
     color: rgb(255, 255, 255);
-    transition:  0.3s;
+    transition: 0.3s;
 }
 
 .lateral a:hover {
     font-size: 3.75vh;
-    text-decoration:underline black;
+    text-decoration: underline black;
 }
 
 /* sobre Personagem */
@@ -205,10 +205,11 @@ nav ul {
 .inicio .textoP h2 {
     color: rgb(67, 67, 255);
 }
+
 .inicio .textoP h3 {
     color: rgb(67, 67, 255);
 }
+
 .inicio .textoP h4 {
     color: rgb(67, 67, 255);
 }
-

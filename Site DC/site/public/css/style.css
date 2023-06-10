@@ -5,8 +5,8 @@
 
 body {
     overflow-x: hidden;
-
 }
+
 
 /* OS background e telas */
 
@@ -224,6 +224,7 @@ nav ul {
 
 
 /* PARTE ABAIXO DA NAVIBAR */
+
 .mensaoDC {
     color: rgba(0, 0, 255, 0.753);
     font-size: 4.6vh;
@@ -801,7 +802,7 @@ nav ul {
 
 
 
-                                                        /* Parte de contribua */
+/* Parte de contribua */
 
 .contribua {
     display: flex;
@@ -856,13 +857,14 @@ nav ul {
 
 
 
-                                                            /*tela de login */
+/*tela de login */
 .login-inicio {
     margin-left: 145.5vh;
-    margin-top: -25vh;
+    margin-top: -20vh;
     border-radius: 3vh;
     display: none;
     width: 30vh;
+    height: 34vh;
     padding: 3vh;
     background-color: rgba(0, 0, 255, 0.596);
     position: fixed;
@@ -928,7 +930,7 @@ nav ul {
 }
 
 
-                                                        /* alertas */
+/* alertas */
 .alerta_erro {
     display: flex;
     justify-content: flex-end;
@@ -965,4 +967,5 @@ nav ul {
 
 #div_erros_login {
     display: none;
+    color: white;
 }

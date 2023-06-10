@@ -3,13 +3,19 @@
     padding: 0;
 }
 
+
+/* parte background inicio  */
+
 .inicio {
-   
+
     background-color: rgb(8, 37, 8);
     box-shadow: inset 5px 5px 5px 5px rgba(0, 0, 0, 0.418);
     border-bottom: 0;
     height: 100vh;
 }
+
+
+/* parte do formato da lateral  */
 
 .lateral1 {
     background-color: rgb(12, 73, 0);
@@ -23,6 +29,8 @@
     overflow-y: auto;
 }
 
+
+/* parte da navbar  */
 
 header {
     display: flex;
@@ -55,8 +63,6 @@ nav ul {
     display: flex;
     list-style: none;
 }
-
-
 
 
 .fechar {

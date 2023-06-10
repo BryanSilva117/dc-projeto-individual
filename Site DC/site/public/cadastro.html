@@ -19,6 +19,10 @@
 
 <body>
     <div class="inicio" id="inicio">
+
+
+        <!-- parte da navbar -->
+
         <header class="header">
 
             <div class="logo">
@@ -56,8 +60,11 @@
                 </ul>
             </nav>
         </header>
-        <section class="cadastro">
 
+
+        <!-- parte cadastro  -->
+
+        <div class="cadastro">
             <div class="logoCadastro">
                 <img src="./img/DCLOGO3.png" alt="" width="80px">
             </div>
@@ -89,7 +96,8 @@
 
                 <input class="senha" type="password" placeholder="Senha*" id="senha_input" style="box-shadow: none">
 
-                <input class="confirmar" type="password" placeholder="Confirmar Senha*" id="confirmacao_senha_input" style="box-shadow: none">
+                <input class="confirmar" type="password" placeholder="Confirmar Senha*" id="confirmacao_senha_input"
+                    style="box-shadow: none">
 
             </div>
             <br>
@@ -137,13 +145,14 @@
                 <button onclick="cadastrar()"><b>Cadastrar</b></button>
 
             </div>
+
             <div id="div_aguardar" class="loading-div">
                 <img src="https://raw.githubusercontent.com/Codelessly/FlutterLoadingGIFs/master/packages/cupertino_activity_indicator_selective.gif"
                     id="loading-gif">
             </div>
 
             <div id="div_erros_login"></div>
-        </section>
+        </div>
 
 
     </div>
@@ -152,7 +161,7 @@
 
 <script>
     function cadastrar() {
-        aguardar();
+
 
         //Recupere o valor da nova input pelo nome do id
         // Agora vá para o método fetch logo abaixo
@@ -178,15 +187,15 @@
 
             finalizarAguardar();
             return false;
-        } 
-        
+        }
+
         else if (cadastro.emailVar.indexOf("@") == - 1 || cadastro.emailVar.length < 3) {
             alert('Email Inválido!')
             email.style.boxShadow = 'inset 0 0 3px 2px rgb(255, 0, 0)'
             finalizarAguardar();
             return false;
         }
-        
+
         else if (cadastro.senhaVar.length < 4) {
             alert('Senha Muito Pequena!')
             email.style.boxShadow = 'none'
@@ -209,9 +218,10 @@
             finalizarAguardar();
             return false;
         }
-        
+
         else {
             setInterval(sumirMensagem, 5000)
+
         }
 
         // Enviando o valor da nova input
@@ -239,7 +249,7 @@
                 cardErro.style.display = "block";
 
                 mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
-
+                aguardar();
                 setTimeout(() => {
                     window.location = "index.html";
                 }, "2000")

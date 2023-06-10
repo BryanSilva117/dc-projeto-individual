@@ -23,6 +23,9 @@
 </head>
 
 <body>
+
+    <!-- parte da Navbar -->
+
     <header class="header">
 
         <div class="logo">
@@ -59,8 +62,12 @@
             </ul>
         </nav>
     </header>
+
+
+    <!-- incio junte-se ao universo DC comics -->
+
     <div class="inicio" id="inicio">
-        
+
 
         <div class="parte1">
             <h1><i class="mensaoDC"><u>BEM VINDO AO UNIVERSO DC!</u></i>
@@ -77,10 +84,13 @@
                 </a>
             </h1>
 
+
+            <!-- Parte da tela de cadastro -->
+
             <div class="triangulo" id="triangulo" style="display: none;"></div>
 
             <div id="login-inicio" class="login-inicio" style="display: none;">
-              
+
                 <h2><u>Bem vindo!</u>
                     <br>
                     <span>Login</span>
@@ -104,6 +114,7 @@
             </div>
         </div>
 
+        <!-- parte sobre a detective comics -->
 
         <div class="inicio dois">
 
@@ -127,6 +138,9 @@
             </div>
 
         </div>
+
+
+        <!-- parte principais membros da liga da justiça -->
 
         <div class="inicio tres" id="JL">
             <br>
@@ -162,6 +176,9 @@
 
         </div>
 
+
+        <!-- sobre o aquaman -->
+
         <div class="inicio aquaman1" id="aquaman">
 
             <div class="parte_aquaman">
@@ -194,6 +211,9 @@
 
         </div>
 
+
+        <!-- sobre o lanterna verde -->
+
         <div class="inicio lanternaVerde1" id="green">
 
             <div class="parte_lanterna">
@@ -217,6 +237,9 @@
             </div>
 
         </div>
+
+
+        <!-- sobre a mulher maravilha -->
 
         <div class="inicio wonder1" id="wonder">
 
@@ -245,6 +268,9 @@
 
         </div>
 
+
+        <!-- sobre o Superman -->
+
         <div class="inicio superman1" id="superman">
 
             <div class="parte_superman">
@@ -268,6 +294,9 @@
             </div>
 
         </div>
+
+
+        <!-- sobre o batman -->
 
         <div class="inicio batman1" id="batman">
 
@@ -296,6 +325,8 @@
             </div>
 
         </div>
+
+        <!-- sobre o flash -->
 
         <div class="inicio flash1" id="flash">
 
@@ -327,6 +358,9 @@
 
         </div>
 
+
+        <!-- sobre o ciborgue -->
+
         <div class="inicio cyborg1" id="cyborg">
 
             <div class="parte_cyborg">
@@ -354,8 +388,8 @@
 
         </div>
 
-        
 
+        <!-- parte para contribuir  -->
 
         <div class="inicio quatro" id="contribuir">
             <div class="contribua">
@@ -389,6 +423,10 @@
                 </div>
             </div>
         </div>
+
+
+        <!-- parte final direitos  -->
+
         <footer class="inicio cinco">
 
             <div class="final">
@@ -403,13 +441,14 @@
 
         </footer>
     </div>
-    <script type="text/javascript" nonce="{coloque_seu_valor_nonce_aqui}" src="https://desk.zoho.com/portal/api/web/inapp/863373000000266024?orgId=811744654" defer></script>
 
 </body>
 
 </html>
 
 <script>
+
+    // ao clicar no botão o container do login fica block
 
     function login() {
         var logininicio = document.getElementById('login-inicio');
@@ -424,8 +463,11 @@
         }
     }
 
+
+    // validar o login 
+
     function entrar() {
-        aguardar();
+
         var entrar = {
             emailVar: email_input.value,
             senhaVar: senha_input.value
@@ -460,6 +502,9 @@
             if (resposta.ok) {
                 console.log(resposta);
 
+                var divErrosLogin = document.getElementById("div_erros_login");
+                divErrosLogin.style.display = 'none'
+
                 resposta.json().then(json => {
                     console.log(json);
                     console.log(JSON.stringify(json));
@@ -467,6 +512,8 @@
                     sessionStorage.EMAIL_USUARIO = json.email;
                     sessionStorage.NOME_USUARIO = json.nome;
                     sessionStorage.ID_USUARIO = json.idUsuario;
+
+                    aguardar();
 
                     setTimeout(function () {
                         window.location = "hero.html";
@@ -495,39 +542,6 @@
         cardErro.style.display = "none"
     }
 
-    // // Seleciona todos os links que apontam para uma seção dentro da página
-    // const sobreDcLink = document.querySelector('a[href="#sobreDc"]');
-
-    // // Adiciona um evento de clique a cada link
-    // sobreDcLink.addEventListener('click', function (event) {
-
-    //     // isso impede que a página seja recarregada quando o link for clicado
-    //     event.preventDefault();
-
-    //     // Seleciona a seção correspondente ao link clicado usando o atributo "href" do link
-    //     const sobreDcSection = document.getElementById('sobreDc');
-
-    //     // Faz a página rolar suavemente até a seção selecionada
-    //     sobreDcSection.scrollIntoView({ behavior: 'smooth' });
-    // });
-
-
-
-    // // Seleciona todos os links que apontam para uma seção dentro da página
-    // const JLLink = document.querySelector('a[href="#JL"]');
-
-    // // Adiciona um evento de clique a cada link
-    // JLLink.addEventListener('click', function (event) {
-
-    //     // isso impede que a página seja recarregada quando o link for clicado
-    //     event.preventDefault();
-
-    //     // Seleciona a seção correspondente ao link clicado usando o atributo "href" do link
-    //     const JLSection = document.getElementById('JL');
-
-    //     // Faz a página rolar suavemente até a seção selecionada
-    //     JLSection.scrollIntoView({ behavior: 'smooth' });
-    // });
 
 
 

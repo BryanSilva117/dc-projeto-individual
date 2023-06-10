@@ -26,6 +26,8 @@
 
 <body>
 
+    <!-- parte da navbar  -->
+
     <header class="header">
 
         <div class="fechar" id="diminuir">
@@ -50,6 +52,9 @@
     </header>
 
     <div class="inicio">
+
+        <!-- parte da lateral -->
+
         <div class="lateral1" id="lateralI" style="margin-left: -40vh;">
             <div class="lateral">
                 <div>
@@ -94,6 +99,9 @@
             </div>
         </div>
 
+
+        <!-- pate das dashboards -->
+
         <div class="parte-dash">
             <br>
             <br>
@@ -119,7 +127,7 @@
 
             </div>
 
-           
+
 
         </div>
 
@@ -132,6 +140,8 @@
 </html>
 
 <script>
+
+    // puxando a maior porcentagem de acertos e o usuario 
 
     window.onload = obterDadosGraficoA(1);
 
@@ -149,7 +159,7 @@
                         porc = (registro.MediaAcertos)
                     }
 
-                
+
 
                     acertos.innerHTML = ` O usuário que tem a maior média de acertos é: <span>${nomeU}</span>,<br>
                     com <span>${porc}</span>%.`
@@ -165,41 +175,41 @@
 
     }
 
+
+    // puxando a maior porcentagem de erro e o usuario 
+
     window.onload = obterDadosGraficoE(1);
 
-function obterDadosGraficoE(idAquario) {
-    var nomeU;
-    var porc;
+    function obterDadosGraficoE(idAquario) {
+        var nomeU;
+        var porc;
 
-    fetch(`/medidas/ultimas5/${idAquario}`, { cache: 'no-store' }).then(function (response) {
-        if (response.ok) {
-            response.json().then(function (resposta) {
-                console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
-                for (var i = 0; i < resposta.length; i++) {
-                    var registro = resposta[i];
-                    nomeU = (registro.Nome);
-                    porc = (registro.MediaErros)
-                }
-                
-                erros.innerHTML = `O usuário que tem a maior média de erros é: <span>${nomeU}</span>,<br>
+        fetch(`/medidas/ultimas5/${idAquario}`, { cache: 'no-store' }).then(function (response) {
+            if (response.ok) {
+                response.json().then(function (resposta) {
+                    console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+                    for (var i = 0; i < resposta.length; i++) {
+                        var registro = resposta[i];
+                        nomeU = (registro.Nome);
+                        porc = (registro.MediaErros)
+                    }
+
+                    erros.innerHTML = `O usuário que tem a maior média de erros é: <span>${nomeU}</span>,<br>
                 com <span>${porc}</span>%.`
 
+                });
+            } else {
+                console.error('Nenhum dado encontrado ou erro na API');
+            }
+        })
+            .catch(function (error) {
+                console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
             });
-        } else {
-            console.error('Nenhum dado encontrado ou erro na API');
-        }
-    })
-        .catch(function (error) {
-            console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
-        });
 
-}
-    
+    }
 
 
-
-
-
+    // parte para fechar a lateral 
 
     function fechar() {
         var lateral = document.getElementById('lateralI')
@@ -218,6 +228,9 @@ function obterDadosGraficoE(idAquario) {
         }
     }
 
+
+
+    // grafico da porcentagens do ultimos 5 usuarios 
 
     let proximaAtualizacao;
 
@@ -332,6 +345,8 @@ function obterDadosGraficoE(idAquario) {
     }
 
 
+
+    // parte para ver a porcentagem do usuario cadastrado
 
     window.onload = obterDadosGrafico2(1);
 

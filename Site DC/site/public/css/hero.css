@@ -3,54 +3,67 @@
     padding: 0;
 }
 
+
+/* parte dos backgrounds  */
+
 .inicio {
     background-image: url(../img/hero/1920X1080\ Wallpaper\ 4K\ Space\ Gallery.jpg);
     background-size: cover;
-    /* background-color: rgba(255, 255, 255, 0.856); */
     height: 145vh;
     overflow-x: hidden;
 }
+
 .dois {
     background-color: rgb(197, 197, 197);
     height: 145vh;
     box-shadow: inset rgba(0, 1, 44, 0.664) 0 100px 50px -15px;
-   
+
 }
+
 .tres {
     background-color: rgba(114, 114, 114, 0.705);
     height: 145vh;
     box-shadow: inset rgba(0, 1, 44, 0.664) 0 100px 50px -15px;
-   
+
 }
+
 .quatro {
-    background-color:rgb(87, 87, 87);
+    background-color: rgb(87, 87, 87);
     height: 145vh;
     box-shadow: inset rgba(0, 1, 44, 0.664) 0 100px 50px -15px;
-   
+
 }
+
 .cinco {
-    background-color:rgb(53, 53, 53);
+    background-color: rgb(53, 53, 53);
     height: 145vh;
     box-shadow: inset rgba(0, 1, 44, 0.664) 0 100px 50px -15px;
-    
+
 }
+
 .seis {
-    background-color:rgb(41, 41, 41);
+    background-color: rgb(41, 41, 41);
     height: 145vh;
     box-shadow: inset rgba(0, 1, 44, 0.664) 0 100px 50px -15px;
-   
+
 }
+
 .sete {
-    background-color:rgb(31, 31, 31);
+    background-color: rgb(31, 31, 31);
     height: 145vh;
     box-shadow: inset rgba(0, 1, 44, 0.664) 0 100px 50px -15px;
-  
+
 }
+
 .oito {
-    background-color:rgb(17, 17, 17);
+    background-color: rgb(17, 17, 17);
     height: 145vh;
     box-shadow: inset rgba(0, 1, 44, 0.664) 0 100px 50px -15px;
 }
+
+
+
+/* parte da do formato da lateral */
 
 .lateral1 {
     background-color: rgb(0, 47, 255);
@@ -71,6 +84,10 @@
 .imgPerfil:hover {
     transform: scale(1.12);
 }
+
+
+
+/* parte da navbar */
 
 header {
     display: flex;
@@ -142,6 +159,9 @@ nav ul {
     transform: scale(1.15);
 }
 
+
+/* parte pesquisa */
+
 .header input {
     font-family: 'Oswald', sans-serif;
     text-align: center;
@@ -173,7 +193,7 @@ nav ul {
     align-items: center;
     margin-top: -5.8vh;
     margin-left: -28vh;
-    
+
 }
 
 .header button:hover {
@@ -198,7 +218,7 @@ nav ul {
     color: rgb(0, 0, 151);
     display: flex;
     font-size: 5vh;
-    
+
 }
 
 .lateral h1 {
@@ -216,12 +236,12 @@ nav ul {
     margin-left: 3vh;
     font-size: 3.7vh;
     color: rgb(255, 255, 255);
-    transition:  0.3s;
+    transition: 0.3s;
 }
 
 .lateral a:hover {
     font-size: 3.75vh;
-    text-decoration:underline black;
+    text-decoration: underline black;
 }
 
 
@@ -235,7 +255,7 @@ nav ul {
 
 .imgHeroE {
     border: 0.5vh solid rgba(0, 5, 82, 0.836);
-    border-radius: 3vh;
+    border-radius: 10vh;
     background-color: rgba(0, 68, 255, 0.582);
     transition: 0.6s;
     width: 50vh;
@@ -255,7 +275,7 @@ nav ul {
     font-size: 4vh;
     font-family: 'Oswald', sans-serif;
     text-align: center;
-    
+
 }
 
 .quadros2 {
@@ -278,7 +298,7 @@ nav ul {
     margin-left: 2vh;
     margin-top: 20vh;
     transition: 0.6s;
-    
+
 }
 
 .herois:hover {
