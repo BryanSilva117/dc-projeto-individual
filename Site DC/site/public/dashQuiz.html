@@ -56,7 +56,7 @@
                     <h1>DASHBOARD QUIZ
                     </h1>
                     <br>
-                    <a href="./hero.html">Voltar</a>
+                    <a href="./QuizP.html">Voltar</a>
                     <br><br>
                 </div>
                 <h1>Equipes DC</h1>
@@ -335,18 +335,19 @@ function obterDadosGraficoE(idAquario) {
 
     window.onload = obterDadosGrafico2(1);
 
-    function obterDadosGrafico2(fk) {
+    function obterDadosGrafico2(idAquario) {
+        var idAquario = sessionStorage.ID_USUARIO
 
         if (proximaAtualizacao != undefined) {
             clearTimeout(proximaAtualizacao);
         }
 
 
-        fetch(`/medidas/ultimas3/${fk}`, { cache: 'no-store' }).then(function (response) {
+        fetch(`/medidas/ultimas3/${idAquario}`, { cache: 'no-store' }).then(function (response) {
             if (response.ok) {
                 response.json().then(function (resposta) {
                     console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
-                    plotarGrafico2(resposta, fk);
+                    plotarGrafico2(resposta, idAquario);
 
                 });
             } else {

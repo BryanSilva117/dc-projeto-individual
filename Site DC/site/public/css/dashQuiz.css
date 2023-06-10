@@ -4,6 +4,7 @@
 }
 
 .inicio {
+   
     background-color: rgb(8, 37, 8);
     box-shadow: inset 5px 5px 5px 5px rgba(0, 0, 0, 0.418);
     border-bottom: 0;
@@ -169,7 +170,7 @@ nav ul {
 /* parte textos */
 
 .textAE {
-    width: 90vh;
+    width: 100vh;
     height: 26vh;
     display: flex;
     justify-content: center;
@@ -180,7 +181,7 @@ nav ul {
     background-color: rgb(37, 131, 0);
     color: white;
     margin-top: -12vh;
-    margin-left: 16vh;
+    margin-left: 10vh;
     font-size: 4vh;
     font-family: 'Oswald', sans-serif;
 }

@@ -64,6 +64,13 @@
     overflow-y: auto;
 }
 
+.imgPerfil {
+    transition: 0.6s;
+}
+
+.imgPerfil:hover {
+    transform: scale(1.12);
+}
 
 header {
     display: flex;
