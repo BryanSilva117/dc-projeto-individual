@@ -62,8 +62,11 @@
 
         <div class="lateral1" id="lateralI" style="margin-left: 0vh;">
             <div class="lateral">
-                <img class="imgPerfil" src="https://cdn-icons-png.flaticon.com/512/6378/6378141.png" alt=""
-                    width="150px">
+                <div id="imgPerfil">
+                    <img class="imgPerfil" src="./img/nadaPerfil.png" alt=""
+                     width="150px">
+                </div>
+               
                 <div style="justify-content: center; display: flex;">
                     <h1>Seja bem Vindo!<div id="div_usuario" style="color: white;">usuário!</div>
                     </h1>
@@ -551,6 +554,23 @@
     ]
 
 
+    var imgOutros = [
+        'https://pbs.twimg.com/media/EZTeykCXsAAoftj.png',
+        'https://i.pinimg.com/474x/ef/23/dc/ef23dcd2e7f6205e457a8b4b91770628.jpg',
+        'https://pm1.narvii.com/6783/3346449361de9f389d629b2267ee68a15f8e23bbv2_00.jpg',
+        'https://64.media.tumblr.com/18dfc564ab509db564cb8728ae6c1fdc/328dc806e91e4805-7a/s1280x1920/26a484a15a18925639fe93b583ceb60d035e7dcf.jpg',
+        'https://i.pinimg.com/736x/97/3b/bd/973bbdd48e0dcf2ff18b799b15250b6f.jpg',
+        'https://i.pinimg.com/474x/2a/12/96/2a12964cf3e43102267c400e4b91cfd2.jpg',
+        'https://i.pinimg.com/736x/46/24/8b/46248b9ffc25d5af835c881c84942ae1.jpg',
+        'https://i.pinimg.com/736x/6b/e3/7b/6be37b814e6b168de4144f93026cf7ea.jpg',
+        'https://64.media.tumblr.com/0f16a69cd95800ed20323c239fd9f628/tumblr_pzqfanVRpL1uikt1jo1_400.png',
+        'https://64.media.tumblr.com/370f034ab23cfa19ad10efb85d9cd37a/d2661f39004ff590-85/s250x400/e0c727834cbeee0ad99894b72a6507c1626b6567.png',
+        'https://64.media.tumblr.com/79429c42374b20b0dc7e86e72bb38d1b/8e86e0aa2153d8e9-28/s400x600/49c49e16e8f4df73dfe66335bbcaf09b89a738da.png',
+        'https://64.media.tumblr.com/5e85967179346ad990867b31262bfa60/dd4a436ff1f3f949-98/s250x400/10cb63b71cb48fde1d806156e1354de4e64c5205.jpg',
+        'https://s3.amazonaws.com/comicgeeks/characters/avatars/16645.jpg?t=1636151586',
+    ]
+
+
     // função para pesquisar os personagens 
 
     function pesquisar() {
@@ -603,9 +623,98 @@
         }
     }
 
-    var fk = sessionStorage.ID_USUARIO
 
-    console.log(fk)
+
+    window.onload = fotosPerso(1);
+
+    function fotosPerso(idAquario) {
+        var idAquario = sessionStorage.ID_USUARIO
+        var fkPerso;
+
+
+        fetch(`/medidas/fotosPerso/${idAquario}`, { cache: 'no-store' }).then(function (response) {
+            if (response.ok) {
+                response.json().then(function (resposta) {
+                    console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+                    for (var i = 0; i < resposta.length; i++) {
+                        var registro = resposta[i];
+                        fkPerso = (registro.personagem);
+                    }
+
+                    if (fkPerso == 1) {
+                        
+                        imgPerfil.innerHTML = `<img class="imgPerfil" src="./img/supermanPerfil.jpg" alt=""
+                     width="150px">`
+
+                    }
+                    if (fkPerso == 2) {
+
+                        imgPerfil.innerHTML = `<img class="imgPerfil" src="./img/batmanPerfil.jpg" alt=""
+                     width="150px">`
+
+                    }
+                    if (fkPerso == 3) {
+
+                        imgPerfil.innerHTML = `<img class="imgPerfil" src="./img/mulherMPerfil.jpg" alt=""
+                     width="150px">`
+
+                    }
+                    if (fkPerso == 4) {
+
+                        imgPerfil.innerHTML = `<img class="imgPerfil" src="./img/flashPerfil.jpg" alt=""
+                     width="150px">`
+
+                    }
+                    if (fkPerso == 5) {
+
+                        imgPerfil.innerHTML = `<img class="imgPerfil" src="./img/lanternaVPerfil.png" alt=""
+                     width="150px">`
+
+                    }
+                    if (fkPerso == 6) {
+
+                        imgPerfil.innerHTML = `<img class="imgPerfil" src="./img/aquamanPerfil.png" alt=""
+                     width="150px">`
+
+                    }
+                    if (fkPerso == 7) {
+
+                        imgPerfil.innerHTML = `<img class="imgPerfil" src="./img/ciborguePerfil.jpg" alt=""
+                     width="150px">`
+
+                    }
+                    if (fkPerso == 8) {
+                        var num = parseInt(Math.random() * imgOutros.length)
+
+                        imgPerfil.innerHTML = `<img class="imgPerfil" src="${imgOutros[num]}" alt=""
+                     width="150px">`
+
+                    }
+                    if (fkPerso == 9) {
+
+                        imgPerfil.innerHTML = `<img class="imgPerfil" src="./img/miranhaPerfil.jpg" alt=""
+                     width="150px">`
+
+                    }
+
+                    if (fkPerso == undefined) {
+
+                        imgPerfil.innerHTML = `<img class="imgPerfil" src="./img/nadaPerfil.png" alt=""
+                     width="150px">`
+                    }
+
+
+
+                });
+            } else {
+                console.error('Nenhum dado encontrado ou erro na API');
+            }
+        })
+            .catch(function (error) {
+                console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+            });
+
+    }
 
 
 </script>

@@ -46,6 +46,8 @@ insert into quizCharada values
 
 select * from quizCharada;
 
+select fkPersonagemFav as personagem from usuario where idUsuario = 40;
+
 
 SELECT nome as Nome, (SUM(acertos) / (COUNT(*) * 5)) * 100 AS Acertos,
 	(SUM(erros) / (COUNT(*) * 5)) * 100 AS Erros FROM quizCharada join usuario on fkUsuario = idUsuario

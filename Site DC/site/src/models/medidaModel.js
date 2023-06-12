@@ -113,6 +113,27 @@ function buscarUltimasMedidas5(idAquario, limite_linhas) {
     return database.executar(instrucaoSql);
 }
 
+function fotosPerso(idAquario, limite_linhas) {
+
+    instrucaoSql = ''
+
+    if (process.env.AMBIENTE_PROCESSO == "producao") {
+        instrucaoSql = `SELECT nome AS Nome, round((SUM(erros) / (COUNT(*) * 5)) * 100, 1) AS MediaErros FROM QuizCharada
+        JOIN Usuario ON fkUsuario = idUsuario GROUP BY fkUsuario ORDER BY MediaErros DESC, fkUsuario desc LIMIT 1;`;
+
+
+    } else if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
+        instrucaoSql = `select fkPersonagemFav as personagem from usuario where idUsuario = ${idAquario};`;
+
+    } else {
+        console.log("\nO AMBIENTE (produção OU desenvolvimento) NÃO FOI DEFINIDO EM app.js\n");
+        return
+    }
+
+    console.log("Executando a instrução SQL: \n" + instrucaoSql);
+    return database.executar(instrucaoSql);
+}
+
 function buscarMedidasEmTempoReal(idAquario) {
 
     instrucaoSql = ''
@@ -150,5 +171,6 @@ module.exports = {
     buscarUltimasMedidas3,
     buscarUltimasMedidas4,
     buscarUltimasMedidas5,
+    fotosPerso,
     buscarMedidasEmTempoReal
 }

@@ -23,6 +23,10 @@ router.get("/ultimas5/:idAquario", function (req, res) {
     medidaController.buscarUltimasMedidas5(req, res);
 });
 
+router.get("/fotosPerso/:idAquario", function (req, res) {
+    medidaController.fotosPerso(req, res);
+});
+
 router.get("/tempo-real/:idAquario", function (req, res) {
     medidaController.buscarMedidasEmTempoReal(req, res);
 })
