@@ -553,7 +553,7 @@
     ]
 
     var superman = [
-        
+
         './img/supermanP/superman1.jpg',
         './img/supermanP/superman2.jpg',
         './img/supermanP/superman3.jpg',
@@ -563,46 +563,78 @@
     ]
 
     var batman = [
-    './img/batmanP/batman1.jpg',
-    './img/batmanP/batman2.jpg',
-    './img/batmanP/batman3.jpg',
-    './img/batmanP/batman4.jpg',
-    './img/batmanP/batman5.jpg',
+        './img/batmanP/batman1.jpg',
+        './img/batmanP/batman2.jpg',
+        './img/batmanP/batman3.jpg',
+        './img/batmanP/batman4.jpg',
+        './img/batmanP/batman5.jpg',
     ]
 
     var mulherM = [
-    './img/wonderP/mulherM1.jpg',
-    './img/wonderP/mulherM2.jpg',
-    './img/wonderP/mulherM3.jpg',
-    './img/wonderP/mulherM4.jpg',
-    './img/wonderP/mulherM5.jpg',
+        './img/wonderP/mulherM1.jpg',
+        './img/wonderP/mulherM2.jpg',
+        './img/wonderP/mulherM3.jpg',
+        './img/wonderP/mulherM4.jpg',
+        './img/wonderP/mulherM5.jpg',
     ]
 
-    var flash = []
+    var flash = [
+        './img/flashP/flash1.jpg',
+        './img/flashP/flash2.jpg',
+        './img/flashP/flash3.jpg',
+        './img/flashP/flash4.jpg',
+        './img/flashP/flash5.jpg',
 
-    var lanternaV = []
+    ]
 
-    var aquaman = []
+    var lanternaV = [
+    './img/lanternP/lanterna1.png',
+    './img/lanternP/lanterna2.png',
+    './img/lanternP/lanterna3.png',
+    './img/lanternP/lanterna4.png',
+    './img/lanternP/lanterna5.png',
+    ]
 
-    var ciborgue = []
+    var aquaman = [
+    './img/aquamanP/aquaman1.png',
+    './img/aquamanP/aquaman2.png',
+    './img/aquamanP/aquaman3.png',
+    './img/aquamanP/aquaman4.png',
+    './img/aquamanP/aquaman5.png',
+    ]
 
-    var marvel = []
+    var ciborgue = [
+    './img/ciborgueP/ciborgue1.jpg',
+    './img/ciborgueP/ciborgue2.jpg',
+    './img/ciborgueP/ciborgue3.jpg',
+    './img/ciborgueP/ciborgue4.jpg',
+    './img/ciborgueP/ciborgue5.jpg',
+    ]
 
 
     var imgOutros = [
-        'https://pbs.twimg.com/media/EZTeykCXsAAoftj.png',
-        'https://i.pinimg.com/474x/ef/23/dc/ef23dcd2e7f6205e457a8b4b91770628.jpg',
-        'https://pm1.narvii.com/6783/3346449361de9f389d629b2267ee68a15f8e23bbv2_00.jpg',
-        'https://64.media.tumblr.com/18dfc564ab509db564cb8728ae6c1fdc/328dc806e91e4805-7a/s1280x1920/26a484a15a18925639fe93b583ceb60d035e7dcf.jpg',
-        'https://i.pinimg.com/736x/97/3b/bd/973bbdd48e0dcf2ff18b799b15250b6f.jpg',
-        'https://i.pinimg.com/474x/2a/12/96/2a12964cf3e43102267c400e4b91cfd2.jpg',
-        'https://i.pinimg.com/736x/46/24/8b/46248b9ffc25d5af835c881c84942ae1.jpg',
-        'https://i.pinimg.com/736x/6b/e3/7b/6be37b814e6b168de4144f93026cf7ea.jpg',
-        'https://64.media.tumblr.com/0f16a69cd95800ed20323c239fd9f628/tumblr_pzqfanVRpL1uikt1jo1_400.png',
-        'https://64.media.tumblr.com/370f034ab23cfa19ad10efb85d9cd37a/d2661f39004ff590-85/s250x400/e0c727834cbeee0ad99894b72a6507c1626b6567.png',
-        'https://64.media.tumblr.com/79429c42374b20b0dc7e86e72bb38d1b/8e86e0aa2153d8e9-28/s400x600/49c49e16e8f4df73dfe66335bbcaf09b89a738da.png',
-        'https://64.media.tumblr.com/5e85967179346ad990867b31262bfa60/dd4a436ff1f3f949-98/s250x400/10cb63b71cb48fde1d806156e1354de4e64c5205.jpg',
-        'https://s3.amazonaws.com/comicgeeks/characters/avatars/16645.jpg?t=1636151586',
+    './img/outroP/outro1.png',
+    './img/outroP/outro2.png',
+    './img/outroP/outro3.png',
+    './img/outroP/outro4.png',
+    './img/outroP/outro5.png',
+    './img/outroP/outro6.png',
+    './img/outroP/outro7.png',
+    './img/outroP/outro8.png',
+    './img/outroP/outro9.png',
+    './img/outroP/outro10.png',
+    './img/outroP/outro11.png',
+    './img/outroP/outro12.png',
+    './img/outroP/outro13.png',
+    ]
+
+
+    var marvel = [
+    './img/marvelP/marvel1.jpg',
+    './img/marvelP/marvel2.jpg',
+    './img/marvelP/marvel3.jpg',
+    './img/marvelP/marvel4.jpg',
+    './img/marvelP/marvel5.jpg',
     ]
 
 
@@ -677,48 +709,51 @@
                     }
 
                     if (fkPerso == 1) {
-                        var num = parseInt(Math.random() * superman.length )
+                        var num = parseInt(Math.random() * superman.length)
 
                         imgPerfil.innerHTML = `<img class="imgPerfil" src="${superman[num]}" alt=""
                      width="150px">`
 
                     }
                     if (fkPerso == 2) {
-                        var num = parseInt(Math.random() * batman.length )
+                        var num = parseInt(Math.random() * batman.length)
 
                         imgPerfil.innerHTML = `<img class="imgPerfil" src="${batman[num]}" alt=""
                      width="150px">`
 
                     }
                     if (fkPerso == 3) {
-                        var num = parseInt(Math.random() * mulherM.length )
+                        var num = parseInt(Math.random() * mulherM.length)
 
                         imgPerfil.innerHTML = `<img class="imgPerfil" src="${mulherM[num]}" alt=""
                      width="150px">`
 
                     }
                     if (fkPerso == 4) {
-                        var num = parseInt(Math.random() * flash.length )
+                        var num = parseInt(Math.random() * flash.length)
 
-                        imgPerfil.innerHTML = `<img class="imgPerfil" src="https://pm1.aminoapps.com/6663/859d5020f4a9f796a1ff9cd4cb5c796b6e0f9bce_00.jpg" alt=""
+                        imgPerfil.innerHTML = `<img class="imgPerfil" src="${flash[num]}" alt=""
                      width="150px">`
 
                     }
                     if (fkPerso == 5) {
+                        var num = parseInt(Math.random() * lanternaV.length)
 
-                        imgPerfil.innerHTML = `<img class="imgPerfil" src="./img/lanternaVPerfil.png" alt=""
+                        imgPerfil.innerHTML = `<img class="imgPerfil" src="${lanternaV[num]}" alt=""
                      width="150px">`
 
                     }
                     if (fkPerso == 6) {
+                        var num = parseInt(Math.random() * aquaman.length)
 
-                        imgPerfil.innerHTML = `<img class="imgPerfil" src="./img/aquamanPerfil.png" alt=""
+                        imgPerfil.innerHTML = `<img class="imgPerfil" src="${aquaman[num]}" alt=""
                      width="150px">`
 
                     }
                     if (fkPerso == 7) {
+                        var num = parseInt(Math.random() * ciborgue.length)
 
-                        imgPerfil.innerHTML = `<img class="imgPerfil" src="./img/ciborguePerfil.jpg" alt=""
+                        imgPerfil.innerHTML = `<img class="imgPerfil" src="${ciborgue[num]}" alt=""
                      width="150px">`
 
                     }
@@ -730,8 +765,9 @@
 
                     }
                     if (fkPerso == 9) {
+                        var num = parseInt(Math.random() * marvel.length)
 
-                        imgPerfil.innerHTML = `<img class="imgPerfil" src="./img/miranhaPerfil.jpg" alt=""
+                        imgPerfil.innerHTML = `<img class="imgPerfil" src="${marvel[num]}" alt=""
                      width="150px">`
 
                     }
