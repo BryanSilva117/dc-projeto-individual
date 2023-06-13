@@ -447,7 +447,15 @@
 </html>
 
 <script>
+    
+    // verifica se o sessionStorage é true porque veio de outra pag, se for chama o login 
 
+  var valor = sessionStorage.getItem('valor');
+
+  if(valor == 'true') {
+    login()
+    sessionStorage.setItem('valor', 'false'); 
+  }
     // ao clicar no botão o container do login fica block
 
     function login() {

@@ -122,14 +122,15 @@
             <div id="acertos">
 
             </div>
+        </div>
+        <br><br><br><br><br><br>
 
+        <div class="textAE">
             <div id="erros">
 
             </div>
-
-
-
         </div>
+
 
     </div>
 
@@ -161,8 +162,8 @@
 
 
 
-                    acertos.innerHTML = `Usuário que tem a maior média de acertos é: <span>${nomeU}</span>,
-                    com <span>${porc}</span>%.<br> <br>`
+                    acertos.innerHTML = `Usuário com a maior média de acertos é: <span>${nomeU}</span>,
+                    com <span>${porc}</span>%.`
 
                 });
             } else {
@@ -194,7 +195,7 @@
                         porc = (registro.MediaErros)
                     }
 
-                    erros.innerHTML = `Usuário que tem a maior média de erros é: <span>${nomeU}</span>,
+                    erros.innerHTML = `Usuário com a maior média de erros é: <span>${nomeU}</span>,
                 com <span>${porc}</span>%.`
 
                 });
@@ -324,7 +325,7 @@
                         },
                         beginAtZero: true,
                         grid: {
-                            color: 'black'
+                            color: 'rgb(0, 255, 0)'
                         }
                     },
                     x: {
@@ -336,7 +337,7 @@
                             }
                         },
                         grid: {
-                            color: 'black'
+                            color: 'rgb(0, 255, 0)'
                         }
                     }
                 }

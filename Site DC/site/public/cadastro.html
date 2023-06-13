@@ -47,7 +47,7 @@
             <nav class="container">
                 <ul>
                     <li>
-                        <a href="./index.html">
+                        <a onclick="irLogin()" href="#" >
                             Já é Membro?
                         </a>
                     </li>
@@ -160,6 +160,13 @@
 </body>
 
 <script>
+
+
+   function irLogin() {
+    window.location = 'index.html'
+    sessionStorage.setItem('valor', 'true');
+   }
+
     function cadastrar() {
 
 
@@ -247,6 +254,8 @@
 
             if (resposta.ok) {
                 cardErro.style.display = "block";
+
+                sessionStorage.setItem('valor', 'true');
 
                 mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
                 aguardar();
