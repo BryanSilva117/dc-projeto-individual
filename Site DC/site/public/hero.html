@@ -36,7 +36,7 @@
         </div>
 
         <div class="pesquisa">
-            <input id="input_pesquisar" placeholder="Pesquisar Heroi">
+            <input id="input_pesquisar" placeholder="Pesquisar Herói">
             <button onclick="pesquisar()">Pesquisar</button>
         </div>
 
@@ -63,10 +63,9 @@
         <div class="lateral1" id="lateralI" style="margin-left: 0vh;">
             <div class="lateral">
                 <div id="imgPerfil">
-                    <img class="imgPerfil" src="./img/nadaPerfil.png" alt=""
-                     width="150px">
+                    <img class="imgPerfil" src="./img/nadaPerfil.png" alt="" width="150px">
                 </div>
-               
+
                 <div style="justify-content: center; display: flex;">
                     <h1>Seja bem Vindo!<div id="div_usuario" style="color: white;">usuário!</div>
                     </h1>
@@ -553,6 +552,42 @@
         crocodilo = 'crocodilo',
     ]
 
+    var superman = [
+        
+        './img/supermanP/superman1.jpg',
+        './img/supermanP/superman2.jpg',
+        './img/supermanP/superman3.jpg',
+        './img/supermanP/superman4.jpg',
+        './img/supermanP/superman5.jpg',
+
+    ]
+
+    var batman = [
+    './img/batmanP/batman1.jpg',
+    './img/batmanP/batman2.jpg',
+    './img/batmanP/batman3.jpg',
+    './img/batmanP/batman4.jpg',
+    './img/batmanP/batman5.jpg',
+    ]
+
+    var mulherM = [
+    './img/wonderP/mulherM1.jpg',
+    './img/wonderP/mulherM2.jpg',
+    './img/wonderP/mulherM3.jpg',
+    './img/wonderP/mulherM4.jpg',
+    './img/wonderP/mulherM5.jpg',
+    ]
+
+    var flash = []
+
+    var lanternaV = []
+
+    var aquaman = []
+
+    var ciborgue = []
+
+    var marvel = []
+
 
     var imgOutros = [
         'https://pbs.twimg.com/media/EZTeykCXsAAoftj.png',
@@ -642,26 +677,30 @@
                     }
 
                     if (fkPerso == 1) {
-                        
-                        imgPerfil.innerHTML = `<img class="imgPerfil" src="./img/supermanPerfil.jpg" alt=""
+                        var num = parseInt(Math.random() * superman.length )
+
+                        imgPerfil.innerHTML = `<img class="imgPerfil" src="${superman[num]}" alt=""
                      width="150px">`
 
                     }
                     if (fkPerso == 2) {
+                        var num = parseInt(Math.random() * batman.length )
 
-                        imgPerfil.innerHTML = `<img class="imgPerfil" src="./img/batmanPerfil.jpg" alt=""
+                        imgPerfil.innerHTML = `<img class="imgPerfil" src="${batman[num]}" alt=""
                      width="150px">`
 
                     }
                     if (fkPerso == 3) {
+                        var num = parseInt(Math.random() * mulherM.length )
 
-                        imgPerfil.innerHTML = `<img class="imgPerfil" src="./img/mulherMPerfil.jpg" alt=""
+                        imgPerfil.innerHTML = `<img class="imgPerfil" src="${mulherM[num]}" alt=""
                      width="150px">`
 
                     }
                     if (fkPerso == 4) {
+                        var num = parseInt(Math.random() * flash.length )
 
-                        imgPerfil.innerHTML = `<img class="imgPerfil" src="./img/flashPerfil.jpg" alt=""
+                        imgPerfil.innerHTML = `<img class="imgPerfil" src="https://pm1.aminoapps.com/6663/859d5020f4a9f796a1ff9cd4cb5c796b6e0f9bce_00.jpg" alt=""
                      width="150px">`
 
                     }
