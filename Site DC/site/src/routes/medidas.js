@@ -27,6 +27,10 @@ router.get("/fotosPerso/:idAquario", function (req, res) {
     medidaController.fotosPerso(req, res);
 });
 
+router.get("/perfil/:idAquario", function (req, res) {
+    medidaController.perfil(req, res);
+});
+
 router.get("/tempo-real/:idAquario", function (req, res) {
     medidaController.buscarMedidasEmTempoReal(req, res);
 })

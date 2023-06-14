@@ -69,5 +69,7 @@ select count(usuario.fkPersonagemFav) as qntVotos, personagemFav.nomeP as 'Nome 
 	from usuario join personagemFav on personagemFav.idPersonagemFav = usuario.fkPersonagemFav 
 		group by usuario.fkPersonagemFav;
 
-select usuario.nome as 'Nome Usuario', email, senha, dtNasc, Genero, personagemFav.nomeP as 'Personagem Favorito' 
-	from usuario join personagemFav on fkPersonagemFav = idPersonagemFav;
+SELECT usuario.nome AS NomeU, sobrenome, email, DATE_FORMAT(STR_TO_DATE(dtNasc, '%Y-%m-%d'), '%d/%m/%Y') AS dtNasc, Genero, personagemFav.nomeP AS Personagem
+	FROM usuario
+		JOIN personagemFav ON fkPersonagemFav = idPersonagemFav
+				WHERE idUsuario = 3;

@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./img/DCLOGO3.png">
+    <title>Detective Comics Perfil</title>
+    <link rel="stylesheet" href="./css/perfil.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital@1&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+
+    <script src="./js/funcoes.js"></script>
+
+</head>
+
+<body>
+    <!-- parte da lateral  -->
+
+    <div class="inicio">
+
+        <div class="lateral1" id="lateralI" style="margin-left: 0vh;">
+            <div class="lateral">
+                <div>
+                    <h1>Seu Perfil</h1>
+                    <br>
+                    <a href="./hero.html">Voltar</a>
+                    <br><br>
+                </div>
+                <br>
+                <h1>Equipes DC</h1>
+                <br>
+                <br>
+
+                <div>
+                    <a href="#justice">Liga da Justiça</a>
+                    <br>
+                    <a href="#justiceSombira">Liga da Justisa Sombria</a>
+                    <br>
+                    <a href="#Sociedade">Sociedade da Justiça</a>
+                    <br>
+                    <a href="#JusticeJovem">Justiça Jovem</a>
+                    <br>
+                    <a href="#JovensTita">Jovens Titã</a>
+                    <br>
+                    <a href="#FamíliaMarvel">Família Marvel</a>
+                    <br><br>
+                    <h1>Vilões/Anti-Herois</h1>
+                    <br>
+                    <a href="#leagueIn">Liga da Injustiça</a>
+                    <br>
+                    <a href="#suicideScquade">Esquadrão Suicida</a>
+                    <br><br>
+                    <h1>Interação</h1>
+                    <br>
+                    <a href="./QuizP.html">Responder um Quiz</a>
+                    <br>
+                    <a href="./dashQuiz.html">Dashboard Quiz</a>
+                    <br>
+                    <a href="./DashPerso.html">Dash Herois JL Pref</a>
+                    <br><br>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="capa">
+            <div id="imgPerfil">
+                <img class="imgPerfil" src="./img/nadaPerfil.png" alt="">
+            </div>
+        </div>
+        <div class="perfil">
+            <div class="nomeSobr">
+
+                <div id="div_nomeSo"></div>
+                <!-- pedros -->
+            </div>
+            <div class="email">
+                <div>Email: <span id="span_email"></span></div>
+                <br>
+                <div>Gênero: <span id="span_genero"></span></div>
+                <br>
+                <div>Data de Nascimento: <span id="span_dataN"></span></div>
+                <br>    
+                <div>Personagem Favorito: <span id="span_persoF"></span></div>
+            </div>
+            
+            <div>
+                
+            </div>
+           
+            
+            
+        </div>
+
+    </div>
+</body>
+
+<script>
+
+    var superman = [
+
+        './img/supermanP/superman1.jpg',
+        './img/supermanP/superman2.jpg',
+        './img/supermanP/superman3.jpg',
+        './img/supermanP/superman4.jpg',
+        './img/supermanP/superman5.jpg',
+
+    ]
+
+    var batman = [
+        './img/batmanP/batman1.jpg',
+        './img/batmanP/batman2.jpg',
+        './img/batmanP/batman3.jpg',
+        './img/batmanP/batman4.jpg',
+        './img/batmanP/batman5.jpg',
+    ]
+
+    var mulherM = [
+        './img/wonderP/mulherM1.jpg',
+        './img/wonderP/mulherM2.jpg',
+        './img/wonderP/mulherM3.jpg',
+        './img/wonderP/mulherM4.jpg',
+        './img/wonderP/mulherM5.jpg',
+    ]
+
+    var flash = [
+        './img/flashP/flash1.jpg',
+        './img/flashP/flash2.jpg',
+        './img/flashP/flash3.jpg',
+        './img/flashP/flash4.jpg',
+        './img/flashP/flash5.jpg',
+
+    ]
+
+    var lanternaV = [
+        './img/lanternP/lanterna1.png',
+        './img/lanternP/lanterna2.png',
+        './img/lanternP/lanterna3.png',
+        './img/lanternP/lanterna4.png',
+        './img/lanternP/lanterna5.png',
+    ]
+
+    var aquaman = [
+        './img/aquamanP/aquaman1.png',
+        './img/aquamanP/aquaman2.png',
+        './img/aquamanP/aquaman3.png',
+        './img/aquamanP/aquaman4.png',
+        './img/aquamanP/aquaman5.png',
+    ]
+
+    var ciborgue = [
+        './img/ciborgueP/ciborgue1.jpg',
+        './img/ciborgueP/ciborgue2.jpg',
+        './img/ciborgueP/ciborgue3.jpg',
+        './img/ciborgueP/ciborgue4.jpg',
+        './img/ciborgueP/ciborgue5.jpg',
+    ]
+
+
+    var imgOutros = [
+        './img/outroP/outro1.png',
+        './img/outroP/outro2.png',
+        './img/outroP/outro3.png',
+        './img/outroP/outro4.png',
+        './img/outroP/outro5.png',
+        './img/outroP/outro6.png',
+        './img/outroP/outro7.png',
+        './img/outroP/outro8.png',
+        './img/outroP/outro9.png',
+        './img/outroP/outro10.png',
+        './img/outroP/outro11.png',
+        './img/outroP/outro12.png',
+        './img/outroP/outro13.png',
+    ]
+
+
+    var marvel = [
+        './img/marvelP/marvel1.jpg',
+        './img/marvelP/marvel2.jpg',
+        './img/marvelP/marvel3.jpg',
+        './img/marvelP/marvel4.jpg',
+        './img/marvelP/marvel5.jpg',
+    ]
+
+
+
+
+    window.onload = fotosPerso(1);
+
+    function fotosPerso(idAquario) {
+        var idAquario = sessionStorage.ID_USUARIO
+        var fkPerso;
+
+
+        fetch(`/medidas/fotosPerso/${idAquario}`, { cache: 'no-store' }).then(function (response) {
+            if (response.ok) {
+                response.json().then(function (resposta) {
+                    console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+                    for (var i = 0; i < resposta.length; i++) {
+                        var registro = resposta[i];
+                        fkPerso = (registro.personagem);
+                    }
+
+                    if (fkPerso == 1) {
+                        var num = parseInt(Math.random() * superman.length)
+
+                        imgPerfil.innerHTML = `<img class="imgPerfil" src="${superman[num]}" alt=""
+                     width="150px">`
+
+                    }
+                    if (fkPerso == 2) {
+                        var num = parseInt(Math.random() * batman.length)
+
+                        imgPerfil.innerHTML = `<img class="imgPerfil" src="${batman[num]}" alt=""
+                     width="150px">`
+
+                    }
+                    if (fkPerso == 3) {
+                        var num = parseInt(Math.random() * mulherM.length)
+
+                        imgPerfil.innerHTML = `<img class="imgPerfil" src="${mulherM[num]}" alt=""
+                     width="150px">`
+
+                    }
+                    if (fkPerso == 4) {
+                        var num = parseInt(Math.random() * flash.length)
+
+                        imgPerfil.innerHTML = `<img class="imgPerfil" src="${flash[num]}" alt=""
+                     width="150px">`
+
+                    }
+                    if (fkPerso == 5) {
+                        var num = parseInt(Math.random() * lanternaV.length)
+
+                        imgPerfil.innerHTML = `<img class="imgPerfil" src="${lanternaV[num]}" alt=""
+                     width="150px">`
+
+                    }
+                    if (fkPerso == 6) {
+                        var num = parseInt(Math.random() * aquaman.length)
+
+                        imgPerfil.innerHTML = `<img class="imgPerfil" src="${aquaman[num]}" alt=""
+                     width="150px">`
+
+                    }
+                    if (fkPerso == 7) {
+                        var num = parseInt(Math.random() * ciborgue.length)
+
+                        imgPerfil.innerHTML = `<img class="imgPerfil" src="${ciborgue[num]}" alt=""
+                     width="150px">`
+
+                    }
+                    if (fkPerso == 8) {
+                        var num = parseInt(Math.random() * imgOutros.length)
+
+                        imgPerfil.innerHTML = `<img class="imgPerfil" src="${imgOutros[num]}" alt=""
+                     width="150px">`
+
+                    }
+                    if (fkPerso == 9) {
+                        var num = parseInt(Math.random() * marvel.length)
+
+                        imgPerfil.innerHTML = `<img class="imgPerfil" src="${marvel[num]}" alt=""
+                     width="150px">`
+
+                    }
+
+                    if (fkPerso == undefined) {
+
+                        imgPerfil.innerHTML = `<img class="imgPerfil" src="./img/nadaPerfil.png" alt=""
+                     width="150px">`
+                    }
+
+
+
+                });
+            } else {
+                console.error('Nenhum dado encontrado ou erro na API');
+            }
+        })
+            .catch(function (error) {
+                console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+            });
+
+    }
+
+    window.onload = perfil(1);
+
+    function perfil(idAquario) {
+        var idAquario = sessionStorage.ID_USUARIO
+        var nome;
+        var sobrenome;
+        var email;
+        var genero;
+        var dataN;
+        var persoF;
+
+
+        fetch(`/medidas/perfil/${idAquario}`, { cache: 'no-store' }).then(function (response) {
+            if (response.ok) {
+                response.json().then(function (resposta) {
+                    console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+                    for (var i = 0; i < resposta.length; i++) {
+                        var registro = resposta[i];
+                        nome = (registro.NomeU);
+                        sobrenome = (registro.sobrenome);
+                        email = (registro.email);
+                        genero = (registro.Genero);
+                        dataN = (registro.dtNasc);
+                        persoF = (registro.Personagem);
+                    }
+                    // pedros
+                   
+                       
+
+                    div_nomeSo.innerHTML = `${nome} ${sobrenome}`
+                    span_email.innerHTML = email
+                    span_genero.innerHTML = genero
+                    span_dataN.innerHTML = dataN
+                    span_persoF.innerHTML = persoF
+
+
+
+                });
+
+            } else {
+                console.error('Nenhum dado encontrado ou erro na API');
+            }
+        })
+            .catch(function (error) {
+                console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+            });
+
+    }
+
+
+</script>

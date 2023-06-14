@@ -134,6 +134,30 @@ function fotosPerso(idAquario, limite_linhas) {
     return database.executar(instrucaoSql);
 }
 
+function perfil(idAquario, limite_linhas) {
+
+    instrucaoSql = ''
+
+    if (process.env.AMBIENTE_PROCESSO == "producao") {
+        instrucaoSql = `SELECT nome AS Nome, round((SUM(erros) / (COUNT(*) * 5)) * 100, 1) AS MediaErros FROM QuizCharada
+        JOIN Usuario ON fkUsuario = idUsuario GROUP BY fkUsuario ORDER BY MediaErros DESC, fkUsuario desc LIMIT 1;`;
+
+
+    } else if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
+        instrucaoSql = `SELECT usuario.nome AS NomeU, sobrenome, email, DATE_FORMAT(STR_TO_DATE(dtNasc, '%Y-%m-%d'), '%d/%m/%Y') AS dtNasc, Genero, personagemFav.nomeP AS Personagem
+        FROM usuario
+            JOIN personagemFav ON fkPersonagemFav = idPersonagemFav
+                    WHERE idUsuario = ${idAquario};`;
+
+    } else {
+        console.log("\nO AMBIENTE (produção OU desenvolvimento) NÃO FOI DEFINIDO EM app.js\n");
+        return
+    }
+
+    console.log("Executando a instrução SQL: \n" + instrucaoSql);
+    return database.executar(instrucaoSql);
+}
+
 function buscarMedidasEmTempoReal(idAquario) {
 
     instrucaoSql = ''
@@ -172,5 +196,6 @@ module.exports = {
     buscarUltimasMedidas4,
     buscarUltimasMedidas5,
     fotosPerso,
+    perfil,
     buscarMedidasEmTempoReal
 }

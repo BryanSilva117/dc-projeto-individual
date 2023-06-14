@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* parte dos backgrounds  */
+
+.inicio {
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+
+/* parte da do formato da lateral */
+
+.lateral1 {
+    background-color: rgb(0, 47, 255);
+    width: 50vh;
+    height: 100vh;
+    position: fixed;
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.418), 0 100px 300px -15px rgb(0, 4, 63) inset;
+    border-radius: 0.5vh;
+    transition: 0.6s;
+    z-index: 6;
+    overflow-y: auto;
+}
+
+
+
+
+
+/* parte da navbar */
+
+header {
+    display: flex;
+    justify-content: end;
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.418);
+    padding: 1vh 5vh;
+    position: fixed;
+    z-index: 5;
+}
+
+
+.header {
+    width: 200vh;
+    background-color: rgba(0, 0, 255, 0.596);
+}
+
+
+
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+
+.sair {
+    display: flex;
+    justify-content: center;
+    margin-top: 3.5vh;
+    margin-right: 1vh;
+    width: 10vh;
+    height: 4vh;
+    transition: 0.4s;
+}
+
+.sair:hover {
+    transform: scale(1.15);
+}
+
+
+/* parte lateral */
+
+.lateral {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Oswald', sans-serif;
+    text-align: left;
+    margin-top: 3vh;
+}
+
+
+.lateral span {
+    color: rgb(0, 0, 151);
+    display: flex;
+    font-size: 5vh;
+
+}
+
+.lateral h1 {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.lateral a {
+    display: flex;
+    justify-content: left;
+    text-align: left;
+    text-decoration: none;
+    margin-left: 3vh;
+    font-size: 3.7vh;
+    color: rgb(255, 255, 255);
+    transition: 0.3s;
+}
+
+.lateral a:hover {
+    font-size: 3.75vh;
+    text-decoration: underline black;
+}
+
+
+/* parte perfil  */
+.capa {
+    background-image: url(../img/hero/1920X1080\ Wallpaper\ 4K\ Space\ Gallery.jpg);
+    background-size: cover;
+    height: 40vh;
+    border-bottom: 3px solid black;
+    box-shadow: 1vh 1vh 1vh 1vh rgba(0, 4, 59, 0.589);
+
+}
+
+.imgPerfil {
+    width: 250px;
+    border-radius: 30vh;
+    border: 3px solid black;
+    margin-top: 20vh;
+    margin-left: 55vh;
+}
+
+
+
+.perfil div {
+    font-family: 'Oswald', sans-serif;
+}
+
+.nomeSobr {
+    position: fixed;
+    margin-left: 55vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 7vh;
+    margin-top: 20vh;
+}
+
+.email {
+    position: fixed;
+    flex-direction: column;
+    display: flex;
+    justify-content: right;
+    margin-top: 5vh;
+   margin-left: 115vh;
+    font-size: 4vh;
+}
