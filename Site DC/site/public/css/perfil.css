@@ -133,6 +133,16 @@ nav ul {
     margin-left: 55vh;
 }
 
+.biografia {
+    position: fixed;
+    flex-direction: column;
+    display: flex;
+    justify-content: right;
+    margin-top: 25vh;
+    margin-left: 70vh;
+    font-size: 4.5vh;
+    background-color: blue;
+}
 
 
 .perfil div {
@@ -141,12 +151,12 @@ nav ul {
 
 .nomeSobr {
     position: fixed;
-    margin-left: 55vh;
+    margin-left: 95vh;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 7vh;
-    margin-top: 20vh;
+    margin-top: 1vh;
 }
 
 .email {
@@ -154,7 +164,7 @@ nav ul {
     flex-direction: column;
     display: flex;
     justify-content: right;
-    margin-top: 5vh;
-   margin-left: 115vh;
-    font-size: 4vh;
+    margin-top: 9.5vh;
+    margin-left: 135vh;
+    font-size: 4.5vh;
 }

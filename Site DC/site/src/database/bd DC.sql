@@ -39,6 +39,15 @@ constraint fkQU foreign key (fkUsuario) references usuario(idUsuario),
 constraint pkQU primary key (idQuizCharada, fkUsuario)
 );
 
+
+create table biografia (
+idBiografia int auto_increment,
+descricao varchar(100),
+fkUsuario int,
+constraint fkBu foreign key (fkUsuario) references usuario(idUsuario),
+constraint pkBu primary key (idBiografia, fkUsuario)
+);
+
 select * from usuario;
 
 insert into quizCharada values
