@@ -18,6 +18,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital@1&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script src="./js/funcoes.js"></script>
 
@@ -26,7 +27,7 @@
 <body>
     <!-- parte da lateral  -->
 
-    <div class="inicio">
+    <div class="inicio" id="inicio">
 
         <div class="lateral1" id="lateralI" style="margin-left: 0vh;">
             <div class="lateral">
@@ -79,16 +80,24 @@
             </div>
         </div>
 
-        <div class="biografia">
-            <textarea name="" id="">
-                
-            </textarea>
+
+
+        <div class="biografia" id="mostrarB">
+
+            <textarea class="textB" id="biografiaA" placeholder="Digite Sua Bibliografia" maxlength="40"></textarea>
+            <br>
+            <button onclick="enviarB()">concluir</button>
+
+        </div>
+        <div class="botoesED">
+            <button onclick="editar()" class="editar">Editar</button>
+            <button onclick="excluir()" class="deletar">Deletar Conta</button>
         </div>
 
         <div class="nomeSobr">
 
             <div id="div_nomeSo"></div>
-            <!-- pedros -->
+
         </div>
         <div class="email">
             <div>Email: <span id="span_email"></span></div>
@@ -99,12 +108,97 @@
             <br>
             <div>Personagem Favorito: <span id="span_persoF"></span></div>
         </div>
-        
 
-    </div>
+        <!-- parano -->
+        <div class="cadastro" id="editar" style="display: none;">
+            <div class="logoCadastro">
+                <img src="./img/DCLOGO3.png" alt="" width="80px">
+            </div>
+            <br>
+            <br>
+
+            <div class="alerta_erro">
+                <div class="card_erro" id="cardErro">
+                    <span id="mensagem_erro"></span>
+                </div>
+            </div>
+
+            <div class="inputs">
+
+                <input class="nome" placeholder="Nome*" id="nome_input">
+
+                <input class="sobrenome" placeholder="Sobrenome" id="sobrenome_input">
+
+            </div>
+
+            <div class="inputs">
+
+                <input class="emailE" placeholder="Email*" id="email_input" style="box-shadow: none">
+
+
+            </div>
+
+
+
+            <div class="inputs">
+
+                <input class="dtNasc" type="date" placeholder="Nascimento" id="dtNasc_input">
+
+                <select class="genero" name="genero" id="genero_input">
+                    <option value="" disabled selected hidden>gênero</option>
+                    <option value="Masculino">Masculino</option>
+                    <option value="Feminino">Feminino</option>
+                    <option value="Outro">Outro</option>
+                    <option value="prefNd">Prefiro não dizer</option>
+
+                </select>
+
+            </div>
+
+            <div class="escolha">
+
+                Qual membro da Liga da Justiça Você prefere?
+
+            </div>
+            <div>
+
+                <select class="heroPref" name="PersFav" id="personagemFav_input">
+                    <option value="" disabled selected hidden>Escolher...</option>
+                    <option value="1">Superman</option>
+                    <option value="2">Batman</option>
+                    <option value="3">Mulher Maravilha</option>
+                    <option value="4">Flash</option>
+                    <option value="5">Lanterna Verde</option>
+                    <option value="6">Aquaman</option>
+                    <option value="7">Ciborgue</option>
+                    <option value="8">Outro</option>
+                    <option value="9">Prefiro a Marvel</option>
+                </select>
+
+            </div>
+
+            <div class="botao">
+                <br>
+                <br>
+                <button onclick="cadastrar()"><b>Cadastrar</b></button>
+            </div>
+
+        </div>
 </body>
 
 <script>
+    var nomeG;
+    var sobrenomeG;
+    var emailG;
+    var generoG;
+    var dataNG;
+    var persoFG;
+
+
+
+
+
+
 
     var superman = [
 
@@ -192,6 +286,84 @@
     ]
 
 
+
+    // pedoro
+    function enviarB() {
+        var fkUsuario = sessionStorage.ID_USUARIO
+        var biografia = biografiaA.value
+        console.log('gggggggggggggggggggg' + fkUsuario)
+        console.log('wwwwwwwwwwwwwwwwwww  ' + biografia)
+
+        if (biografia == '') {
+            alert('Digite sua Biografia')
+        }
+        else {
+
+            // Enviando o valor da nova input
+            fetch("/usuarios/biografia", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    // crie um atributo que recebe o valor recuperado aqui
+                    // Agora vá para o arquivo routes/usuario.js
+                    biografiaServer: biografia,
+                    fkUsuarioServer: fkUsuario
+
+                })
+            }).then(function (resposta) {
+
+                console.log("resposta: ", resposta);
+
+                if (resposta.ok) {
+
+                    plotarB()
+
+                } else {
+                    throw ("Houve um erro ao tentar realizar o cadastro!");
+                }
+            }).catch(function (resposta) {
+                console.log(`#ERRO: ${resposta}`);
+                finalizarAguardar();
+            });
+
+            return false;
+        }
+
+    }
+
+    window.onload = plotarB(1);
+
+    function plotarB(idAquario) {
+        var idAquario = sessionStorage.ID_USUARIO
+        var descricaoB;
+
+
+        fetch(`/usuarios/plotarB/${idAquario}`, { cache: 'no-store' }).then(function (response) {
+            if (response.ok) {
+                response.json().then(function (resposta) {
+                    console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+                    for (var i = 0; i < resposta.length; i++) {
+                        var registro = resposta[i];
+                        descricaoB = (registro.descricao);
+                    }
+                    if (mostrarB != undefined) {
+
+                        mostrarB.innerHTML = descricaoB
+
+                    }
+
+                });
+            } else {
+                console.error('Nenhum dado encontrado ou erro na API');
+            }
+        })
+            .catch(function (error) {
+                console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+            });
+
+    }
 
 
     window.onload = fotosPerso(1);
@@ -318,8 +490,6 @@
                         dataN = (registro.dtNasc);
                         persoF = (registro.Personagem);
                     }
-                    // pedros
-
 
 
                     div_nomeSo.innerHTML = `${nome} ${sobrenome}`
@@ -327,6 +497,13 @@
                     span_genero.innerHTML = genero
                     span_dataN.innerHTML = dataN
                     span_persoF.innerHTML = persoF
+
+                    var nomeG = nome
+                    var sobrenomeG = sobrenome
+                    var emailG = email
+                    var generoG = genero
+                    var dataNG = dataN
+                    var persoFG = persoF
 
 
 
@@ -341,6 +518,101 @@
             });
 
     }
+
+    // parano
+    function editar() {
+        var sumir = document.getElementById('editar')
+        if (sumir.style.display == 'none') {
+            sumir.style.display = 'flex'
+        }
+
+        else {
+            sumir.style.display = 'none'
+        }
+
+    }
+
+    function deletar(idAquario) {
+        var idAquario = sessionStorage.ID_USUARIO
+
+
+        fetch(`/usuarios/deletar/${idAquario}`, { cache: 'no-store' }).then(function (response) {
+            if (response.ok) {
+                console.log('biografia deletada')
+                deletar1()
+            } else {
+                console.error('Nenhum dado encontrado ou erro na API');
+            }
+        })
+            .catch(function (error) {
+                console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+            });
+
+    }
+
+
+
+    function deletar1(idAquario) {
+        var idAquario = sessionStorage.ID_USUARIO
+
+        fetch(`/usuarios/deletar1/${idAquario}`, { cache: 'no-store' }).then(function (response) {
+            if (response.ok) {
+                console.log('quiz deletado')
+                deletar2()
+            } else {
+                console.error('Nenhum dado encontrado ou erro na API');
+            }
+        })
+            .catch(function (error) {
+                console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+            });
+
+    }
+
+
+    function deletar2(idAquario) {
+        var idAquario = sessionStorage.ID_USUARIO
+
+        fetch(`/usuarios/deletar2/${idAquario}`, { cache: 'no-store' }).then(function (response) {
+            if (response.ok) {
+                console.log('usuario deletado')
+                setTimeout(() => {
+                    window.location = "index.html";
+                }, "2000")
+            } else {
+                console.error('Nenhum dado encontrado ou erro na API');
+            }
+        })
+            .catch(function (error) {
+                console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+            });
+
+    }
+
+    function excluir() {
+        Swal.fire({
+            title: 'Você tem certeza?',
+            text: "Sua conta será apagada para sempre!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'SIM'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                deletar()
+                Swal.fire(
+                    'Deletado!',
+                    'Sua conta Foi deletada',
+                    'success'
+                )
+            }
+        })
+    }
+
+
+
+
 
 
 </script>

@@ -48,7 +48,17 @@ constraint fkBu foreign key (fkUsuario) references usuario(idUsuario),
 constraint pkBu primary key (idBiografia, fkUsuario)
 );
 
-select * from usuario;
+select descricao from biografia where fkUsuario = 92;
+
+delete from biografia where fkUsuario = 92;
+delete from quizCharada where fkUsuario = 92;
+delete from usuario where idUsuario = 92;
+
+select * from usuario where idUsuario = 97;
+
+UPDATE usuario
+SET nome = 'ddjsjsd', sobrenome = 'carlos', email = 'Carlos22@asas', genero = 'masculino', dtNasc = '2001-01-01', fkPersonagemFav = 3
+WHERE idUsuario = 1;
 
 insert into quizCharada values
 (null, 4, 4, 1);

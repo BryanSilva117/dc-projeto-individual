@@ -135,13 +135,33 @@ nav ul {
 
 .biografia {
     position: fixed;
-    flex-direction: column;
     display: flex;
     justify-content: right;
-    margin-top: 25vh;
-    margin-left: 70vh;
-    font-size: 4.5vh;
-    background-color: blue;
+    margin-top: 20vh;
+    margin-left: 53vh;
+    color: rgb(46, 46, 252);
+    height: 20vh;
+    font-size: 4vh;
+    text-align: center;   
+    font-family: 'Oswald', sans-serif;
+   
+}
+
+.biografia button {
+    width: 20vh;
+    height: 5vh;
+    margin-left: 3px;
+    border-radius: 2vh;
+    border: 1px solid black;
+}
+
+.textB {
+    border-radius: 2vh ;
+    text-align: center;
+    font-size: 3vh;
+    height: 5vh;
+    width: 50vh;
+    font-family: 'Oswald', sans-serif;
 }
 
 
@@ -157,6 +177,7 @@ nav ul {
     align-items: center;
     font-size: 7vh;
     margin-top: 1vh;
+    font-family: 'Oswald', sans-serif;
 }
 
 .email {
@@ -167,4 +188,176 @@ nav ul {
     margin-top: 9.5vh;
     margin-left: 135vh;
     font-size: 4.5vh;
+    font-family: 'Oswald', sans-serif;
 }
+
+.botoesED {
+    position: fixed;
+    margin-left: 65vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 7vh;
+    margin-top: 50vh;
+    font-family: 'Oswald', sans-serif;
+    
+}
+
+.editar {
+    color: white;
+    background-color: rgb(0, 47, 255);
+    font-size: 3vh;
+    width: 20vh;
+    height: 5vh;
+    margin-right: 6px;
+    border-radius: 1vh;
+    font-family: 'Oswald', sans-serif;
+    border: none;
+    transition: 0.4s;
+}
+
+.editar:hover {
+    box-shadow: 5px 5px 1px 1px rgba(0, 0, 0, 0.507);
+}
+
+.deletar { 
+    color: white;
+    background-color: rgb(151, 0, 0);
+    font-size: 3vh;
+    width: 20vh;
+    height: 5vh;
+    margin-right: 6px;
+    border-radius: 1vh;
+    font-family: 'Oswald', sans-serif;
+    border: none;
+    transition: 0.4s;
+}
+
+.deletar:hover {
+    box-shadow: 5px 5px 1px 1px rgba(0, 0, 0, 0.507);
+}
+
+
+
+/* parte editar  */
+
+.cadastro {
+    position: absolute;
+    z-index: 5;
+    background-color: rgb(0, 0, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+    width: 70vh;
+    height: 87vh;
+    margin-top: -30vh;
+    margin-left: 90vh;
+    border-radius: 3vh;
+    box-shadow: 1vh 1vh 1vh 0vh rgba(0, 0, 0, 0.623);
+}
+
+.logoCadastro {
+    margin-top: -2vh;
+}
+
+input {
+    text-align: center;
+    font-size: 3vh;
+    width: 30vh;
+    height: 6vh;
+    margin-left: 0.5vh;
+    margin-bottom: 2vh;
+    border-radius: 1vh;
+    border: solid 2px rgba(0, 0, 0, 0.767);
+    transition: 0.4s;
+}
+
+input:hover {
+    box-shadow: 1vh 1vh 1vh 0vh rgba(0, 0, 0, 0.623);
+}
+
+.cadastro ::placeholder {
+    color: rgb(0, 0, 255);
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.6vh;
+    padding: 2vh;
+}
+
+.inputs {
+    display: flex;
+    justify-content: center;
+}
+
+.emailE {
+    width: 61vh;
+}
+
+.dtNasc {
+    width: 30vh;
+    height: 5.6vh;
+    margin-right: 0.5vh;
+}
+
+.genero {
+    text-align: center;
+    color: rgb(0, 0, 255);
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.6vh;
+    border: solid 2px rgba(0, 0, 0, 0.767);
+    width: 30vh;
+    height: 6vh;
+    border-radius: 1vh;
+    transition: 0.4s;
+}
+
+.genero:hover {
+    box-shadow: 1vh 1vh 1vh 0vh rgba(0, 0, 0, 0.623);
+}
+
+.escolha {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.9vh;
+    color: white;
+}
+
+
+.heroPref {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: rgb(0, 0, 255);
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.6vh;
+    border: solid 2px rgba(0, 0, 0, 0.767);
+    width: 20vh;
+    height: 6vh;
+    border-radius: 1vh;
+    transition: 0.4s;
+}
+
+.heroPref:hover {
+    box-shadow: 1vh 1vh 1vh 0vh rgba(0, 0, 0, 0.623);
+}
+
+.cadastro button {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.61);
+    border: 5px black;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    font-size: 4vh;
+    border: solid 2px rgba(0, 0, 0, 0.767);
+    width: 33vh;
+    height: 9vh;
+    border-radius: 3vh;
+    transition: 0.4s;
+}
+
+.cadastro button:hover {
+    box-shadow: 1vh 1vh 1vh rgba(0, 0, 0, 0.76);
+    background-color: white;
+    color: black;
+}
+
