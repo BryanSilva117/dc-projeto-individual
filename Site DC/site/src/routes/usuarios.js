@@ -16,6 +16,10 @@ router.post("/cadastrar", function (req, res) {
     usuarioController.cadastrar(req, res);
 })
 
+router.post("/atualizar", function (req, res) {
+    usuarioController.atualizar(req, res);
+})
+
 router.post("/biografia", function (req, res) {
     usuarioController.biografia(req, res);
 })
