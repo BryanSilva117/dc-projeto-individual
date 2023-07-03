@@ -12,6 +12,7 @@
   Espero que gostem!
 </div>
 
+<h3 style="color: red;"> SITE NÃO RESPONSIVO!! Resolução ideal: 1366 x 768 </h3>
 
 #### Minhas Rede Sociais
 
