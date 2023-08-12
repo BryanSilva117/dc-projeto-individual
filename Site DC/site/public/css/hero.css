@@ -9,6 +9,7 @@
 .inicio {
     background-image: url(../img/hero/1920X1080\ Wallpaper\ 4K\ Space\ Gallery.jpg);
     background-size: cover;
+    background-attachment: fixed;
     height: 145vh;
     overflow-x: hidden;
 }
@@ -16,49 +17,42 @@
 .dois {
     background-color: rgb(197, 197, 197);
     height: 145vh;
-    box-shadow: inset rgba(0, 1, 44, 0.664) 0 100px 50px -15px;
 
 }
 
 .tres {
     background-color: rgba(114, 114, 114, 0.705);
     height: 145vh;
-    box-shadow: inset rgba(0, 1, 44, 0.664) 0 100px 50px -15px;
 
 }
 
 .quatro {
     background-color: rgb(87, 87, 87);
     height: 145vh;
-    box-shadow: inset rgba(0, 1, 44, 0.664) 0 100px 50px -15px;
 
 }
 
 .cinco {
     background-color: rgb(53, 53, 53);
     height: 145vh;
-    box-shadow: inset rgba(0, 1, 44, 0.664) 0 100px 50px -15px;
 
 }
 
 .seis {
     background-color: rgb(41, 41, 41);
     height: 145vh;
-    box-shadow: inset rgba(0, 1, 44, 0.664) 0 100px 50px -15px;
 
 }
 
 .sete {
     background-color: rgb(31, 31, 31);
     height: 145vh;
-    box-shadow: inset rgba(0, 1, 44, 0.664) 0 100px 50px -15px;
 
 }
 
 .oito {
     background-color: rgb(17, 17, 17);
     height: 145vh;
-    box-shadow: inset rgba(0, 1, 44, 0.664) 0 100px 50px -15px;
 }
 
 

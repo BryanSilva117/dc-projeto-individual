@@ -123,6 +123,7 @@ header {
     padding: 1vh 5vh;
     position: fixed;
     width: 200vh;
+    height: 10vh;
     z-index: 10;
 }
 
@@ -134,7 +135,7 @@ header {
 
 .logo img {
     display: flex;
-    height: 12vh;
+    height: 9vh;
     cursor: pointer;
     transition: 0.4s;
 }
@@ -735,7 +736,7 @@ nav ul {
     color: rgb(167, 10, 10);
     border-radius: 2vh;
     margin-top: 2vh;
-    margin-left: 58.2vh;
+    margin-left: 52vh;
     padding-left: 2vh;
     width: 15vh;
     height: 8vh;
@@ -785,7 +786,7 @@ nav ul {
     background-color: rgba(1, 132, 255, 0.822);
     color: rgb(36, 36, 36);
     border-radius: 2vh;
-    margin-left: 51vh;
+    margin-left: 48vh;
     padding-left: 2vh;
     width: 15vh;
     height: 8vh;
@@ -860,11 +861,11 @@ nav ul {
 /*tela de login */
 .login-inicio {
     margin-left: 145.5vh;
-    margin-top: -20vh;
-    border-radius: 3vh;
+    margin-top: -23.8vh;
+    border-radius: 1.5vh;
     display: none;
     width: 30vh;
-    height: 34vh;
+    height: 31vh;
     padding: 3vh;
     background-color: rgba(0, 0, 255, 0.596);
     position: fixed;
@@ -955,14 +956,13 @@ nav ul {
 }
 
 .loading-div {
-    width: 116px;
-    margin-top: 1vh;
+    margin-top: -49px;
+    width: 490px;
     display: none;
 }
 
 .loading-div img {
-    height: 30px;
-    width: 30px;
+    width: 30vh;
 }
 
 #div_erros_login {
