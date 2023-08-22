@@ -12,7 +12,7 @@
   Espero que gostem!
 </div>
 
-<h3> SITE NÃO RESPONSIVO!! Resolução ideal: 1366 x 768 </h3>
+<h3> SITE NÃO RESPONSIVO!! Resolução ideal: 1920x1080 </h3>
 
 #### Minhas Rede Sociais
 
