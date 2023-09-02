@@ -3,6 +3,7 @@
     padding: 0;
 }
 
+
 body {
     overflow-x: hidden;
 }
@@ -50,48 +51,48 @@ body {
     box-shadow: inset rgba(0, 0, 0, 0.801) 0 100px 50px -15px;
     background-image: url(../img/background\ aquaman.jpg);
     background-size: cover;
-    height: 106vh;
+    width: 47vh;
 }
 
 .lanternaVerde1 {
     background-image: url(../img/background\ lanternaVerde.jpg);
     background-size: cover;
-    height: 106vh;
+    width: 47vh;
 }
 
 .wonder1 {
     box-shadow: inset rgba(0, 0, 0, 0.801) 0 100px 50px -15px;
     background-image: url(../img/background\ wonder.png);
     background-size: cover;
-    height: 106vh;
+    width: 47vh;
 }
 
 .superman1 {
     box-shadow: inset rgba(0, 0, 0, 0.801) 0 100px 50px -15px;
     background-image: url(../img/background\ superman.jpg);
     background-size: cover;
-    height: 106vh;
+    width: 47vh;
 }
 
 .batman1 {
     box-shadow: inset rgba(0, 0, 0, 0.801) 0 100px 50px -15px;
     background-image: url(../img/background\ batman.jpg);
     background-size: cover;
-    height: 106vh;
+    width: 47vh;
 }
 
 .flash1 {
     box-shadow: inset rgba(0, 0, 0, 0.801) 0 100px 50px -15px;
     background-image: url(../img/imgfl.jpg);
     background-size: cover;
-    height: 106vh;
+    width: 47vh;
 }
 
 .cyborg1 {
     box-shadow: inset rgba(0, 0, 0, 0.801) 0 100px 50px -15px;
     background-image: url(../img/background\ cyborg.jpg);
     background-size: cover;
-    height: 106vh;
+    width: 47vh;
 }
 
 
@@ -968,4 +969,953 @@ nav ul {
 #div_erros_login {
     display: none;
     color: white;
+}
+
+@media screen and (max-width: 480px) {
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    
+    body {
+        overflow-x: hidden;
+    }
+    
+    
+    /* OS background e telas */
+    
+    .inicio {
+        background-image: url(https://i.pinimg.com/564x/cd/f8/ca/cdf8cad6dbe98c17bceb226441388653.jpg);
+        background-size: cover;
+        width: 47vh;
+        height: 100vh;
+        border-bottom: 0.2vh solid rgba(182, 182, 185, 0.808);
+    }
+    
+    .dois {
+        background-image: url(../img/imgSobre.jpg);
+        background-size: cover;
+        width: 47vh;
+    }
+    
+    .tres {
+        background-image: url(../img/BackgroundJL.jpg);
+        background-size: cover;
+        width: 47vh;
+        animation: aternar-imagem 12s linear infinite;
+        border-bottom: 0;
+    }
+    
+    @keyframes aternar-imagem {
+        0% {
+            background-image: url(../img/BackgroundJL.jpg);
+        }
+    
+        50% {
+            background-image: url(../img/BackgroundJL2.jpg);
+        }
+    
+        100% {
+            background-image: url(../img/BackgroundJL.jpg);
+        }
+    }
+    
+    
+    .aquaman1 {
+        box-shadow: inset rgba(0, 0, 0, 0.801) 0 100px 50px -15px;
+        background-image: url(../img/background\ aquaman.jpg);
+        background-size: cover;
+        width: 47vh;;
+    }
+    
+    .lanternaVerde1 {
+        background-image: url(../img/background\ lanternaVerde.jpg);
+        background-size: cover;
+        width: 47vh;
+    }
+    
+    .wonder1 {
+        box-shadow: inset rgba(0, 0, 0, 0.801) 0 100px 50px -15px;
+        background-image: url(../img/background\ wonder.png);
+        background-size: cover;
+        width: 47vh;
+    }
+    
+    .superman1 {
+        box-shadow: inset rgba(0, 0, 0, 0.801) 0 100px 50px -15px;
+        background-image: url(../img/background\ superman.jpg);
+        background-size: cover;
+        width: 47vh;
+    }
+    
+    .batman1 {
+        box-shadow: inset rgba(0, 0, 0, 0.801) 0 100px 50px -15px;
+        background-image: url(../img/background\ batman.jpg);
+        background-size: cover;
+        width: 47vh;
+    }
+    
+    .flash1 {
+        box-shadow: inset rgba(0, 0, 0, 0.801) 0 100px 50px -15px;
+        background-image: url(../img/imgfl.jpg);
+        background-size: cover;
+        width: 47vh;
+    }
+    
+    .cyborg1 {
+        box-shadow: inset rgba(0, 0, 0, 0.801) 0 100px 50px -15px;
+        background-image: url(../img/background\ cyborg.jpg);
+        background-size: cover;
+        width: 47vh;
+    }
+    
+    
+    
+    .quatro {
+        box-shadow: inset rgba(0, 0, 0, 0.925) 0 100px 50px -15px;
+        background-color: rgb(64, 142, 243);
+        background-image: none;
+        background-size: 200vh 20vh;
+        height: 40vh;
+        border-bottom: 0;
+    }
+    
+    .cinco {
+        background-color: rgba(0, 0, 0, 0.89);
+        background-image: none;
+        height: 15vh;
+        border-bottom: 0;
+    }
+    
+    
+    /* PARTE NAVBAR */
+    
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1vh 5vh;
+        position: fixed;
+        width: 40vh;
+        height: 10vh;
+        z-index: 10;
+    }
+    
+    
+    .header {
+        background-color: rgba(0, 0, 255, 0.158);
+    }
+    
+    
+    .logo img {
+        display: flex;
+        margin-left: -3vh;
+        height: 9vh;
+        cursor: pointer;
+        transition: 0.4s;
+    }
+    
+    
+    .logo :hover {
+        transform: scale(1.2);
+        margin-top: 5px;
+    
+    }
+    
+    
+    .contribuir {
+        display: none;
+    }
+    
+    
+    .sobre {
+        display: none;
+       
+    }
+    
+    
+    
+    .jl {
+       display: none;
+    }
+    
+    
+    nav ul {
+        display: flex;
+        list-style: none;
+    }
+    
+    
+    .container a {
+        cursor: pointer;
+        font-size: 2vh;
+        background-color: rgba(0, 0, 0, 0.61);
+        border: 5px black;
+        border-radius: 2vh;
+        padding: 1vh 1vh;
+        text-decoration: none;
+        color: white;
+        margin: 0.1vh;
+        font-family: 'Oswald', sans-serif;
+    }
+    
+    
+    .container a:hover {
+        box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.418);
+        background-color: white;
+        color: black;
+        transition: 0.4s;
+    }
+    
+    
+    
+    /* PARTE ABAIXO DA NAVIBAR */
+    
+    .mensaoDC {
+        color: rgba(0, 0, 255, 0.753);
+        font-size: 25px;
+    }
+    
+    .parte1 {
+        margin-left: -5vh;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        font-family: 'Oswald', sans-serif;
+        font-size: 10px;
+        width: 47vh;
+    }
+    
+    .cadastro {
+        font-size: 3vh;
+        background-color: rgba(0, 0, 255, 0.753);
+        border: 5px black;
+        border-radius: 1vh;
+        padding: 3vh 5vh;
+        text-decoration: none;
+        color: white;
+        margin: 2vh;
+        font-family: 'Oswald', sans-serif;
+        transition: 0.4s;
+    }
+    
+    .cadastro:hover {
+        box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.418);
+        background-color: rgba(0, 0, 255, 0.596);
+        ;
+        color: black;
+        transition: 0.4s;
+    }
+    
+    
+    /* SOBRE A DC */
+    
+    .parte2 {
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+        text-align: center;
+        font-family: 'Oswald', sans-serif;
+    }
+    
+    /* Parte trindade */
+    
+    .tres h1 {
+        color: white;
+        display: flex;
+        justify-content: center;
+        font-family: 'Oswald', sans-serif;
+    
+    }
+    
+    .parte3 {
+        display: flex;
+        justify-content: flex-start;
+        position: relative;
+        top: 12vh;
+    
+    }
+    
+    
+    .hero {
+        cursor: pointer;
+        transition: all 0.7s;
+    
+    }
+    
+    .hero:hover {
+        transform: scale(1.2);
+    }
+    
+    
+    .hero span {
+        color: white;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        font-family: 'Oswald', sans-serif;
+    }
+    
+    
+    .aquaman {
+        position: absolute;
+        left: 19vh;
+        z-index: 2;
+    }
+    
+    
+    .aquaman:hover {
+        z-index: 8;
+    }
+    
+    
+    .green {
+        position: absolute;
+        left: 39vh;
+        z-index: 3;
+        top: 3vh;
+    }
+    
+    .green:hover {
+        z-index: 8;
+    }
+    
+    .mulherM {
+        position: absolute;
+        left: 62vh;
+        z-index: 5;
+    }
+    
+    .mulherM:hover {
+        z-index: 8;
+    }
+    
+    .superman {
+        position: absolute;
+        left: 84vh;
+        z-index: 7;
+        top: -4vh;
+    }
+    
+    .batman {
+        position: absolute;
+        left: 112vh;
+        z-index: 6;
+    }
+    
+    .batman:hover {
+        z-index: 8;
+    }
+    
+    .flash {
+        position: absolute;
+        left: 138vh;
+        z-index: 4;
+        top: 7vh;
+    }
+    
+    .flash:hover {
+        z-index: 8;
+    }
+    
+    .ciborgue {
+        position: absolute;
+        left: 158vh;
+        z-index: 1;
+        top: 7vh;
+    }
+    
+    .ciborgue:hover {
+        z-index: 8;
+    }
+    
+    /* parte sobre cada membro da liga da justiça */
+    
+    .parte_aquaman {
+        margin-left: -5vh;
+        color: rgb(16, 102, 1);
+        -webkit-text-stroke: 1px black;
+        display: flex;
+        justify-content: left;
+        text-align: center;
+        font-family: 'Oswald', sans-serif;
+        font-size: 4vh;
+    }
+    
+    .parte_aquaman img {
+        margin-top: 3vh;
+        margin-left: 87vh;
+        transition: 0.4s;
+        animation: aumentar-logo 5s linear infinite;
+    }
+    
+    @keyframes aumentar-logo {
+        0% {
+            transform: scale(1.2);
+        }
+    
+        50% {
+            transform: scale(1.1);
+        }
+    
+        100% {
+            transform: scale(1.2);
+        }
+    }
+    
+    
+    .parte_aquaman span {
+        font-size: 4.2vh;
+        color: rgb(202, 64, 0);
+        -webkit-text-stroke: 0.1px black;
+    }
+    
+    .parte_aquaman a {
+        font-family: 'Oswald', sans-serif;
+        text-decoration: none;
+        align-items: center;
+        display: flex;
+        text-align: center;
+        background-color: rgb(202, 64, 0);
+        color: rgba(255, 255, 0, 0.822);
+        border-radius: 2vh;
+        margin-left: 51vh;
+        padding-left: 2vh;
+        width: 15vh;
+        height: 8vh;
+        transition: 0.5s;
+        cursor: pointer;
+    }
+    
+    .parte_aquaman a:hover {
+        box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.418);
+        background-color: rgba(255, 255, 0, 0.822);
+        color: rgb(202, 64, 0);
+        transform: scale(1.15);
+    }
+    
+    
+    
+    
+    .parte_lanterna {
+        margin-left: 80vh;
+        color: white;
+        -webkit-text-stroke: 1px black;
+        display: flex;
+        justify-content: right;
+        text-align: center;
+        font-family: 'Oswald', sans-serif;
+        font-size: 4vh;
+        margin-right: 2vh;
+    }
+    
+    .parte_lanterna img {
+        margin-top: 3vh;
+        margin-right: 74vh;
+        transition: 0.4s;
+        animation: aumentar-logo 5s linear infinite;
+    }
+    
+    .parte_lanterna p {
+        margin-top: -6vh;
+        text-align: center;
+    }
+    
+    .parte_lanterna span {
+        display: flex;
+        justify-content: center;
+        font-size: 4.2vh;
+        color: rgb(0, 75, 0);
+        -webkit-text-stroke: 0.1px rgb(0, 255, 0);
+    }
+    
+    .parte_lanterna a {
+        font-family: 'Oswald', sans-serif;
+        text-decoration: none;
+        align-items: center;
+        display: flex;
+        text-align: center;
+        background-color: rgb(0, 255, 0);
+        color: rgb(0, 75, 0);
+        border-radius: 2vh;
+        margin-left: 54vh;
+        padding-left: 2vh;
+        width: 15vh;
+        height: 8vh;
+        transition: 0.5s;
+        cursor: pointer;
+    }
+    
+    .parte_lanterna a:hover {
+        box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.418);
+        background-color: rgb(0, 75, 0);
+        color: rgb(0, 255, 0);
+        transform: scale(1.15);
+    }
+    
+    
+    
+    
+    .parte_wonder {
+        padding-top: 3vh;
+        padding-left: 2vh;
+        background-color: rgba(0, 0, 0, 0.671);
+        color: rgb(255, 196, 0);
+        -webkit-text-stroke: 0.8px rgb(8, 8, 8);
+        display: flex;
+        justify-content: left;
+        text-align: center;
+        font-family: 'Oswald', sans-serif;
+        font-size: 4vh;
+    }
+    
+    .parte_wonder .Wimg {
+        margin-top: 3vh;
+        margin-left: 68vh;
+        transition: 0.4s;
+        animation: aumentar-logo 5s linear infinite;
+    }
+    
+    .parte_wonder .back_img {
+        display: flex;
+        justify-content: right;
+        align-items: end;
+    }
+    
+    .parte_wonder span {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        font-size: 4.3vh;
+        color: rgb(255, 255, 255);
+        -webkit-text-stroke: 0.1px rgb(0, 0, 0);
+    }
+    
+    .parte_wonder a {
+        font-family: 'Oswald', sans-serif;
+        text-decoration: none;
+        align-items: center;
+        display: flex;
+        text-align: center;
+        background-color: white;
+        color: rgb(255, 196, 0);
+        border-radius: 2vh;
+        margin-left: 58vh;
+        padding-left: 2vh;
+        width: 15vh;
+        height: 8vh;
+        transition: 0.5s;
+        cursor: pointer;
+    }
+    
+    .parte_wonder a:hover {
+        box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.418);
+        background-color: rgb(255, 196, 0);
+        color: white;
+        transform: scale(1.15);
+    }
+    
+    
+    
+    
+    .parte_superman {
+        margin-left: 80vh;
+        color: rgb(44, 129, 233);
+        -webkit-text-stroke: 1px black;
+        display: flex;
+        justify-content: right;
+        text-align: center;
+        font-family: 'Oswald', sans-serif;
+        font-size: 4vh;
+        margin-right: 2vh;
+    }
+    
+    .parte_superman img {
+        margin-top: 3vh;
+        margin-right: 74vh;
+        transition: 0.4s;
+        animation: aumentar-logo 5s linear infinite;
+    }
+    
+    .parte_superman p {
+        margin-top: -6vh;
+        text-align: center;
+    }
+    
+    .parte_superman span {
+        display: flex;
+        justify-content: center;
+        font-size: 4.2vh;
+        color: rgb(252, 209, 22);
+        -webkit-text-stroke: 0.1px rgb(0, 0, 0);
+    }
+    
+    
+    .parte_superman a {
+        font-family: 'Oswald', sans-serif;
+        text-decoration: none;
+        align-items: center;
+        display: flex;
+        text-align: center;
+        background-color: rgb(44, 129, 233);
+        color: rgb(252, 209, 22);
+        border-radius: 2vh;
+        margin-top: 2vh;
+        margin-left: 53vh;
+        padding-left: 2vh;
+        width: 15vh;
+        height: 8vh;
+        transition: 0.5s;
+        cursor: pointer;
+    }
+    
+    .parte_superman a:hover {
+        box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.418);
+        background-color: rgb(170, 0, 0);
+        color: rgb(252, 209, 22);
+        transform: scale(1.15);
+    }
+    
+    
+    
+    
+    .parte_batman {
+        margin-left: 1vh;
+        color: rgb(255, 255, 255);
+        -webkit-text-stroke: 1px black;
+        display: flex;
+        justify-content: left;
+        text-align: center;
+        font-family: 'Oswald', sans-serif;
+        font-size: 4vh;
+    }
+    
+    .parte_batman img {
+        margin-top: 3vh;
+        margin-left: 83vh;
+        transition: 0.4s;
+        animation: aumentar-logo 5s linear infinite;
+    }
+    
+    .parte_batman span {
+        font-size: 4.2vh;
+        color: rgb(0, 0, 0);
+        -webkit-text-stroke: 0.1px rgba(143, 140, 140, 0.466);
+    }
+    
+    .parte_batman a {
+        margin-top: 2vh;
+        font-family: 'Oswald', sans-serif;
+        text-decoration: none;
+        align-items: center;
+        display: flex;
+        text-align: center;
+        background-color: rgb(44, 44, 43);
+        color: rgba(255, 255, 255, 0.822);
+        border-radius: 2vh;
+        margin-left: 51vh;
+        padding-left: 2vh;
+        width: 15vh;
+        height: 8vh;
+        transition: 0.5s;
+        cursor: pointer;
+    }
+    
+    .parte_batman a:hover {
+        box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.418);
+        background-color: rgba(255, 255, 255, 0.822);
+        color: rgb(44, 44, 43);
+        transform: scale(1.15);
+    }
+    
+    
+    
+    
+    .parte_flash {
+        margin-left: 80vh;
+        color: rgb(255, 255, 255);
+        -webkit-text-stroke: 0.8px rgb(0, 0, 0);
+        display: flex;
+        justify-content: right;
+        text-align: center;
+        font-family: 'Oswald', sans-serif;
+        font-size: 4vh;
+        margin-right: 2vh;
+    }
+    
+    .parte_flash .Wimg {
+        margin-top: 3vh;
+        margin-right: 81vh;
+        transition: 0.4s;
+        animation: aumentar-logo 5s linear infinite;
+    }
+    
+    .parte_flash .back_img {
+        margin-top: 20.3vh;
+        margin-right: -24vh;
+        display: flex;
+        justify-content: left;
+    
+    }
+    
+    .parte_flash p {
+        margin-top: -6vh;
+        text-align: center;
+    }
+    
+    .parte_flash span {
+        display: flex;
+        justify-content: center;
+        font-size: 4.2vh;
+        color: rgb(252, 209, 22);
+        -webkit-text-stroke: 0.1px rgb(0, 0, 0);
+    }
+    
+    
+    .parte_flash a {
+        font-family: 'Oswald', sans-serif;
+        text-decoration: none;
+        align-items: center;
+        display: flex;
+        text-align: center;
+        background-color: rgb(252, 209, 22);
+        color: rgb(167, 10, 10);
+        border-radius: 2vh;
+        margin-top: 2vh;
+        margin-left: 52vh;
+        padding-left: 2vh;
+        width: 15vh;
+        height: 8vh;
+        transition: 0.5s;
+        cursor: pointer;
+    }
+    
+    .parte_flash a:hover {
+        box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.418);
+        background-color: rgb(170, 0, 0);
+        color: rgb(255, 255, 255);
+        transform: scale(1.15);
+    }
+    
+    
+    .parte_cyborg {
+        margin-left: 1vh;
+        color: rgb(255, 255, 255);
+        -webkit-text-stroke: 1px black;
+        display: flex;
+        justify-content: left;
+        text-align: center;
+        font-family: 'Oswald', sans-serif;
+        font-size: 4.1vh;
+    }
+    
+    .parte_cyborg img {
+        margin-top: 3vh;
+        margin-left: 83vh;
+        transition: 0.4s;
+        animation: aumentar-logo 5s linear infinite;
+    }
+    
+    .parte_cyborg span {
+        font-size: 4.2vh;
+        color: rgb(255, 0, 0);
+        -webkit-text-stroke: 0.1px rgb(0, 0, 0);
+    }
+    
+    .parte_cyborg a {
+        margin-top: 2vh;
+        font-family: 'Oswald', sans-serif;
+        text-decoration: none;
+        align-items: center;
+        display: flex;
+        text-align: center;
+        background-color: rgba(1, 132, 255, 0.822);
+        color: rgb(36, 36, 36);
+        border-radius: 2vh;
+        margin-left: 48vh;
+        padding-left: 2vh;
+        width: 15vh;
+        height: 8vh;
+        transition: 0.5s;
+        cursor: pointer;
+    }
+    
+    .parte_cyborg a:hover {
+        box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.418);
+        background-color: rgb(36, 36, 36);
+        color: rgba(1, 132, 255, 0.822);
+        transform: scale(1.15);
+    }
+    
+    
+    
+    /* Parte de contribua */
+    
+    .contribua {
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    .imgSocial {
+        width: 70.8vh;
+        margin-left: -10vh;
+    }
+    
+    .social {
+        font-family: 'Oswald', sans-serif;
+        font-size: 3vh;
+    }
+    
+    .social span {
+        font-size: 3.5vh;
+    }
+    
+    .logoSocial {
+        display: flex;
+        justify-content: space-between;
+    
+    }
+    
+    .logoSocial img {
+        transition: 0.7s;
+    }
+    
+    .logoSocial img:hover {
+        transform: scale(1.3);
+    }
+    
+    
+    /* footer final */
+    .final {
+        color: white;
+        display: flex;
+        justify-content: center;
+        font-family: 'Oswald', sans-serif;
+    }
+    
+    .final img {
+        margin-top: 2vh;
+        transition: 0.4s;
+    }
+    
+    .final img:hover {
+        transform: scale(1.2);
+    }
+    
+    
+    
+    /*tela de login */
+    .login-inicio {
+        margin-left: 145.5vh;
+        margin-top: -23.8vh;
+        border-radius: 1.5vh;
+        display: none;
+        width: 30vh;
+        height: 31vh;
+        padding: 3vh;
+        background-color: rgba(0, 0, 255, 0.596);
+        position: fixed;
+        z-index: 10;
+    
+    }
+    
+    .login-inicio h2 {
+        font-family: 'Oswald', sans-serif;
+        color: white;
+        text-align: center;
+    }
+    
+    .login-inicio input {
+        width: 27vh;
+        padding: 1.3vh;
+        margin-bottom: 1vh;
+        border-radius: 0.5vh;
+        transition: 0.4s;
+        border: none;
+    }
+    
+    .login-inicio input:hover {
+        box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.897);
+    }
+    
+    .login-inicio button {
+        font-family: 'Oswald', sans-serif;
+        width: 29.5vh;
+        padding: 1.3vh;
+        background-color: rgba(0, 0, 0, 0.61);
+        ;
+        color: white;
+        font-size: 2.5vh;
+        border: none;
+        border-radius: 1vh;
+        cursor: pointer;
+        transition: 0.4s;
+    }
+    
+    .login-inicio button:hover {
+        background-color: white;
+        color: black;
+        box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.897);
+    }
+    
+    .triangulo {
+        display: inline-block;
+        margin-left: 159.8vh;
+        margin-top: -64vh;
+        position: fixed;
+        z-index: 10;
+    
+    }
+    
+    #triangulo {
+        width: 0;
+        height: 0;
+        border-left: 25px solid transparent;
+        border-right: 25px solid transparent;
+        border-bottom: 25px solid rgba(0, 0, 255, 0.596);
+        ;
+    }
+    
+    
+    /* alertas */
+    .alerta_erro {
+        display: flex;
+        justify-content: flex-end;
+    }
+    
+    .card_erro {
+        display: none;
+        background-color: #fff;
+        color: black;
+        width: 230px;
+        position: fixed;
+        border-radius: 4vh;
+        border: #000000 3px solid;
+        padding: 10px;
+        margin-right: 17%;
+        margin-top: -12vh;
+    }
+    
+    .card_erro #mensagem_erro {
+        font-weight: 500;
+        font-size: 20px;
+    }
+    
+    .loading-div {
+        margin-top: -49px;
+        width: 490px;
+        display: none;
+    }
+    
+    .loading-div img {
+        width: 30vh;
+    }
+    
+    #div_erros_login {
+        display: none;
+        color: white;
+    }
+
 }
