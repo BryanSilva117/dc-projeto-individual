@@ -51,48 +51,48 @@ body {
     box-shadow: inset rgba(0, 0, 0, 0.801) 0 100px 50px -15px;
     background-image: url(../img/background\ aquaman.jpg);
     background-size: cover;
-    width: 47vh;
+    height: 106vh;
 }
 
 .lanternaVerde1 {
     background-image: url(../img/background\ lanternaVerde.jpg);
     background-size: cover;
-    width: 47vh;
+    height: 106vh;
 }
 
 .wonder1 {
     box-shadow: inset rgba(0, 0, 0, 0.801) 0 100px 50px -15px;
     background-image: url(../img/background\ wonder.png);
     background-size: cover;
-    width: 47vh;
+    height: 106vh;
 }
 
 .superman1 {
     box-shadow: inset rgba(0, 0, 0, 0.801) 0 100px 50px -15px;
     background-image: url(../img/background\ superman.jpg);
     background-size: cover;
-    width: 47vh;
+    height: 106vh;
 }
 
 .batman1 {
     box-shadow: inset rgba(0, 0, 0, 0.801) 0 100px 50px -15px;
     background-image: url(../img/background\ batman.jpg);
     background-size: cover;
-    width: 47vh;
+    height: 106vh;
 }
 
 .flash1 {
     box-shadow: inset rgba(0, 0, 0, 0.801) 0 100px 50px -15px;
     background-image: url(../img/imgfl.jpg);
     background-size: cover;
-    width: 47vh;
+    height: 106vh;
 }
 
 .cyborg1 {
     box-shadow: inset rgba(0, 0, 0, 0.801) 0 100px 50px -15px;
     background-image: url(../img/background\ cyborg.jpg);
     background-size: cover;
-    width: 47vh;
+    height: 106vh;
 }
 
 
