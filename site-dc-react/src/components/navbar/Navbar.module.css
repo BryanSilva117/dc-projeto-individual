@@ -1,0 +1,86 @@
+.navbar {
+    top: 0;
+    left: 0;
+    height: 8vh;
+    width: 100vw;
+    z-index: 999;
+    display: flex;
+    max-height: 8vh;
+    min-height: 6vh;
+    padding: 0.6rem;
+    align-items: center;
+    background-color: #ffffff00;
+    justify-content: space-around;
+}
+
+
+.imagem-logo {
+    display: flex;
+    height: 8vh;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+
+.imagem-logo:hover {
+    transform: scale(1.15);
+}
+
+.contribuir {
+    font-size: 3.3vh;
+    display: flex;
+    color: white;
+    cursor: pointer;
+    transition: 0.4s;
+    font-family: 'Oswald', sans-serif;
+    text-decoration: none;
+}
+
+.contribuir:hover {
+    color: black;
+}
+
+.sobre {
+    font-size: 3.3vh;
+    display: flex;
+    color: white;
+    cursor: pointer;
+    transition: 0.4s;
+    font-family: 'Oswald', sans-serif;
+    text-decoration: none;
+}
+
+.sobre:hover {
+    color: black;
+}
+
+.jl {
+    height: 6vh;
+    display: flex;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.jl:hover {
+    transform: scale(1.2);
+}
+
+.container a {
+    cursor: pointer;
+    font-size: 2.5vh;
+    background-color: rgba(0, 0, 0, 0.61);
+    border: 5px black;
+    border-radius: 2vh;
+    text-decoration: none;
+    color: white;
+    margin: 2vh;
+    font-family: 'Oswald', sans-serif;
+}
+
+
+.container a:hover {
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.418);
+    background-color: white;
+    color: black;
+    transition: 0.4s;
+}
