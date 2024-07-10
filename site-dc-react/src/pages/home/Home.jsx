@@ -5,12 +5,25 @@ import NavBar from "../../components/navbar/Navbar";
 
 const Home = () => {
     return (
-        
+
         <>
-          
-            <NavBar />
-          
-            
+
+        <div className={styles["div-nav"]}>
+        <NavBar />
+        </div>
+        
+            <header id="Home">
+                <div className={styles["header-content"]}>
+                    <div className={styles["text-home"]}>
+                        
+                    </div>
+                </div>
+            </header>
+
+            <div className={styles["teste"]}>
+              
+            </div>
+
         </>
     );
 };
