@@ -15,4 +15,6 @@ public class Personagem {
     @Column(length = 1000)
     private String origem;
     private Boolean ativo;
+    @Column(length = 1000)
+    private String foto;
 }

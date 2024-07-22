@@ -7,4 +7,5 @@ public class PersonagemListagemDto {
     private Integer id;
     private String nome;
     private String origem;
+    private String foto;
 }

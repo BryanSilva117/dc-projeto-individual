@@ -18,6 +18,7 @@ public class PersonagemMapper {
         personagem.setNome(dto.getNome());
         personagem.setOrigem(dto.getOrigem());
         personagem.setAtivo(true);
+        personagem.setFoto(dto.getFoto());
 
         return personagem;
     }
@@ -29,6 +30,7 @@ public class PersonagemMapper {
         dto.setId(entity.getId());
         dto.setNome(entity.getNome());
         dto.setOrigem(entity.getOrigem());
+        dto.setFoto(entity.getFoto());
         return dto;
     }
 

@@ -12,4 +12,7 @@ public class PersonagemCriacaoDto {
     @NotBlank
     @NotNull
     private String origem;
+    @NotBlank
+    @NotNull
+    private String foto;
 }
