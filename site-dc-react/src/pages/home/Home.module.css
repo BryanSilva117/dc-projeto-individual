@@ -9,38 +9,106 @@ html {
 
 .div-nav {
     height: 7vh;
+    background-color: #fbfbf3;
 }
 
 header {
     width: 100%;
-    height: 100vh;
+    height: 85vh;
     background-image: url('../../utils/assets/fundo-home.jpg');
     background-size: cover;
 }
 
 
 .header-content {
-    color: #000;
     display: flex;
+    width: 50%;
+    height: 60%;
+    background-color: #00000000;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
-    text-align: center;
-    gap: 1vh;
-    top: 10vh;
+    justify-content: space-evenly;
+    color: #000;
+}
+
+.header-content h1 {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-size: 32px;
+    color: #0474F4;
 }
 
 .text-home {
+    width: 50%;
+    height: 30%;
+    background-color: #00000000;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-size: 24px;
     display: flex;
     flex-direction: column;
-    gap: 54px;
+    justify-content: center;
+    color: #000;
 }
 
-.teste {
+.parte-sobre {
+    display: flex;
     width: 100%;
-    height: 100vh;
-    background-color: #000;
+    height: 90vh;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
 }
+
+.container-quadrinhos {
+    display: flex;
+    flex-wrap: wrap;
+    width: 96%;
+    height: 95%;
+    background-color: wheat;
+}
+
+.primeiro-quadro {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    width: 49%;
+    height: 50%; 
+    background-color: #fbfbf3;
+    border: 2px solid #000000;
+}
+
+.quadro-viloes {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    width: 49%;
+    height: 50%; 
+    background-image: url('../../utils/assets/sobre-parte-vilao.jpg');
+    background-size: cover;
+}
+
+.info-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 99%;
+    height: 97%;
+    border: 2px solid #000000;
+}
+
+.segundo-quadro {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    width: 49%;
+    height: 50%; 
+    background-color: #fbfbf3;
+    border: 2px solid #000000; 
+}
+
 
 @media only screen and (max-width: 800px) {
     .titulo {

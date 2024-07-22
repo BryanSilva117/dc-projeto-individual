@@ -3,14 +3,14 @@
 .navbar {
     top: 0;
     left: 0;
-    height: 10vh;
+    height: 12vh;
     width: 100%;
     z-index: 999;
     display: flex;
     position: fixed;
     align-items: center;
     justify-content: space-around;
-    background-color: #fbfbf3;
+    background-color: #fbfbf300;
     
 }
 
