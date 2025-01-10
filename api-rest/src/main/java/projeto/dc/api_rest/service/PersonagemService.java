@@ -29,7 +29,7 @@ public class PersonagemService {
 
     public Personagem persongemPorId(Long id) {
         Personagem personagem = personagemRepository.findByIdAndAtivoTrue(id);
-        if (personagem == null) throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+        if (personagem == null) throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Personagem não encontrado");
         return personagem;
     }
 

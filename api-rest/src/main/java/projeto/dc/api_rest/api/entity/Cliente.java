@@ -3,6 +3,7 @@ package projeto.dc.api_rest.api.entity;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
+import projeto.dc.api_rest.domain.usuario.Usuario;
 
 import java.time.LocalDate;
 
@@ -26,5 +27,8 @@ public class Cliente {
 
     @ManyToOne
     private Personagem personagem;
+
+    @ManyToOne
+    private Usuario usuario;
 
 }
