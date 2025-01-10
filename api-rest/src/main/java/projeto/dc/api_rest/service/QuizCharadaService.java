@@ -4,11 +4,11 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
-import projeto.dc.api_rest.dto.mapper.QuizCharadaMapper;
-import projeto.dc.api_rest.dto.quizcharada.QuizCharadaCriacaoDto;
-import projeto.dc.api_rest.entity.QuizCharada;
-import projeto.dc.api_rest.entity.Usuario;
-import projeto.dc.api_rest.repository.QuizCharadaRepository;
+import projeto.dc.api_rest.api.dto.mapper.QuizCharadaMapper;
+import projeto.dc.api_rest.api.dto.quizcharada.QuizCharadaCriacaoDto;
+import projeto.dc.api_rest.api.entity.QuizCharada;
+import projeto.dc.api_rest.api.entity.Cliente;
+import projeto.dc.api_rest.api.repository.QuizCharadaRepository;
 
 import java.util.List;
 import java.util.Optional;
@@ -18,13 +18,13 @@ import java.util.Optional;
 public class QuizCharadaService {
 
     private final QuizCharadaRepository quizCharadaRepository;
-    private final UsuarioService usuarioService;
+    private final ClienteService usuarioService;
 
-    public QuizCharada criarQuiz(QuizCharadaCriacaoDto quizCriacao, Integer id) {
+    public QuizCharada criarQuiz(QuizCharadaCriacaoDto quizCriacao, Long id) {
         if (quizCriacao == null) return null;
-        Usuario usuario = usuarioService.usuarioPorId(id);
-        if (usuario == null) throw new ResponseStatusException(HttpStatus.NOT_FOUND);
-        QuizCharada quizCharada = QuizCharadaMapper.toEntity(quizCriacao, usuario);
+        Cliente cliente = usuarioService.usuarioPorId(id);
+        if (cliente == null) throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+        QuizCharada quizCharada = QuizCharadaMapper.toEntity(quizCriacao, cliente);
 
         return quizCharadaRepository.save(quizCharada);
     }
@@ -33,7 +33,7 @@ public class QuizCharadaService {
         return quizCharadaRepository.findAll();
     }
 
-    public QuizCharada quizPorId(Integer id) {
+    public QuizCharada quizPorId(Long id) {
        Optional<QuizCharada> quizCharada = quizCharadaRepository.findById(id);
         return quizCharada.orElse(null);
     }

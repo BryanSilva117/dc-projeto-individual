@@ -4,13 +4,12 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
-import projeto.dc.api_rest.dto.mapper.PersonagemMapper;
-import projeto.dc.api_rest.dto.personagem.PersonagemCriacaoDto;
-import projeto.dc.api_rest.entity.Personagem;
-import projeto.dc.api_rest.repository.PersonagemRepository;
+import projeto.dc.api_rest.api.dto.mapper.PersonagemMapper;
+import projeto.dc.api_rest.api.dto.personagem.PersonagemCriacaoDto;
+import projeto.dc.api_rest.api.entity.Personagem;
+import projeto.dc.api_rest.api.repository.PersonagemRepository;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
@@ -28,7 +27,7 @@ public class PersonagemService {
         return personagemRepository.findByAtivoTrue();
     }
 
-    public Personagem persongemPorId(Integer id) {
+    public Personagem persongemPorId(Long id) {
         Personagem personagem = personagemRepository.findByIdAndAtivoTrue(id);
         if (personagem == null) throw new ResponseStatusException(HttpStatus.NOT_FOUND);
         return personagem;
@@ -38,7 +37,7 @@ public class PersonagemService {
         return personagemRepository.findByAtivoFalse();
     }
 
-    public Personagem atualizarPersonagem(Integer id, PersonagemCriacaoDto personagemAtt) {
+    public Personagem atualizarPersonagem(Long id, PersonagemCriacaoDto personagemAtt) {
         Personagem personagemAtual = personagemRepository.findById(id).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
 
         personagemAtual.setNome(personagemAtt.getNome());
@@ -47,7 +46,7 @@ public class PersonagemService {
         return personagemRepository.save(personagemAtual);
     }
 
-    public void desativarPersonagem(Integer id) {
+    public void desativarPersonagem(Long id) {
         Personagem personagemDesativar = personagemRepository.findById(id).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
 
         if (!personagemDesativar.getAtivo()) throw new ResponseStatusException(HttpStatus.CONFLICT);
@@ -56,7 +55,7 @@ public class PersonagemService {
         personagemRepository.save(personagemDesativar);
     }
 
-    public Personagem reativarPersonagem(Integer id) {
+    public Personagem reativarPersonagem(Long id) {
         Personagem personagemReativar = personagemRepository.findById(id).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
 
         if (personagemReativar.getAtivo()) throw new ResponseStatusException(HttpStatus.CONFLICT);
