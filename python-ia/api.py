@@ -1,3 +1,12 @@
 from models import gerador_textos
+import requests
+import json
+import os
+from dotenv import load_dotenv
 
-resposta = gerador_textos.gerador_text("Savage")
+load_dotenv()
+
+
+resposta = gerador_textos.gerador_text("")
+
+print(resposta)
