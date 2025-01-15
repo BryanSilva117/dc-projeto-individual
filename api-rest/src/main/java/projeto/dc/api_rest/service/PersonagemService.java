@@ -10,6 +10,7 @@ import projeto.dc.api_rest.api.entity.Personagem;
 import projeto.dc.api_rest.api.repository.PersonagemRepository;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
@@ -63,5 +64,12 @@ public class PersonagemService {
         personagemReativar.setAtivo(true);
 
         return personagemRepository.save(personagemReativar);
+    }
+
+    public List<Personagem> buscarPersonagemPorNome(String nome) {
+        Optional<List<Personagem>> personagem = personagemRepository.findByNomeAlternativo(nome);
+        if (personagem == null) throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Personagem não encontrado");
+
+        return personagem.get();
     }
 }

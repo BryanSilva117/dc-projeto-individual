@@ -98,4 +98,11 @@ public class PersonagemController {
         return ResponseEntity.ok(PersonagemMapper.toDto(personagem));
     }
 
+
+    @GetMapping("/personagem-por-nome/{nome}")
+    public ResponseEntity<List<PersonagemListagemDto>> personagemPorNome(@PathVariable String nome) {
+        List<Personagem> personagem = personagemService.buscarPersonagemPorNome(nome);
+        return ResponseEntity.ok(PersonagemMapper.toDto(personagem));
+    }
+
 }
