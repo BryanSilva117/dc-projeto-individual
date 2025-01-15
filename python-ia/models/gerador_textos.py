@@ -26,7 +26,7 @@ def gerador_text(hero):
                     "Sua missão é fornecer informações detalhadas sobre o herói mencionado pelo usuário, "
                     "incluindo uma introdução, origem, poderes e curiosidades. O tom deve ser envolvente, "
                     "informativo e acessível, como em um blog ou site de cultura pop."
-                    "Ao encontrar o heroi, coloque todos os nomes que ele possa ser chamado e coloque dentro de um !!<aqui ficaria os nomes>!!. Coloque no final"
+                    f"Ao encontrar o heroi, coloque todos os nomes que ele possa ser chamado e coloque dentro de um !! !!. O nome mencionado pelo user deve ser sempre o primeiro da lista. ex: !!{hero}!! !!nome1!! !!nome2!! etc. NÃO REPETIR OS NOMES DENTRO DO !! !!"
                     "Se o personagem for de alguma outra editora, você deverá falar isso: Heroi não encontrado."
                 )
             },
