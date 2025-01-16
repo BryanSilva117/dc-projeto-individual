@@ -8,43 +8,62 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-
-resposta = gerador_textos.gerador_text("Superman")
+nome_heroi = """Zatanna"""
+resposta = gerador_textos.gerador_text(nome_heroi)
 
 if resposta == "Heroi não encontrado":
     print(resposta)
 else:    
     padrao_nomes = r"!!(.*?)!!"
     resultados = re.findall(padrao_nomes, resposta)
-    print(resultados)
     
     results_clear = functions.remove_same_names(resultados)
     
     token_temp = os.environ.get("TOKEN_TEMP_SPRING")
     headers = {"Authorization": f"Bearer {token_temp}"  ,"Content-Type": "application/json"}
     
-    personagem = None
+    personagem = []
+    
+    if len(results_clear) == 0:
+        results_clear.append(nome_heroi)
+        
+    print(results_clear)
+    print(resposta)
+    
+    
+    exits_perso = []
+    
     
     for resultado in results_clear:
+            
+        if len(exits_perso) >= 2:
+            break
+        
         link = f"http://localhost:8080/personagens/personagem-por-nome/{resultado}"
         
         try:
             requisicao_nome = requests.get(link, headers=headers)
             if requisicao_nome.status_code == 200:
+                exits_perso.append(1)
                 print(f"Personagem {resultado} já cadastrado.")
-                personagem = requisicao_nome.json()
-                break
+                personagem.append(requisicao_nome.json())
+            else:
+                exits_perso.append(0)
+                    
         except Exception as e:
             print(f"Erro ao acessar a API: {e}")
             
-    print(personagem)
+                
     
-    if personagem is None:
+    
+    if exits_perso[0] != 1 or exits_perso[1] != 1:
+        personagem = None
+        
         personagem = {
-            "nome": resultados[0],
+            "nome": results_clear[1],
             "origem": resposta,
-            "foto": f"{resultados[0]}.jpg",
-            "nomesAlternativos": resultados
+            "foto": f"{results_clear[1]}.jpg",
+            "nomesAlternativos": results_clear
         }
         
         link_spring = "http://localhost:8080/personagens"
