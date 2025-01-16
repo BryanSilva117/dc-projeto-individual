@@ -68,7 +68,10 @@ public class PersonagemService {
 
     public List<Personagem> buscarPersonagemPorNome(String nome) {
         Optional<List<Personagem>> personagem = personagemRepository.findByNomeAlternativo(nome);
-        if (personagem == null) throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Personagem não encontrado");
+        if (personagem.isEmpty() || personagem.get().isEmpty()) {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Personagem não encontrado");
+        }
+
 
         return personagem.get();
     }
