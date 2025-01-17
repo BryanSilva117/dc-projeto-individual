@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+.navbar {
+    top: 0;
+    left: 0;
+    height: 12vh;
+    width: 100%;
+    z-index: 999;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #fbfbf300;
+    
+}
+
+.navbar-moviment {
+    top: 0;
+    left: 0;
+    height: 10vh;
+    width: 100%;
+    z-index: 999;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #fbfbf300;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.122);
+    backdrop-filter: blur(8.5px);
+    -webkit-backdrop-filter: blur(7.5px);
+    border-bottom: 2px solid #0474F4;
+    transition: 0.5s;
+}
+
+
+nav a {
+    list-style-type: none;
+    text-decoration: none;
+}
+
+.imagem-logo {
+    display: flex;
+    height: 9vh;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.imagem-logo:hover {
+    transform: scale(1.15);
+}
+
+.parte-left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    gap: 50px;
+}
+
+
+.navbar-options {
+    list-style: none;
+    display: flex;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-size: 16px;
+    gap: 30px;
+}
+
+.navbar-options li a {
+    background-image: linear-gradient(to right, #000000, #000000 50%, #0474F4 50%);
+    background-size: 200% 100%;
+    background-position: 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar-options li a:hover {
+    background-position: 0;
+}
+
+.parte-left .jl {
+    height: 7vh;
+    display: flex;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.parte-left .jl:hover {
+    transform: scale(1.2);
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    gap: 20px;
+
+}
+
+
+.wrapper a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100px;
+    height: 40px;
+    text-decoration: none;
+    color: #0474F4;
+    border: 2px solid #0474F4;
+    border-radius: 5px;
+    position: relative;
+    transition: all .35s;
+}
+
+.wrapper .cadastro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 130px;
+    height: 40px;
+    text-decoration: none;
+    color: #0474F4;
+    border: 2px solid #0474F4;
+    border-radius: 5px;
+    position: relative;
+    transition: all .35s;
+}
+
+.wrapper a span {
+    position: relative;
+    z-index: 2;
+}
+
+.wrapper a:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #0474F4;
+    border-radius: 1px;
+    transition: all .35s;
+}
+
+.wrapper a:hover {
+    color: #fff;
+}
+
+.wrapper a:hover:after {
+    width: 100%;
+}
