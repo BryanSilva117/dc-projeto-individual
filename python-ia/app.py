@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from api import buscador
+from functions.run_model import buscador
 
 
 app = FastAPI()
