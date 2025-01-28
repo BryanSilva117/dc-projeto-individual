@@ -4,17 +4,43 @@ import os
 from dotenv import load_dotenv
 
 load_dotenv()
+    
+def gerador_text(personagem):
 
-api_key = os.environ.get("API_KEY")
-if not api_key:
-    raise ValueError("Token da API não encontrado. Verifique o arquivo .env e a variável API_KEY.")
+    API_KEY = os.environ.get("KEY_GOOGLE")
+    CX = os.environ.get("ID_SEARCH_PERSO")
+    search_url = "https://www.googleapis.com/customsearch/v1"
+   
+    params = {
+        "q": personagem,               
+        "cx": CX,                
+        "key": API_KEY,              
+        "num": 1
+    }
 
-headers = {"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"}
-link = "https://api.openai.com/v1/chat/completions"
-id_model = "gpt-4o-mini"
+    dados = None
+
+    try:
+        resposta = requests.get(search_url, params=params)
+    
+        if resposta.status_code == 200:
+            dados = resposta.json()
+        else:
+            print("Erro ao buscar personagem:", resposta.text)
+            
+    except Exception as e:
+        print("Erro ao buscar personagem:", str(e))
+        
 
 
-def gerador_text(hero):
+    api_key = os.environ.get("API_KEY")
+    if not api_key:
+        raise ValueError("Token da API não encontrado. Verifique o arquivo .env e a variável API_KEY.")
+
+    headers = {"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"}
+    link = "https://api.openai.com/v1/chat/completions"
+    id_model = "gpt-4o-mini"
+
 
     body_msg = {
         "model": id_model,
@@ -22,12 +48,13 @@ def gerador_text(hero):
             {
                 "role": "system",
                 "content": (
-                    "Você é um redator especializado em criar conteúdo para um site sobre heróis da DC Comics. "
-                    "Sua missão é fornecer informações detalhadas sobre o herói mencionado pelo usuário, "
-                    "incluindo uma introdução, origem, poderes e curiosidades. O tom deve ser envolvente, "
+                    "Você é um redator especializado em criar conteúdo para um site sobre personagens da DC Comics."
+                    "Sua missão é fornecer informações detalhadas sobre o personagem mencionado pelo usuário"
+                    "incluindo uma introdução, origem, poderes e curiosidades. O tom deve ser envolvente"
+                    f"Use esses dados do dc_database como base: {dados}"
                     "informativo e acessível, como em um blog ou site de cultura pop."
                     """
-                    No começo da resposta, você deve listar os nomes pelos quais um herói pode ser chamado, sempre seguindo esta ordem:  
+                    No começo da resposta, você deve listar os nomes pelos quais o personagem pode ser chamado, sempre seguindo esta ordem:  
                     1. O nome real (alter ego) do personagem primeiro.  
                     2. O nome heroico (ou qualquer outro nome pelo qual ele seja conhecido) depois.  
 
@@ -41,7 +68,7 @@ def gerador_text(hero):
             },
             {
                 "role": "user",
-                "content": hero
+                "content": personagem
             }
         ]
     }
