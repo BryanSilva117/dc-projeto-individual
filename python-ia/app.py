@@ -1,10 +1,19 @@
 from fastapi import FastAPI
-from functions.run_model import buscador
+from functions import run_model
+from functions.objeto import Personagem
 
 
 app = FastAPI()
 
-@app.get("/buscar_personagem/{hero}")
-def buscar_personagem(hero: str):
-    personagem = buscador(hero)
+@app.get("/buscar_personagem/{perso}")
+def buscar_personagem(perso: str):
+    personagem = run_model.buscador(perso)
     return personagem
+
+
+    
+@app.post("/cadastrar_personagem")
+def cadastrar_personagem(personagem : Personagem):
+    personagem = run_model.cadastrar_personagem(personagem)
+    return personagem
+

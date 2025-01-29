@@ -7,4 +7,3 @@ def remove_same_names(nomes):
             seen.add(nome)
     return result
     
-   
